@@ -1,0 +1,103 @@
+# website config
+title: Multimedia and Artificial Intelligence Laboratory
+subtitle: National Taiwan Normal University (NTNU)
+description: "MAILAB at National Taiwan Normal University conducts cutting-edge research in multimedia analysis, artificial intelligence, and machine learning with applications in computer vision and signal processing."
+url: https://mailab-ntnuee.github.io
+repository: MAILAB-NTNUEE/MAILAB-NTNUEE.github.io
+
+# theme config
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes@4.24.0
+minimal_mistakes_skin: "air" # "default", "air", "contrast", "dark", "dirt", "mint", "sunrise"
+
+# plugin config
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+# pagination config
+defaults:
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: false
+      share: true
+
+# Site footer
+footer:
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:mailab@ntnu.edu.tw"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/MAILAB-NTNUEE"
+
+# Collections
+collections:
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  team:
+    output: true
+    permalink: /:collection/:path/
+  research:
+    output: true
+    permalink: /:collection/:path/
+
+# sitemap config
+include:
+  - _pages
+
+# website author
+author:
+  name   : "MAILAB NTNU"
+  avatar : "/assets/images/mailab-logo.png"
+  bio    : "Multimedia and Artificial Intelligence Lab at National Taiwan Normal University, focusing on computer vision, machine learning, and signal processing."
+  location: "Taipei, Taiwan"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:mailab@ntnu.edu.tw"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/MAILAB-NTNUEE"
+
+# Analytics
+analytics:
+  provider: false # false (default), "google", "google-universal", "google-gtag", "custom"
+
+# Search
+search: true
+search_full_content: true
+
+# SEO Related
+social:
+  links:
+    - "https://github.com/MAILAB-NTNUEE"

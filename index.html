@@ -1,0 +1,171 @@
+---
+layout: single
+permalink: /
+classes:
+  - landing
+  - wide
+title: false
+header: false
+---
+
+<div class="hero-section">
+  <div class="hero-background" style="background-image: url('/assets/images/hero-background.jpg');"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Multimedia and Artificial Intelligence Laboratory</h1>
+    <h2 class="hero-subtitle">National Taiwan Normal University</h2>
+    <p class="mb-5">Advancing the frontiers of computer vision, multimedia analysis, and artificial intelligence</p>
+    <div>
+      <a href="/research/" class="hero-button">Explore Our Research</a>
+      <a href="/publications/" class="hero-button">View Publications</a>
+    </div>
+  </div>
+</div>
+
+<div class="feature-section">
+  <div class="feature-container">
+    <div class="section-heading">
+      <h2>About Our Lab</h2>
+    </div>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+      The Multimedia and Artificial Intelligence Laboratory (MAILAB) at National Taiwan Normal University 
+      conducts cutting-edge research in computer vision, machine learning, and multimedia analysis with 
+      applications in various domains including healthcare, autonomous systems, and content creation.
+    </p>
+    
+    <div class="feature-grid">
+      <div class="feature-card">
+        <img src="/assets/images/research-vision.jpg" alt="Computer Vision">
+        <div class="card-content">
+          <h3>Computer Vision</h3>
+          <p>Developing advanced algorithms for image understanding, object detection, and scene analysis</p>
+        </div>
+      </div>
+      
+      <div class="feature-card">
+        <img src="/assets/images/research-ml.jpg" alt="Machine Learning">
+        <div class="card-content">
+          <h3>Machine Learning</h3>
+          <p>Creating intelligent systems through deep learning, reinforcement learning, and neural networks</p>
+        </div>
+      </div>
+      
+      <div class="feature-card">
+        <img src="/assets/images/research-multimedia.jpg" alt="Multimedia Analysis">
+        <div class="card-content">
+          <h3>Multimedia Analysis</h3>
+          <p>Integrating multiple modalities including visual, audio, and textual data for richer understanding</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="feature-section grid-pattern">
+  <div class="feature-container">
+    <div class="section-heading">
+      <h2>Recent Publications</h2>
+    </div>
+    
+    <div class="publication-list">
+      {% assign recent_publications = site.publications | sort: "date" | reverse | limit: 3 %}
+      {% for publication in recent_publications %}
+        <div class="publication-item">
+          <h3 class="pub-title">{{ publication.title }}</h3>
+          <p class="pub-authors">{{ publication.authors }}</p>
+          <p class="pub-journal">{{ publication.venue }}, {{ publication.date | date: "%Y" }}</p>
+          <div class="pub-links">
+            {% if publication.doi %}
+              <a href="https://doi.org/{{ publication.doi }}" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+            {% endif %}
+            {% if publication.pdf %}
+              <a href="{{ publication.pdf }}" target="_blank"><i class="far fa-file-pdf"></i> PDF</a>
+            {% endif %}
+            {% if publication.code %}
+              <a href="{{ publication.code }}" target="_blank"><i class="fas fa-code"></i> Code</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="/publications/" class="hero-button">View All Publications</a>
+    </div>
+  </div>
+</div>
+
+<div class="feature-section">
+  <div class="feature-container">
+    <div class="section-heading">
+      <h2>Latest News</h2>
+    </div>
+    
+    <div class="feature-grid">
+      {% for post in site.posts limit:3 %}
+        <div class="feature-card">
+          {% if post.header.teaser %}
+            <img src="{{ post.header.teaser }}" alt="{{ post.title }}">
+          {% else %}
+            <img src="/assets/images/news-default.jpg" alt="{{ post.title }}">
+          {% endif %}
+          <div class="card-content">
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p class="page__meta">{{ post.date | date: "%B %d, %Y" }}</p>
+            <p>{{ post.excerpt | truncate: 120 }}</p>
+            <a href="{{ post.url | relative_url }}" class="btn btn--primary">Read More</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="/news/" class="hero-button">View All News</a>
+    </div>
+  </div>
+</div>
+
+<div class="feature-section grid-pattern">
+  <div class="feature-container">
+    <div class="section-heading">
+      <h2>Meet Our Team</h2>
+    </div>
+    
+    <div class="team-grid">
+      {% assign featured_members = site.team | where: "featured", true | sort: "position" | limit: 4 %}
+      {% for member in featured_members %}
+        <div class="team-card">
+          {% if member.avatar %}
+            <img src="{{ member.avatar }}" alt="{{ member.name }}" class="team-image">
+          {% else %}
+            <img src="/assets/images/bio-photo.jpg" alt="{{ member.name }}" class="team-image">
+          {% endif %}
+          <h3 class="team-name">{{ member.name }}</h3>
+          <p class="team-title">{{ member.position }}</p>
+          <p class="team-bio">{{ member.excerpt | markdownify | strip_html | truncate: 100 }}</p>
+          <a href="{{ member.url }}" class="btn btn--primary">Profile</a>
+        </div>
+      {% endfor %}
+    </div>
+    
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="/team/" class="hero-button">View All Members</a>
+    </div>
+  </div>
+</div>
+
+<div class="feature-section">
+  <div class="feature-container">
+    <div class="section-heading">
+      <h2>Join Our Lab</h2>
+    </div>
+    
+    <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+      <p>MAILAB is always looking for talented and motivated students and researchers interested in computer vision, machine learning, and multimedia analysis.</p>
+      <p>We offer opportunities for graduate studies (Master's and PhD), postdoctoral research, and undergraduate research internships.</p>
+      <div style="margin-top: 2rem;">
+        <a href="/join/" class="hero-button">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
