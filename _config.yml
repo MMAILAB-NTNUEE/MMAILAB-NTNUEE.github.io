@@ -8,7 +8,18 @@ repository: MAILAB-NTNUEE/MAILAB-NTNUEE.github.io
 # theme config
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes@4.24.0
-minimal_mistakes_skin: "air" # "default", "air", "contrast", "dark", "dirt", "mint", "sunrise"
+minimal_mistakes_skin: "dark" # Changed to dark for a more modern, professional look
+search: true
+search_full_content: true
+logo: "/assets/images/mailab-logo.png"
+
+# Custom color variables
+colors:
+  primary: "#0066cc"    # Deep blue for research/tech feel
+  secondary: "#00a6a6"  # Teal accent for visual interest
+  tertiary: "#f39c12"   # Amber for highlighting important elements
+  background: "#f8f9fa" # Light gray for content areas
+  text: "#333333"       # Dark gray for text
 
 # plugin config
 plugins:
@@ -20,7 +31,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
 
-# pagination config
+# Defaults
 defaults:
   # _pages
   - scope:
@@ -28,18 +39,21 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false
   # _posts
   - scope:
       path: ""
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: false
       share: true
       related: true
+      show_date: true
+      header:
+        overlay_filter: 0.5
   # _publications
   - scope:
       path: ""
@@ -48,6 +62,38 @@ defaults:
       layout: single
       author_profile: false
       share: true
+  # _team
+  - scope:
+      path: ""
+      type: team
+    values:
+      layout: single
+      author_profile: true
+      share: false
+  # _research
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      toc: true
+      toc_sticky: true
+  # _news
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: news-single
+      author_profile: false
+      share: true
+      show_date: true
+      read_time: false
+      classes: wide
+      related: false
+      sidebar:
+        nav: "news"
 
 # Site footer
 footer:
@@ -58,6 +104,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/MAILAB-NTNUEE"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "#" # Add your Google Scholar profile URL
 
 # Collections
 collections:
@@ -68,6 +117,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   research:
+    output: true
+    permalink: /:collection/:path/
+  news:
     output: true
     permalink: /:collection/:path/
 
@@ -88,16 +140,20 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/MAILAB-NTNUEE"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "#" # Add your Google Scholar profile URL
 
 # Analytics
 analytics:
-  provider: false # false (default), "google", "google-universal", "google-gtag", "custom"
-
-# Search
-search: true
-search_full_content: true
+  provider: "google-gtag"
+  google:
+    tracking_id: "" # Add your Google Analytics tracking ID
+    anonymize_ip: false
 
 # SEO Related
 social:
   links:
     - "https://github.com/MAILAB-NTNUEE"
+twitter_cards: true
+og_image: "/assets/images/mailab-logo.png"

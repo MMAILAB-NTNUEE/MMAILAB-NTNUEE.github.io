@@ -1,173 +1,96 @@
 ---
-title: "News & Research Updates"
+title: "News"
 layout: single
 permalink: /news/
 classes:
   - wide
 header:
-  overlay_image: /assets/images/news-header.jpg
+  overlay_image: /assets/images/research-vision.jpg
   overlay_filter: 0.5
 ---
 
-<div class="feature-section">
-  <div class="feature-container">
-    <div class="section-heading">
-      <h2>Latest News & Updates</h2>
-    </div>
-    
-    <div class="news-filter-bar">
-      <div class="news-filter-heading">Filter By:</div>
-      <div class="news-filter-tags">
-        <a href="/news/" class="news-filter-tag active">All</a>
-        <a href="/news/?tag=research" class="news-filter-tag">Research</a>
-        <a href="/news/?tag=awards" class="news-filter-tag">Awards</a>
-        <a href="/news/?tag=publications" class="news-filter-tag">Publications</a>
-        <a href="/news/?tag=events" class="news-filter-tag">Events</a>
-        <a href="/news/?tag=press" class="news-filter-tag">Press</a>
+<div class="news-container">
+  <div class="news-intro">
+    <div class="filter-categories">
+      <div class="news-filter-bar">
+        <div class="news-filter-heading">Filter By:</div>
+        <div class="news-filter-tags">
+          <a href="/news/" class="news-filter-tag {% unless include.tag %}active{% endunless %}">All</a>
+          {% assign all_tags = "" | split: "" %}
+          {% for news in site.news %}
+            {% for tag in news.tags %}
+              {% unless all_tags contains tag %}
+                {% assign all_tags = all_tags | push: tag %}
+              {% endunless %}
+            {% endfor %}
+          {% endfor %}
+          
+          {% for tag in all_tags %}
+            <a href="/news/?tag={{ tag | slugify }}" class="news-filter-tag {% if include.tag == tag %}active{% endif %}">{{ tag }}</a>
+          {% endfor %}
+        </div>
       </div>
     </div>
-    
-    <div class="news-grid">
-      {% assign all_posts = site.posts %}
-      {% for post in all_posts %}
-        <div class="news-card">
-          <div class="news-card-image">
-            {% if post.header.teaser %}
-              <img src="{{ post.header.teaser }}" alt="{{ post.title }}">
-            {% else %}
-              <img src="/assets/images/news-default.jpg" alt="{{ post.title }}">
-            {% endif %}
-          </div>
-          <div class="news-card-content">
-            <div class="news-card-meta">
-              <span class="news-date">{{ post.date | date: "%B %d, %Y" }}</span>
-              {% if post.categories.size > 0 %}
-                <span class="news-category">{{ post.categories | first }}</span>
+
+    <div class="news-list">
+      {% assign filtered_news = site.news %}
+      {% if include.tag %}
+        {% assign filtered_news = site.news | where_exp: "item", "item.tags contains include.tag" %}
+      {% endif %}
+      
+      <ul class="news-items">
+        {% for news in filtered_news %}
+          <li class="news-item">
+            <div class="news-item-date">
+              <span class="date-box">
+                <span class="day">{{ news.date | date: "%d" }}</span>
+                <span class="month">{{ news.date | date: "%b" }}</span>
+                <span class="year">{{ news.date | date: "%Y" }}</span>
+              </span>
+            </div>
+            
+            <div class="news-item-content">
+              <h3 class="news-item-title">
+                <a href="{{ news.url | relative_url }}">{{ news.title }}</a>
+              </h3>
+              
+              {% if news.categories.first %}
+                <span class="news-item-category">{{ news.categories.first }}</span>
+              {% endif %}
+              
+              <p class="news-item-excerpt">
+                {{ news.excerpt | strip_html | truncate: 180 }}
+              </p>
+              
+              {% if news.tags %}
+                <div class="news-item-tags">
+                  {% for tag in news.tags limit:4 %}
+                    <a href="/news/?tag={{ tag | slugify }}" class="news-tag">#{{ tag }}</a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+              
+              <a href="{{ news.url | relative_url }}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            {% if news.featured_image or news.header.teaser %}
+            <div class="news-item-image">
+              {% if news.featured_image %}
+                <img src="{{ news.featured_image | relative_url }}" alt="{{ news.title }}">
+              {% elsif news.header.teaser %}
+                <img src="{{ news.header.teaser | relative_url }}" alt="{{ news.title }}">
               {% endif %}
             </div>
-            <h3 class="news-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <p class="news-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-            <div class="news-card-tags">
-              {% for tag in post.tags %}
-                <a href="/news/?tag={{ tag | slugify }}" class="news-tag">#{{ tag }}</a>
-              {% endfor %}
-            </div>
-            <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
-          </div>
-        </div>
-      {% endfor %}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
     </div>
-    
+
+    {% if site.news.size > 10 %}
     <div class="pagination">
-      {% if paginator.total_pages > 1 %}
-      <div class="pagination-links">
-        {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-link">← Previous</a>
-        {% endif %}
-        
-        {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-link">Next →</a>
-        {% endif %}
-      </div>
-      {% endif %}
+      <a href="/news/archive/" class="view-all-news">View All News <i class="fas fa-chevron-right"></i></a>
     </div>
-  </div>
-</div>
-
-<div class="feature-section grid-pattern">
-  <div class="feature-container">
-    <div class="section-heading">
-      <h2>Research Themes</h2>
-    </div>
-    
-    <div class="research-themes-grid">
-      <div class="research-theme-card">
-        <div class="research-theme-icon">
-          <i class="fas fa-eye"></i>
-        </div>
-        <h3>Computer Vision</h3>
-        <p>Advancing algorithms for image understanding, object detection, and scene analysis</p>
-        <div class="theme-tags">
-          <span class="theme-tag">#computer-vision</span>
-          <span class="theme-tag">#deep-learning</span>
-        </div>
-        <a href="/research/#computer-vision" class="theme-link">View Projects →</a>
-      </div>
-      
-      <div class="research-theme-card">
-        <div class="research-theme-icon">
-          <i class="fas fa-brain"></i>
-        </div>
-        <h3>Machine Learning</h3>
-        <p>Creating intelligent systems through deep learning, reinforcement learning, and neural networks</p>
-        <div class="theme-tags">
-          <span class="theme-tag">#machine-learning</span>
-          <span class="theme-tag">#neural-networks</span>
-        </div>
-        <a href="/research/#machine-learning" class="theme-link">View Projects →</a>
-      </div>
-      
-      <div class="research-theme-card">
-        <div class="research-theme-icon">
-          <i class="fas fa-video"></i>
-        </div>
-        <h3>Multimedia Analysis</h3>
-        <p>Integrating multiple modalities including visual, audio, and textual data for richer understanding</p>
-        <div class="theme-tags">
-          <span class="theme-tag">#multimedia</span>
-          <span class="theme-tag">#multimodal</span>
-        </div>
-        <a href="/research/#multimedia-analysis" class="theme-link">View Projects →</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="feature-section">
-  <div class="feature-container">
-    <div class="section-heading">
-      <h2>Featured Projects</h2>
-    </div>
-    
-    <div class="featured-projects-grid">
-      <div class="featured-project">
-        <img src="/assets/images/project1.jpg" alt="Self-supervised Learning">
-        <div class="featured-project-overlay">
-          <h3>Self-supervised Visual Representation Learning</h3>
-          <div class="project-tags">
-            <span class="project-tag">#computer-vision</span>
-            <span class="project-tag">#deep-learning</span>
-          </div>
-          <p>Developing new approaches for learning visual representations without human-annotated labels.</p>
-          <a href="/research/self-supervised-learning/" class="project-link">Learn More →</a>
-        </div>
-      </div>
-      
-      <div class="featured-project">
-        <img src="/assets/images/project2.jpg" alt="Medical Imaging">
-        <div class="featured-project-overlay">
-          <h3>Vision-Language Models for Medical Imaging</h3>
-          <div class="project-tags">
-            <span class="project-tag">#medical-imaging</span>
-            <span class="project-tag">#multimodal</span>
-          </div>
-          <p>Creating AI systems that can understand both visual medical data and textual medical reports.</p>
-          <a href="/research/medical-vision-language/" class="project-link">Learn More →</a>
-        </div>
-      </div>
-      
-      <div class="featured-project">
-        <img src="/assets/images/project3.jpg" alt="Edge Computing">
-        <div class="featured-project-overlay">
-          <h3>Efficient Neural Networks for Edge Devices</h3>
-          <div class="project-tags">
-            <span class="project-tag">#edge-computing</span>
-            <span class="project-tag">#neural-networks</span>
-          </div>
-          <p>Designing lightweight, energy-efficient neural networks for resource-constrained devices.</p>
-          <a href="/research/efficient-neural-networks/" class="project-link">Learn More →</a>
-        </div>
-      </div>
-    </div>
+    {% endif %}
   </div>
 </div>
