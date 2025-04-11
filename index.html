@@ -1,0 +1,423 @@
+---
+layout: splash
+title: "多媒體暨人工智慧實驗室"
+excerpt: "NTNU Multimedia and Artificial Intelligence Laboratory"
+header:
+  overlay_color: "#000"
+  overlay_filter: 0.5
+  overlay_image: /assets/images/research-vision.jpg
+classes: wide
+---
+
+<!-- Modern immersive hero section with parallax effect -->
+<div class="immersive-hero">
+  <div class="parallax-background" style="background-image: url('{{ site.baseurl }}/assets/images/research-vision.jpg');"></div>
+  <div class="hero-content-wrapper">
+    <div class="hero-content">
+      <h1 class="animated-title">
+        <span class="title-line" style="font-size: 2.5rem;">Solving Real-World</span>
+        <span class="title-line" style="font-size: 2.5rem;">Challenges with</span>
+        <span class="title-line highlight">Computer Vision</span>
+      </h1>
+      <p class="hero-tagline">Researching Super-Resolution, 3D Reconstruction, Image Quality Improvement, etc.</p>
+      
+      <div class="hero-cta-container">
+        <a href="{{ site.baseurl }}/research/" class="cta-button primary pulse">Explore Research</a>
+        <a href="{{ site.baseurl }}/publications/" class="cta-button secondary">Publications</a>
+        <a href="{{ site.baseurl }}/join/" class="cta-button secondary">Join Our Team</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Animated scroll indicator -->
+  <div class="scroll-indicator">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <div>
+      <span class="scroll-arrows">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Research showcase with modern cards -->
+<section class="research-showcase" style="display: flex; flex-direction: column; align-items: center;"></section>
+  <div class="section-intro">
+    <h2 class="section-title">Research <span class="highlight">Excellence</span></h2>
+    <p class="section-description" style="text-align: center; margin: 0 auto; max-width: 800px;">Our interdisciplinary team is advancing the state-of-the-art in these key areas</p>
+  </div>
+  
+  <div class="research-cards-container">
+    <div class="research-card" data-aos="fade-up">
+      <div class="card-icon">
+        <div class="icon-3d">
+          <i class="fas fa-brain"></i>
+        </div>
+      </div>
+      <h3>Deep Learning</h3>
+      <p>Pioneering neural architectures and algorithms for complex pattern recognition and data-driven decision making.</p>
+      <div class="card-footer">
+        <div class="tags">
+          <span>Neural Networks</span>
+          <span>Transfer Learning</span>
+        </div>
+        <a href="{{ site.baseurl }}/research/#deep-learning" class="read-more">
+          <span>Learn More</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="research-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-icon">
+        <div class="icon-3d">
+          <i class="fas fa-microscope"></i>
+        </div>
+      </div>
+      <h3>Medical Imaging</h3>
+      <p>Developing AI-powered diagnostic tools that enhance clinical decision-making and improve patient outcomes.</p>
+      <div class="card-footer">
+        <div class="tags">
+          <span>MRI Analysis</span>
+          <span>Disease Classification</span>
+        </div>
+        <a href="{{ site.baseurl }}/research/#medical-imaging" class="read-more">
+          <span>Learn More</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="research-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="card-icon">
+        <div class="icon-3d">
+          <i class="fas fa-robot"></i>
+        </div>
+      </div>
+      <h3>Computer Vision</h3>
+      <p>Creating systems that can understand and interpret the visual world with human-like perception and reasoning.</p>
+      <div class="card-footer">
+        <div class="tags">
+          <span>Object Detection</span>
+          <span>Scene Understanding</span>
+        </div>
+        <a href="{{ site.baseurl }}/research/#computer-vision" class="read-more">
+          <span>Learn More</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Latest research highlights with visual impact -->
+<section class="latest-research">
+  <div class="research-bg-pattern"></div>
+  
+  <div class="section-intro dark">
+    <h2 class="section-title">Latest <span class="highlight">Publications</span></h2>
+    <p class="section-description">Our recent contributions to advancing the field of AI</p>
+  </div>
+  
+  <div class="publications-slider">
+    {% assign sorted_publications = site.publications | sort: "date" | reverse %}
+    {% for publication in sorted_publications limit:3 %}
+      <div class="publication-slide" data-aos="zoom-in" data-aos-delay="{{ forloop.index | minus: 1 | times: 100 }}">
+        <div class="publication-card">
+          <h3>{{ publication.title }}</h3>
+          <p class="authors">{{ publication.authors }}</p>
+          <p class="venue">{{ publication.journal }}, {{ publication.date | date: "%Y" }}</p>
+          
+          <div class="publication-links">
+            {% if publication.pdf %}
+              <a href="{{ publication.pdf }}" class="pub-link pdf" target="_blank">
+                <i class="fas fa-file-pdf"></i>
+                <span>PDF</span>
+              </a>
+            {% endif %}
+            
+            {% if publication.code %}
+              <a href="{{ publication.code }}" class="pub-link code" target="_blank">
+                <i class="fas fa-code"></i>
+                <span>Code</span>
+              </a>
+            {% endif %}
+            
+            {% if publication.doi %}
+              <a href="https://doi.org/{{ publication.doi }}" class="pub-link doi" target="_blank">
+                <i class="fas fa-external-link-alt"></i>
+                <span>DOI</span>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div class="view-all-container">
+    <a href="{{ site.baseurl }}/publications/" class="view-all-button" data-aos="fade-up">
+      View All Publications
+      <i class="fas fa-long-arrow-alt-right"></i>
+    </a>
+  </div>
+</section>
+
+<!-- News and updates with modern masonry grid -->
+<section class="news-section">
+  <div class="section-intro">
+    <h2 class="section-title">Latest <span class="highlight">News</span></h2>
+    <p class="section-description">Stay updated with our recent accomplishments and events</p>
+  </div>
+  
+  <div class="news-masonry">
+    {% assign sorted_posts = site.posts | sort: "date" | reverse %}
+    {% for post in sorted_posts limit:3 %}
+      <div class="news-item" data-aos="fade-up" data-aos-delay="{{ forloop.index | minus: 1 | times: 100 }}">
+        <div class="news-card">
+          {% if post.header.teaser %}
+            <div class="news-image">
+              <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}">
+              <div class="news-date">
+                <span class="day">{{ post.date | date: "%d" }}</span>
+                <span class="month">{{ post.date | date: "%b" }}</span>
+              </div>
+            </div>
+          {% else %}
+            <div class="news-date standalone">
+              <span class="day">{{ post.date | date: "%d" }}</span>
+              <span class="month">{{ post.date | date: "%b" }}</span>
+            </div>
+          {% endif %}
+          
+          <div class="news-content">
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            
+            {% if post.categories[0] %}
+              <div class="news-category">
+                <span><i class="fas fa-tag"></i> {{ post.categories[0] | capitalize }}</span>
+              </div>
+            {% endif %}
+            
+            <div class="news-excerpt">
+              {{ post.excerpt | truncate: 120 }}
+            </div>
+            
+            <a href="{{ post.url | relative_url }}" class="news-read-more">
+              Read Full Story
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div class="view-all-container">
+    <a href="{{ site.baseurl }}/news/" class="view-all-button" data-aos="fade-up">
+      View All News
+      <i class="fas fa-long-arrow-alt-right"></i>
+    </a>
+  </div>
+</section>
+
+<!-- Team section with hover effects -->
+<section class="team-section">
+  <div class="team-bg-pattern"></div>
+  
+  <div class="section-intro dark">
+    <h2 class="section-title">Our <span class="highlight">Team</span></h2>
+    <p class="section-description">Meet the researchers driving innovation in AI</p>
+  </div>
+  
+  <div class="team-cards">
+    {% assign faculty = site.team | where: "position", "faculty" %}
+    {% for member in faculty limit:3 %}
+      <div class="team-card-wrapper" data-aos="flip-left" data-aos-delay="{{ forloop.index | minus: 1 | times: 100 }}">
+        <div class="team-card">
+          <div class="team-card-front">
+            {% if member.avatar %}
+              <img src="{{ member.avatar | relative_url }}" alt="{{ member.name }}" class="team-photo">
+            {% else %}
+              <div class="team-photo-placeholder">
+                <i class="fas fa-user"></i>
+              </div>
+            {% endif %}
+            <h3 class="team-name">{{ member.name }}</h3>
+            <p class="team-title">{{ member.title }}</p>
+          </div>
+          
+          <div class="team-card-back">
+            <h3 class="team-name">{{ member.name }}</h3>
+            <p class="team-bio">{{ member.bio | truncate: 150 }}</p>
+            
+            <div class="team-social">
+              {% if member.email %}
+                <a href="mailto:{{ member.email }}" class="social-icon">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              {% endif %}
+              
+              {% if member.github %}
+                <a href="{{ member.github }}" target="_blank" class="social-icon">
+                  <i class="fab fa-github"></i>
+                </a>
+              {% endif %}
+              
+              {% if member.linkedin %}
+                <a href="{{ member.linkedin }}" target="_blank" class="social-icon">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              {% endif %}
+              
+              {% if member.twitter %}
+                <a href="{{ member.twitter }}" target="_blank" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              {% endif %}
+            </div>
+            
+            <a href="{{ member.url | relative_url }}" class="view-profile">
+              View Full Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div class="view-all-container">
+    <a href="{{ site.baseurl }}/team/" class="view-all-button" data-aos="fade-up">
+      Meet Our Full Team
+      <i class="fas fa-long-arrow-alt-right"></i>
+    </a>
+  </div>
+</section>
+
+<!-- Impact statistics with animated counters -->
+<section class="impact-section">
+  <div class="section-intro">
+    <h2 class="section-title">Research <span class="highlight">Impact</span></h2>
+    <p class="section-description">Our contributions to advancing the scientific community</p>
+  </div>
+  
+  <div class="stats-container">
+    <div class="stat-card" data-aos="zoom-in">
+      <div class="stat-icon">
+        <i class="fas fa-file-alt"></i>
+      </div>
+      <div class="stat-counter">
+        <span class="count" data-target="50">0</span>
+      </div>
+      <h3 class="stat-title">Publications</h3>
+      <p class="stat-description">Scientific papers in top-tier journals and conferences</p>
+    </div>
+    
+    <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+      <div class="stat-icon">
+        <i class="fas fa-project-diagram"></i>
+      </div>
+      <div class="stat-counter">
+        <span class="count" data-target="15">0</span>
+      </div>
+      <h3 class="stat-title">Research Projects</h3>
+      <p class="stat-description">Active innovative research initiatives</p>
+    </div>
+    
+    <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="stat-icon">
+        <i class="fas fa-handshake"></i>
+      </div>
+      <div class="stat-counter">
+        <span class="count" data-target="25">0</span>
+      </div>
+      <h3 class="stat-title">Collaborations</h3>
+      <p class="stat-description">Partnerships with industry and academia</p>
+    </div>
+    
+    <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+      <div class="stat-icon">
+        <i class="fas fa-award"></i>
+      </div>
+      <div class="stat-counter">
+        <span class="count" data-target="10">0</span>
+      </div>
+      <h3 class="stat-title">Awards</h3>
+      <p class="stat-description">Recognition for our research excellence</p>
+    </div>
+  </div>
+</section>
+
+<!-- Call to action section -->
+<section class="cta-section">
+  <div class="cta-container">
+    <div class="cta-content" data-aos="fade-right">
+      <h2 class="cta-title">Interested in <span class="highlight">Joining Our Lab?</span></h2>
+      <p class="cta-description">We are always looking for talented and passionate researchers to join our team.</p>
+      <a href="{{ site.baseurl }}/join/" class="cta-button primary">View Opportunities</a>
+    </div>
+    
+    <div class="cta-image" data-aos="fade-left">
+      <div class="image-wrapper">
+        <img src="{{ site.baseurl }}/assets/images/research-vision.jpg" alt="Join our research team">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Custom JavaScript -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Parallax effect for hero section
+    window.addEventListener('scroll', function() {
+      const parallax = document.querySelector('.parallax-background');
+      if (parallax) {
+        let scrollPosition = window.pageYOffset;
+        parallax.style.transform = 'translateY(' + scrollPosition * 0.4 + 'px)';
+      }
+    });
+    
+    // Animated counters for stats
+    const counterElements = document.querySelectorAll('.count');
+    
+    function startCountUp() {
+      counterElements.forEach(counter => {
+        const target = parseInt(counter.dataset.target);
+        const duration = 2000; // ms
+        const stepTime = 50; // ms
+        const steps = duration / stepTime;
+        const increment = target / steps;
+        
+        let current = 0;
+        const timer = setInterval(() => {
+          current += increment;
+          counter.textContent = Math.floor(current);
+          
+          if (Math.floor(current) >= target) {
+            counter.textContent = target;
+            clearInterval(timer);
+          }
+        }, stepTime);
+      });
+    }
+    
+    // Use Intersection Observer for counter animation
+    const statsSection = document.querySelector('.impact-section');
+    if (statsSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startCountUp();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      observer.observe(statsSection);
+    }
+  });
+</script>
