@@ -501,11 +501,9 @@ window.addEventListener('load', function() {
             </li><li class="masthead__menu-item">
               <a href="/publications/">Publications</a>
             </li><li class="masthead__menu-item">
-              <a href="">News</a>
+              <a href="/news/">News</a>
             </li><li class="masthead__menu-item">
-              <a href="">Join Us</a>
-            </li><li class="masthead__menu-item">
-              <a href="">Contact</a>
+              <a href="/contact/">Contact & Join Us</a>
             </li></ul>
         
         <!-- Mobile navigation - hidden by default, shown when toggle is clicked -->
@@ -519,21 +517,14 @@ window.addEventListener('load', function() {
               </li><li class="masthead__menu-item">
                 <a href="/publications/">Publications</a>
               </li><li class="masthead__menu-item">
-                <a href="">News</a>
+                <a href="/news/">News</a>
               </li><li class="masthead__menu-item">
-                <a href="">Join Us</a>
-              </li><li class="masthead__menu-item">
-                <a href="">Contact</a>
+                <a href="/contact/">Contact & Join Us</a>
               </li></ul>
         </div>
         
-        <!-- Original greedy nav components - now hidden -->
-        <button class="greedy-nav__toggle hidden" type="button" aria-controls="primary-menu" aria-expanded="false">
-          <span class="visually-hidden">Toggle menu</span>
-          <div class="navicon"></div>
-        </button>
-        
-        <button class="mobile-menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
+        <!-- Original greedy nav components - now hidden but preserved for compatibility -->
+        <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
         </button>
@@ -541,7 +532,6 @@ window.addEventListener('load', function() {
       </nav>
     </div>
   </div>
-
 </div>
 
 <script>
@@ -549,9 +539,12 @@ window.addEventListener('load', function() {
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     
+    if (!mobileToggle || !mobileMenu) return;
+    
     // Toggle mobile menu
     mobileToggle.addEventListener('click', function(event) {
       event.stopPropagation();
+      event.preventDefault();
       const expanded = this.getAttribute('aria-expanded') === 'true';
       this.setAttribute('aria-expanded', !expanded);
       mobileMenu.classList.toggle('hidden');
@@ -560,7 +553,10 @@ window.addEventListener('load', function() {
     
     // Close menu when clicking outside
     document.addEventListener('click', function(event) {
-      if (!mobileMenu.contains(event.target) && !mobileToggle.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+      if (mobileMenu && mobileToggle && 
+          !mobileMenu.contains(event.target) && 
+          !mobileToggle.contains(event.target) && 
+          !mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.add('hidden');
         mobileToggle.setAttribute('aria-expanded', 'false');
         mobileToggle.classList.remove('is-active');
@@ -579,7 +575,7 @@ window.addEventListener('load', function() {
     
     // Handle window resize events to hide mobile menu on large screens
     window.addEventListener('resize', function() {
-      if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+      if (window.innerWidth >= 768 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.add('hidden');
         mobileToggle.setAttribute('aria-expanded', 'false');
         mobileToggle.classList.remove('is-active');
@@ -617,6 +613,7 @@ window.addEventListener('load', function() {
       outline: none;
       float: right;
       margin-left: auto;
+      z-index: 20;
     }
     .mobile-menu-toggle .navicon {
       background: #333;
@@ -660,7 +657,7 @@ window.addEventListener('load', function() {
       left: 0;
       background: #fff;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      z-index: 100;
+      z-index: 10;
       opacity: 1;
       transform-origin: top center;
       transition: all 0.2s ease-out;
@@ -668,8 +665,8 @@ window.addEventListener('load', function() {
     .mobile-menu.hidden {
       opacity: 0;
       transform: scaleY(0);
-      display: block !important;
       visibility: hidden;
+      pointer-events: none;
     }
     .mobile-links {
       list-style: none;
@@ -705,6 +702,8 @@ window.addEventListener('load', function() {
   .greedy-nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    position: relative;
   }
 </style>
 
