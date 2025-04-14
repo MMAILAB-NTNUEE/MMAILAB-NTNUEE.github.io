@@ -1,6 +1,6 @@
 ---
 title: "Lab Members"
-layout: single
+layout: splash
 permalink: /member/
 classes:
   - wide
