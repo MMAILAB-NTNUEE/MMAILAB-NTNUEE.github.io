@@ -1,13 +1,13 @@
 main:
-  - title: "Professor"
-    url: /professor/
-  - title: "Members"
-    url: /member/
-  - title: "Publications"
-    url: /publications/
   - title: "Research"
-    url: /research/
+    # url: /research/
+  - title: "Publications"
+    # url: /publications/
+  - title: "Members"
+    # url: /member/
   - title: "News"
-    url: /news/
-  - title: "Contact & Join Us"
-    url: /contact/
+    # url: /news/
+  - title: "Join Us"
+    # url: /join/
+  - title: "Contact"
+    # url: /contact/

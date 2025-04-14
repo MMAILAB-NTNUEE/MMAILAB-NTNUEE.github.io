@@ -1,6 +1,6 @@
 ---
 title: "News"
-layout: splash
+layout: single
 permalink: /news/
 classes:
   - wide
