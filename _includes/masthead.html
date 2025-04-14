@@ -34,13 +34,8 @@
           </ul>
         </div>
         
-        <!-- Original greedy nav components - now hidden -->
-        <button class="greedy-nav__toggle hidden" type="button" aria-controls="primary-menu" aria-expanded="false">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
-          <div class="navicon"></div>
-        </button>
-        
-        <button class="mobile-menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
+        <!-- Original greedy nav components - now hidden but preserved for compatibility -->
+        <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
           <div class="navicon"></div>
         </button>
@@ -48,7 +43,6 @@
       </nav>
     </div>
   </div>
-
 </div>
 
 <script>
@@ -56,9 +50,12 @@
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     
+    if (!mobileToggle || !mobileMenu) return;
+    
     // Toggle mobile menu
     mobileToggle.addEventListener('click', function(event) {
       event.stopPropagation();
+      event.preventDefault();
       const expanded = this.getAttribute('aria-expanded') === 'true';
       this.setAttribute('aria-expanded', !expanded);
       mobileMenu.classList.toggle('hidden');
@@ -67,7 +64,10 @@
     
     // Close menu when clicking outside
     document.addEventListener('click', function(event) {
-      if (!mobileMenu.contains(event.target) && !mobileToggle.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+      if (mobileMenu && mobileToggle && 
+          !mobileMenu.contains(event.target) && 
+          !mobileToggle.contains(event.target) && 
+          !mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.add('hidden');
         mobileToggle.setAttribute('aria-expanded', 'false');
         mobileToggle.classList.remove('is-active');
@@ -86,7 +86,7 @@
     
     // Handle window resize events to hide mobile menu on large screens
     window.addEventListener('resize', function() {
-      if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+      if (window.innerWidth >= 768 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.add('hidden');
         mobileToggle.setAttribute('aria-expanded', 'false');
         mobileToggle.classList.remove('is-active');
@@ -124,6 +124,7 @@
       outline: none;
       float: right;
       margin-left: auto;
+      z-index: 20;
     }
     .mobile-menu-toggle .navicon {
       background: #333;
@@ -167,7 +168,7 @@
       left: 0;
       background: #fff;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      z-index: 100;
+      z-index: 10;
       opacity: 1;
       transform-origin: top center;
       transition: all 0.2s ease-out;
@@ -175,8 +176,8 @@
     .mobile-menu.hidden {
       opacity: 0;
       transform: scaleY(0);
-      display: block !important;
       visibility: hidden;
+      pointer-events: none;
     }
     .mobile-links {
       list-style: none;
@@ -212,5 +213,7 @@
   .greedy-nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    position: relative;
   }
 </style>
