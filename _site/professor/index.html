@@ -485,6 +485,7 @@ window.addEventListener('load', function() {
           <a class="site-logo" href="/"><img src="/assets/images/mailab-logo.png" alt="MAI Lab"></a>
         
         
+<<<<<<< HEAD
         <!-- Mobile toggle button - only visible on small screens -->
         <button class="mobile-menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false">
           <span class="visually-hidden">Toggle menu</span>
@@ -492,20 +493,30 @@ window.addEventListener('load', function() {
         </button>
         
         <!-- Desktop navigation - only visible on large screens -->
+=======
+>>>>>>> 4dde86a17542b0f79a78d7867e3acf0f63686fa5
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/professor/">Professor</a>
             </li><li class="masthead__menu-item">
               <a href="/member/">Members</a>
             </li><li class="masthead__menu-item">
+<<<<<<< HEAD
               <a href="/research/">Research</a>
             </li><li class="masthead__menu-item">
               <a href="/publications/">Publications</a>
             </li><li class="masthead__menu-item">
+=======
+              <a href="/publications/">Publications</a>
+            </li><li class="masthead__menu-item">
+              <a href="/research/">Research</a>
+            </li><li class="masthead__menu-item">
+>>>>>>> 4dde86a17542b0f79a78d7867e3acf0f63686fa5
               <a href="/news/">News</a>
             </li><li class="masthead__menu-item">
               <a href="/contact/">Contact & Join Us</a>
             </li></ul>
         
+<<<<<<< HEAD
         <!-- Mobile navigation - hidden by default, shown when toggle is clicked -->
         <div id="mobile-menu" class="mobile-menu hidden">
           <ul class="mobile-links"><li class="masthead__menu-item">
@@ -529,11 +540,31 @@ window.addEventListener('load', function() {
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
+=======
+        
+        
+        <button class="search__toggle" type="button" aria-label="Search" aria-expanded="false">
+          <span class="visually-hidden">Search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="mobile-menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        
+        <ul class="hidden-links hidden" id="primary-menu"></ul>
+>>>>>>> 4dde86a17542b0f79a78d7867e3acf0f63686fa5
       </nav>
     </div>
   </div>
 </div>
 
+<<<<<<< HEAD
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
@@ -698,6 +729,284 @@ window.addEventListener('load', function() {
   }
 </style>
 
+=======
+<style>
+  /* Mobile menu toggle styles */
+  .mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    z-index: 20;
+  }
+  
+  .hamburger-icon {
+    width: 28px;
+    height: 20px;
+    position: relative;
+    margin: 0 auto;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+  }
+  
+  .hamburger-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #333;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .dark-mode .hamburger-icon span {
+    background: #fff;
+  }
+  
+  .hamburger-icon span:nth-child(1) {
+    top: 0px;
+  }
+  
+  .hamburger-icon span:nth-child(2) {
+    top: 9px;
+  }
+  
+  .hamburger-icon span:nth-child(3) {
+    top: 18px;
+  }
+  
+  .mobile-menu-open .hamburger-icon span:nth-child(1) {
+    top: 9px;
+    transform: rotate(135deg);
+  }
+  
+  .mobile-menu-open .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+  
+  .mobile-menu-open .hamburger-icon span:nth-child(3) {
+    top: 9px;
+    transform: rotate(-135deg);
+  }
+  
+  /* Mobile dropdown menu */
+  .mobile-dropdown {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 15;
+    padding: 80px 20px 20px;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .dark-mode .mobile-dropdown {
+    background-color: #222;
+  }
+  
+  .mobile-dropdown.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .mobile-dropdown-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mobile-dropdown-links li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .mobile-dropdown-links a {
+    display: block;
+    padding: 12px 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .dark-mode .mobile-dropdown-links a {
+    color: #fff;
+  }
+  
+  .mobile-dropdown-links a:hover, 
+  .mobile-dropdown-links a:focus {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .dark-mode .mobile-dropdown-links a:hover,
+  .dark-mode .mobile-dropdown-links a:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Language switcher in mobile menu */
+  .mobile-dropdown .language-switcher-mobile {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark-mode .mobile-dropdown .language-switcher-mobile {
+    border-top-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-dropdown .language-title {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #105E96;
+  }
+  
+  .dark-mode .mobile-dropdown .language-title {
+    color: #17A589;
+  }
+  
+  .mobile-dropdown .language-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .mobile-dropdown .language-option {
+    padding: 8px 15px;
+    background-color: rgba(16, 94, 150, 0.1);
+    color: #105E96;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .dark-mode .mobile-dropdown .language-option {
+    background-color: rgba(23, 165, 137, 0.1);
+    color: #17A589;
+  }
+  
+  .mobile-dropdown .language-option:hover {
+    background-color: rgba(16, 94, 150, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  .dark-mode .mobile-dropdown .language-option:hover {
+    background-color: rgba(23, 165, 137, 0.15);
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .mobile-menu-toggle {
+      display: block;
+    }
+    
+    .greedy-nav .visible-links {
+      display: none;
+    }
+    
+    .greedy-nav .language-switcher {
+      display: none;
+    }
+  }
+</style>
+
+<!-- Mobile dropdown menu template -->
+<div class="mobile-dropdown">
+  <ul class="mobile-dropdown-links"><li>
+        <a href="/professor/">Professor</a>
+      </li><li>
+        <a href="/member/">Members</a>
+      </li><li>
+        <a href="/publications/">Publications</a>
+      </li><li>
+        <a href="/research/">Research</a>
+      </li><li>
+        <a href="/news/">News</a>
+      </li><li>
+        <a href="/contact/">Contact & Join Us</a>
+      </li></ul>
+  
+  
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileDropdown = document.querySelector('.mobile-dropdown');
+    const siteNav = document.getElementById('site-nav');
+    const body = document.body;
+    
+    if (mobileMenuToggle && mobileDropdown) {
+      mobileMenuToggle.addEventListener('click', function() {
+        siteNav.classList.toggle('mobile-menu-open');
+        mobileDropdown.classList.toggle('active');
+        body.classList.toggle('menu-is-open');
+        
+        // Toggle aria-expanded
+        const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true' || false;
+        mobileMenuToggle.setAttribute('aria-expanded', !expanded);
+        
+        // Prevent scrolling when menu is open
+        if (body.classList.contains('menu-is-open')) {
+          body.style.overflow = 'hidden';
+        } else {
+          body.style.overflow = '';
+        }
+      });
+      
+      // Close mobile menu when clicking on a menu item
+      const mobileLinks = mobileDropdown.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          siteNav.classList.remove('mobile-menu-open');
+          mobileDropdown.classList.remove('active');
+          body.classList.remove('menu-is-open');
+          body.style.overflow = '';
+          mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!mobileDropdown.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+          if (mobileDropdown.classList.contains('active')) {
+            siteNav.classList.remove('mobile-menu-open');
+            mobileDropdown.classList.remove('active');
+            body.classList.remove('menu-is-open');
+            body.style.overflow = '';
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+      
+      // Handle escape key to close mobile menu
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && mobileDropdown.classList.contains('active')) {
+          siteNav.classList.remove('mobile-menu-open');
+          mobileDropdown.classList.remove('active');
+          body.classList.remove('menu-is-open');
+          body.style.overflow = '';
+          mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  });
+</script>
+
+>>>>>>> 4dde86a17542b0f79a78d7867e3acf0f63686fa5
     <div class="initial-content">
       
   
@@ -1087,11 +1396,22 @@ window.addEventListener('load', function() {
 </style>
 
 <div class="professor-page">
+<<<<<<< HEAD
+=======
+  <div class="page-heading">
+    <h1>Lab Director &amp; Faculty</h1>
+  </div>
+  
+  <div class="page-intro">
+    Our laboratory is led by distinguished faculty members who are internationally recognized for their contributions to the fields of multimedia analysis, computer vision, and artificial intelligence. Their pioneering research, mentorship, and collaborations drive our lab's mission to advance the frontiers of AI research.
+  </div>
+>>>>>>> 4dde86a17542b0f79a78d7867e3acf0f63686fa5
   
   <div class="professor-container">
     <!-- Professor 1 -->
     <div class="professor-profile">
       <div class="professor-image">
+<<<<<<< HEAD
         <img src="/assets/images/professor.png" />
       </div>
       
@@ -1194,6 +1514,172 @@ window.addEventListener('load', function() {
         </div>
           </div>
         </div>
+=======
+        <img src="/assets/images/professor1.jpg" alt="Professor Jane Chen" />
+      </div>
+      
+      <div class="professor-details">
+        <h2 class="professor-name">Prof. Jane Chen, Ph.D.</h2>
+        <p class="professor-title">Lab Director &amp; Professor, Department of Electrical Engineering</p>
+        
+        <div class="professor-bio">
+          <p>Prof. Jane Chen is the founder and director of the Multimedia and Artificial Intelligence Laboratory (MAILAB) at National Taiwan Normal University. She received her Ph.D. in Computer Science from Stanford University in 2010 and has since established herself as a leading researcher in computer vision and deep learning applications.</p>
+          
+          <p>Her research addresses fundamental challenges in visual understanding, medical image analysis, and neural network architectures. Prof. Chen has published over 100 papers in top-tier conferences and journals including CVPR, ICCV, NeurIPS, and IEEE Transactions on Pattern Analysis and Machine Intelligence.</p>
+          
+          <p>Before joining NTNU, she was a research scientist at Google Research, where she worked on large-scale visual recognition systems. She is currently serving as an Associate Editor for the IEEE Transactions on Pattern Analysis and Machine Intelligence and regularly serves on the program committees of major AI conferences.</p>
+        </div>
+        
+        <div class="professor-stats">
+          <div class="stat-item">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Publications</div>
+          </div>
+          
+          <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Ph.D. Students Advised</div>
+          </div>
+          
+          <div class="stat-item">
+            <div class="stat-number">8000+</div>
+            <div class="stat-label">Citations</div>
+          </div>
+          
+          <div class="stat-item">
+            <div class="stat-number">12</div>
+            <div class="stat-label">Patents</div>
+          </div>
+        </div>
+        
+        <h3 class="section-title">Research Interests</h3>
+        <div class="interests-tags">
+          <span class="interest-tag">Computer Vision</span>
+          <span class="interest-tag">Deep Learning</span>
+          <span class="interest-tag">Medical Image Analysis</span>
+          <span class="interest-tag">Visual Understanding</span>
+          <span class="interest-tag">Neural Networks</span>
+          <span class="interest-tag">Multimodal Learning</span>
+        </div>
+        
+        <h3 class="section-title">Education</h3>
+        <div class="education-list">
+          <div class="education-item">
+            <div class="education-degree">Ph.D. in Computer Science</div>
+            <div class="education-university">Stanford University</div>
+            <div class="education-year">2010</div>
+          </div>
+          
+          <div class="education-item">
+            <div class="education-degree">M.S. in Electrical Engineering</div>
+            <div class="education-university">Massachusetts Institute of Technology</div>
+            <div class="education-year">2005</div>
+          </div>
+          
+          <div class="education-item">
+            <div class="education-degree">B.S. in Computer Science</div>
+            <div class="education-university">National Taiwan University</div>
+            <div class="education-year">2003</div>
+          </div>
+        </div>
+        
+        <h3 class="section-title">Selected Awards &amp; Honors</h3>
+        <div class="awards-list">
+          <div class="award-item">
+            <div class="award-icon"><i class="fas fa-award"></i></div>
+            <div class="award-content">
+              <div class="award-name">Outstanding Research Award</div>
+              <div class="award-org">Ministry of Science and Technology, Taiwan</div>
+              <div class="award-year">2023</div>
+            </div>
+          </div>
+          
+          <div class="award-item">
+            <div class="award-icon"><i class="fas fa-award"></i></div>
+            <div class="award-content">
+              <div class="award-name">Best Paper Award</div>
+              <div class="award-org">IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</div>
+              <div class="award-year">2022</div>
+            </div>
+          </div>
+          
+          <div class="award-item">
+            <div class="award-icon"><i class="fas fa-award"></i></div>
+            <div class="award-content">
+              <div class="award-name">NTNU Excellence in Teaching Award</div>
+              <div class="award-org">National Taiwan Normal University</div>
+              <div class="award-year">2020</div>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="section-title">Selected Publications</h3>
+        <div class="publications-highlight">
+          <div class="publication-item">
+            <div class="publication-title">Dual-Path Transformer for Medical Image Segmentation with Incomplete Annotations</div>
+            <div class="publication-authors">J. Chen, A. Johnson, D. Lee, M. Wang</div>
+            <div class="publication-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</div>
+            <div class="publication-year">2025</div>
+          </div>
+          
+          <div class="publication-item">
+            <div class="publication-title">Understanding Long-Range Dependencies in Multi-Modal Vision-Language Models</div>
+            <div class="publication-authors">J. Chen, R. Zhang, K. Liu, S. Kim</div>
+            <div class="publication-venue">Neural Information Processing Systems (NeurIPS)</div>
+            <div class="publication-year">2024</div>
+          </div>
+          
+          <div class="publication-item">
+            <div class="publication-title">Efficient Neural Architectures for Edge-Based Visual Recognition</div>
+            <div class="publication-authors">J. Chen, S. Kim, L. Huang</div>
+            <div class="publication-venue">International Conference on Computer Vision (ICCV)</div>
+            <div class="publication-year">2023</div>
+          </div>
+        </div>
+        
+        <a href="/publications" class="all-publications-link">View all publications <i class="fas fa-long-arrow-alt-right"></i></a>
+        
+        <h3 class="section-title">Current Teaching</h3>
+        <div class="teaching-list">
+          <div class="teaching-item">
+            <div class="teaching-course">Advanced Computer Vision</div>
+            <div class="teaching-code">EE7015</div>
+            <div class="teaching-sem">Spring 2025</div>
+          </div>
+          
+          <div class="teaching-item">
+            <div class="teaching-course">Deep Learning for Visual Recognition</div>
+            <div class="teaching-code">EE6530</div>
+            <div class="teaching-sem">Fall 2024</div>
+          </div>
+          
+          <div class="teaching-item">
+            <div class="teaching-course">Research Methods in AI</div>
+            <div class="teaching-code">EE8020</div>
+            <div class="teaching-sem">Fall 2024 (Graduate Seminar)</div>
+          </div>
+        </div>
+        
+        <h3 class="section-title">Contact</h3>
+        <div class="contact-links">
+          <a href="mailto:jane.chen@ntnu.edu.tw" class="contact-link">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+          <a href="https://scholar.google.com/citations?user=EXAMPLE" target="_blank" class="contact-link">
+            <i class="fas fa-graduation-cap"></i> Google Scholar
+          </a>
+          <a href="#" target="_blank" class="contact-link">
+            <i class="fas fa-globe"></i> Personal Website
+          </a>
+          <a href="#" target="_blank" class="contact-link">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    
+>>>>>>> 4dde86a17542b0f79a78d7867e3acf0f63686fa5
   </div>
 </div>
 
