@@ -6,8 +6,6 @@
       <nav id="site-nav" class="greedy-nav">
         {% unless logo_path == empty %}
           <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.abbreviation }}"></a>
-        {% else %}
-          <a class="site-title" href="{{ '/' | relative_url }}">{{ site.abbreviation }}</a>
         {% endunless %}
         
         <!-- Mobile toggle button - only visible on small screens -->
@@ -25,6 +23,7 @@
           {%- endfor -%}
         </ul>
         
+<<<<<<< HEAD
         <!-- Mobile navigation - hidden by default, shown when toggle is clicked -->
         <div id="mobile-menu" class="mobile-menu hidden">
           <ul class="mobile-links">
@@ -43,18 +42,17 @@
         </button>
         
         <button class="mobile-menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
+=======
+        <button class="greedy-nav__toggle hidden" type="button">
+>>>>>>> be38631095b451c069839098850fffaf6dc49c1b
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
-          <div class="hamburger-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <div class="navicon"></div>
         </button>
-        
-        <ul class="hidden-links hidden" id="primary-menu"></ul>
+        <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
+<<<<<<< HEAD
 </div>
 
 <<<<<<< HEAD
@@ -503,3 +501,6 @@
   });
 </script>
 >>>>>>> 4dde86a17542b0f79a78d7867e3acf0f63686fa5
+=======
+</div>
+>>>>>>> be38631095b451c069839098850fffaf6dc49c1b

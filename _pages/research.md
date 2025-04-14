@@ -1,13 +1,13 @@
 ---
 title: "Our Research"
-layout: splash
+layout: single
 permalink: /research/
 classes:
   - wide
 header:
   overlay_image: /assets/images/research-vision.jpg
   overlay_filter: 0.4
-#   caption: "Advancing the frontiers of machine learning and artificial intelligence"
+  caption: "Advancing the frontiers of machine learning and artificial intelligence"
 ---
 
 <div class="hero-section" style="text-align: center; margin-bottom: 3rem;">

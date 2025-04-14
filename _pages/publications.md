@@ -1,6 +1,6 @@
 ---
 title: "Publications"
-layout: splash
+layout: single
 permalink: /publications/
 classes:
   - wide
