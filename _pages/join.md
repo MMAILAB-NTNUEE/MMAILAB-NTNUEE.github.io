@@ -1,6 +1,6 @@
 ---
 title: "Join Our Lab"
-layout: single
+layout: splash
 permalink: /join/
 classes:
   - wide

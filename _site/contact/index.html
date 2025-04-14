@@ -9,7 +9,7 @@
 <meta name="author" content="MAILAB NTNU">
 
 <!-- Open Graph meta tags -->
-<meta property="og:title" content="Contact Us">
+<meta property="og:title" content="Contact &amp; Join Us">
 <meta property="og:description" content="MAILAB at National Taiwan Normal University conducts cutting-edge research in multimedia analysis, artificial intelligence, and machine learning with applica...">
 <meta property="og:image" content="http://localhost:4000/assets/images/mailab-logo.png">
 <meta property="og:url" content="http://localhost:4000/contact/">
@@ -20,7 +20,7 @@
 
 <!-- Twitter Card meta tags -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact Us">
+<meta name="twitter:title" content="Contact &amp; Join Us">
 <meta name="twitter:description" content="MAILAB at National Taiwan Normal University conducts cutting-edge research in multimedia analysis, artificial intelligence, and machine learning with applica...">
 <meta name="twitter:image" content="http://localhost:4000/assets/images/mailab-logo.png">
 
@@ -334,7 +334,7 @@ if ('serviceWorker' in navigator) {
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en">
     <meta property="og:site_name" content="Multimedia and Artificial Intelligence Laboratory">
-    <meta property="og:title" content="Contact Us">
+    <meta property="og:title" content="Contact &amp; Join Us">
     <meta property="og:description" content="MAILAB at National Taiwan Normal University conducts cutting-edge research in multimedia analysis, artificial intelligence, and machine learning with applica...">
     
     
@@ -363,7 +363,7 @@ if ('serviceWorker' in navigator) {
     </script>
   </head>
 
-  <body class="layout--single wide">
+  <body class="layout--splash wide">
     <div id="loader" class="loader-wrapper">
   <div class="loader">
     <div class="loader-inner"></div>
@@ -484,21 +484,47 @@ window.addEventListener('load', function() {
         
           <a class="site-logo" href="/"><img src="/assets/images/mailab-logo.png" alt="MAI Lab"></a>
         
+        
+        <!-- Mobile toggle button - only visible on small screens -->
+        <button class="mobile-menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        
+        <!-- Desktop navigation - only visible on large screens -->
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="">Research</a>
+              <a href="/professor/">Professor</a>
             </li><li class="masthead__menu-item">
-              <a href="">Publications</a>
+              <a href="/member/">Members</a>
             </li><li class="masthead__menu-item">
-              <a href="">Members</a>
+              <a href="/research/">Research</a>
             </li><li class="masthead__menu-item">
-              <a href="">News</a>
+              <a href="/publications/">Publications</a>
             </li><li class="masthead__menu-item">
-              <a href="">Join Us</a>
+              <a href="/news/">News</a>
             </li><li class="masthead__menu-item">
-              <a href="">Contact</a>
+              <a href="/contact/">Contact & Join Us</a>
             </li></ul>
         
-        <button class="greedy-nav__toggle hidden" type="button">
+        <!-- Mobile navigation - hidden by default, shown when toggle is clicked -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+          <ul class="mobile-links"><li class="masthead__menu-item">
+                <a href="/professor/">Professor</a>
+              </li><li class="masthead__menu-item">
+                <a href="/member/">Members</a>
+              </li><li class="masthead__menu-item">
+                <a href="/research/">Research</a>
+              </li><li class="masthead__menu-item">
+                <a href="/publications/">Publications</a>
+              </li><li class="masthead__menu-item">
+                <a href="/news/">News</a>
+              </li><li class="masthead__menu-item">
+                <a href="/contact/">Contact & Join Us</a>
+              </li></ul>
+        </div>
+        
+        <!-- Original greedy nav components - now hidden -->
+        <button class="greedy-nav__toggle hidden" type="button" aria-controls="primary-menu" aria-expanded="false">
           <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
         </button>
@@ -507,6 +533,170 @@ window.addEventListener('load', function() {
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    // Toggle mobile menu
+    mobileToggle.addEventListener('click', function(event) {
+      event.stopPropagation();
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      mobileMenu.classList.toggle('hidden');
+      this.classList.toggle('is-active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!mobileMenu.contains(event.target) && !mobileToggle.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.classList.remove('is-active');
+      }
+    });
+    
+    // Close menu when clicking a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.classList.remove('is-active');
+      });
+    });
+    
+    // Handle window resize events to hide mobile menu on large screens
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.classList.remove('is-active');
+      }
+    });
+  });
+</script>
+
+<style>
+  @media screen and (min-width: 768px) {
+    /* Large screens - show desktop nav, hide mobile elements */
+    .mobile-menu-toggle {
+      display: none !important;
+    }
+    .mobile-menu {
+      display: none !important;
+    }
+    .visible-links {
+      display: flex !important;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    /* Small screens - hide desktop nav, show mobile toggle */
+    .visible-links {
+      display: none !important;
+    }
+    .mobile-menu-toggle {
+      display: block;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      transition: all 0.3s ease;
+      outline: none;
+      float: right;
+      margin-left: auto;
+    }
+    .mobile-menu-toggle .navicon {
+      background: #333;
+      display: block;
+      position: relative;
+      width: 18px;
+      height: 2px;
+      transition: background 0.3s ease;
+    }
+    .mobile-menu-toggle .navicon:before,
+    .mobile-menu-toggle .navicon:after {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background: #333;
+      transition: all 0.3s ease;
+    }
+    .mobile-menu-toggle .navicon:before {
+      top: -6px;
+    }
+    .mobile-menu-toggle .navicon:after {
+      bottom: -6px;
+    }
+    .mobile-menu-toggle.is-active .navicon {
+      background: transparent;
+    }
+    .mobile-menu-toggle.is-active .navicon:before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+    .mobile-menu-toggle.is-active .navicon:after {
+      transform: rotate(45deg);
+      bottom: 0;
+    }
+    .mobile-menu {
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 100;
+      opacity: 1;
+      transform-origin: top center;
+      transition: all 0.2s ease-out;
+    }
+    .mobile-menu.hidden {
+      opacity: 0;
+      transform: scaleY(0);
+      display: block !important;
+      visibility: hidden;
+    }
+    .mobile-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .mobile-links li {
+      border-bottom: 1px solid #eee;
+    }
+    .mobile-links a {
+      display: block;
+      padding: 1rem;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .mobile-links a:hover,
+    .mobile-links a:focus {
+      background: #f5f5f5;
+    }
+    
+    /* Hide original greedy nav elements completely */
+    .greedy-nav__toggle, .hidden-links {
+      display: none !important;
+    }
+  }
+  
+  /* Fix for logo and toggle alignment */
+  .site-logo {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .greedy-nav {
+    display: flex;
+    align-items: center;
+  }
+</style>
 
     <div class="initial-content">
       
@@ -525,7 +715,7 @@ window.addEventListener('load', function() {
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Contact Us
+          Contact &amp; Join Us
 
         
       </h1>
@@ -542,24 +732,15 @@ window.addEventListener('load', function() {
 
 
 
-
-
 <div id="main" role="main">
-  
-
-
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Contact Us">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Contact &amp; Join Us">
     
     
     
 
-    <div class="page__inner-wrap">
-      
-
-      <section class="page__content" itemprop="text">
-        
-        <div class="feature-section">
+    <section class="page__content" itemprop="text">
+      <div class="feature-section">
   <div class="feature-container">
     <div class="section-heading">
       <h2>Get in Touch</h2>
@@ -594,6 +775,51 @@ window.addEventListener('load', function() {
 </div>
 
 <div class="feature-section grid-pattern">
+  <div class="feature-container">
+    <div class="section-heading">
+      <h2>Join Our Lab</h2>
+    </div>
+    
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+      We are always looking for talented and motivated individuals to join our research team. 
+      If you're interested in working with us, please review the opportunities below.
+    </p>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem;">
+      <div style="flex: 1; min-width: 250px; max-width: 350px; margin: 1rem; padding: 1.5rem; background-color: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+        <h3>PhD &amp; Master's Programs</h3>
+        <p>We offer opportunities for graduate students interested in computer vision, deep learning, and multimedia analysis. Students receive mentorship, access to computing resources, and opportunities to publish in top venues.</p>
+        <a href="https://www.ntnu.edu.tw/admission/foreign.html" target="_blank" class="btn btn--primary">Apply to NTNU</a>
+      </div>
+      
+      <div style="flex: 1; min-width: 250px; max-width: 350px; margin: 1rem; padding: 1.5rem; background-color: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+        <h3>Postdoctoral Positions</h3>
+        <p>We regularly have openings for postdoctoral researchers to lead projects, mentor students, and collaborate with international partners.</p>
+        <a href="mailto:mailab@ntnu.edu.tw" class="btn btn--primary">Contact Us</a>
+      </div>
+      
+      <div style="flex: 1; min-width: 250px; max-width: 350px; margin: 1rem; padding: 1.5rem; background-color: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+        <h3>Undergraduate Research</h3>
+        <p>NTNU undergraduates can gain research experience working on components of larger projects while receiving mentorship from graduate students and faculty.</p>
+        <a href="mailto:mailab@ntnu.edu.tw" class="btn btn--primary">Contact Us</a>
+      </div>
+    </div>
+    
+    <div style="max-width: 800px; margin: 0 auto; background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px;">
+      <h3 style="color: #1E5F74;">How to Apply</h3>
+      <p>If you're interested in joining our lab, please email us at <a href="mailto:mailab@ntnu.edu.tw">mailab@ntnu.edu.tw</a> with:</p>
+      <ul>
+        <li>Your CV/resume</li>
+        <li>Brief description of your research interests</li>
+        <li>Why you're interested in our lab specifically</li>
+        <li>For postdocs: Include a research statement and 1-2 representative publications</li>
+      </ul>
+      <p>We encourage you to review our <a href="/research/">research areas</a> and <a href="/publications/">publications</a> before applying.</p>
+    </div>
+  </div>
+</div>
+
+<div class="feature-section">
   <div class="feature-container">
     <div class="section-heading">
       <h2>Collaborations &amp; Partnerships</h2>
@@ -644,29 +870,8 @@ window.addEventListener('load', function() {
   </div>
 </div>
 
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-        
-
-
-      </footer>
-
-      
-
-      
-    </div>
-
-    
+    </section>
   </article>
-
-  
-  
 </div>
 
     </div>

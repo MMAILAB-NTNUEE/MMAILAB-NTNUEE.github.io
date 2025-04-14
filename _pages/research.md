@@ -1,6 +1,6 @@
 ---
 title: "Our Research"
-layout: single
+layout: splash
 permalink: /research/
 classes:
   - wide

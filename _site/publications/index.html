@@ -363,7 +363,7 @@ if ('serviceWorker' in navigator) {
     </script>
   </head>
 
-  <body class="layout--single wide">
+  <body class="layout--splash wide">
     <div id="loader" class="loader-wrapper">
   <div class="loader">
     <div class="loader-inner"></div>
@@ -484,21 +484,47 @@ window.addEventListener('load', function() {
         
           <a class="site-logo" href="/"><img src="/assets/images/mailab-logo.png" alt="MAI Lab"></a>
         
+        
+        <!-- Mobile toggle button - only visible on small screens -->
+        <button class="mobile-menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        
+        <!-- Desktop navigation - only visible on large screens -->
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="">Research</a>
+              <a href="/professor/">Professor</a>
             </li><li class="masthead__menu-item">
-              <a href="">Publications</a>
+              <a href="/member/">Members</a>
             </li><li class="masthead__menu-item">
-              <a href="">Members</a>
+              <a href="/research/">Research</a>
             </li><li class="masthead__menu-item">
-              <a href="">News</a>
+              <a href="/publications/">Publications</a>
             </li><li class="masthead__menu-item">
-              <a href="">Join Us</a>
+              <a href="/news/">News</a>
             </li><li class="masthead__menu-item">
-              <a href="">Contact</a>
+              <a href="/contact/">Contact & Join Us</a>
             </li></ul>
         
-        <button class="greedy-nav__toggle hidden" type="button">
+        <!-- Mobile navigation - hidden by default, shown when toggle is clicked -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+          <ul class="mobile-links"><li class="masthead__menu-item">
+                <a href="/professor/">Professor</a>
+              </li><li class="masthead__menu-item">
+                <a href="/member/">Members</a>
+              </li><li class="masthead__menu-item">
+                <a href="/research/">Research</a>
+              </li><li class="masthead__menu-item">
+                <a href="/publications/">Publications</a>
+              </li><li class="masthead__menu-item">
+                <a href="/news/">News</a>
+              </li><li class="masthead__menu-item">
+                <a href="/contact/">Contact & Join Us</a>
+              </li></ul>
+        </div>
+        
+        <!-- Original greedy nav components - now hidden -->
+        <button class="greedy-nav__toggle hidden" type="button" aria-controls="primary-menu" aria-expanded="false">
           <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
         </button>
@@ -507,6 +533,170 @@ window.addEventListener('load', function() {
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    // Toggle mobile menu
+    mobileToggle.addEventListener('click', function(event) {
+      event.stopPropagation();
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      mobileMenu.classList.toggle('hidden');
+      this.classList.toggle('is-active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!mobileMenu.contains(event.target) && !mobileToggle.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.classList.remove('is-active');
+      }
+    });
+    
+    // Close menu when clicking a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.classList.remove('is-active');
+      });
+    });
+    
+    // Handle window resize events to hide mobile menu on large screens
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.classList.remove('is-active');
+      }
+    });
+  });
+</script>
+
+<style>
+  @media screen and (min-width: 768px) {
+    /* Large screens - show desktop nav, hide mobile elements */
+    .mobile-menu-toggle {
+      display: none !important;
+    }
+    .mobile-menu {
+      display: none !important;
+    }
+    .visible-links {
+      display: flex !important;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    /* Small screens - hide desktop nav, show mobile toggle */
+    .visible-links {
+      display: none !important;
+    }
+    .mobile-menu-toggle {
+      display: block;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      transition: all 0.3s ease;
+      outline: none;
+      float: right;
+      margin-left: auto;
+    }
+    .mobile-menu-toggle .navicon {
+      background: #333;
+      display: block;
+      position: relative;
+      width: 18px;
+      height: 2px;
+      transition: background 0.3s ease;
+    }
+    .mobile-menu-toggle .navicon:before,
+    .mobile-menu-toggle .navicon:after {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background: #333;
+      transition: all 0.3s ease;
+    }
+    .mobile-menu-toggle .navicon:before {
+      top: -6px;
+    }
+    .mobile-menu-toggle .navicon:after {
+      bottom: -6px;
+    }
+    .mobile-menu-toggle.is-active .navicon {
+      background: transparent;
+    }
+    .mobile-menu-toggle.is-active .navicon:before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+    .mobile-menu-toggle.is-active .navicon:after {
+      transform: rotate(45deg);
+      bottom: 0;
+    }
+    .mobile-menu {
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 100;
+      opacity: 1;
+      transform-origin: top center;
+      transition: all 0.2s ease-out;
+    }
+    .mobile-menu.hidden {
+      opacity: 0;
+      transform: scaleY(0);
+      display: block !important;
+      visibility: hidden;
+    }
+    .mobile-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .mobile-links li {
+      border-bottom: 1px solid #eee;
+    }
+    .mobile-links a {
+      display: block;
+      padding: 1rem;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .mobile-links a:hover,
+    .mobile-links a:focus {
+      background: #f5f5f5;
+    }
+    
+    /* Hide original greedy nav elements completely */
+    .greedy-nav__toggle, .hidden-links {
+      display: none !important;
+    }
+  }
+  
+  /* Fix for logo and toggle alignment */
+  .site-logo {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .greedy-nav {
+    display: flex;
+    align-items: center;
+  }
+</style>
 
     <div class="initial-content">
       
@@ -545,24 +735,15 @@ window.addEventListener('load', function() {
 
 
 
-
-
 <div id="main" role="main">
-  
-
-
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Publications">
     
     
     
 
-    <div class="page__inner-wrap">
-      
-
-      <section class="page__content" itemprop="text">
-        
-        <div class="publications-container">
+    <section class="page__content" itemprop="text">
+      <div class="publications-container">
   <div class="publications-intro">
     <p>Our lab members publish in top-tier conferences and journals in computer vision, machine learning, and multimedia analysis.</p>
     
@@ -743,29 +924,8 @@ window.addEventListener('load', function() {
   </div>
 </div>
 
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-        
-
-
-      </footer>
-
-      
-
-      
-    </div>
-
-    
+    </section>
   </article>
-
-  
-  
 </div>
 
     </div>
