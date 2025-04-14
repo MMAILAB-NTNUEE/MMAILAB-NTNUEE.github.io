@@ -1,6 +1,6 @@
 ---
-title: "Contact Us"
-layout: single
+title: "Contact & Join Us"
+layout: splash
 permalink: /contact/
 classes:
   - wide
@@ -44,6 +44,51 @@ header:
 </div>
 
 <div class="feature-section grid-pattern">
+  <div class="feature-container">
+    <div class="section-heading">
+      <h2>Join Our Lab</h2>
+    </div>
+    
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+      We are always looking for talented and motivated individuals to join our research team. 
+      If you're interested in working with us, please review the opportunities below.
+    </p>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem;">
+      <div style="flex: 1; min-width: 250px; max-width: 350px; margin: 1rem; padding: 1.5rem; background-color: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+        <h3>PhD & Master's Programs</h3>
+        <p>We offer opportunities for graduate students interested in computer vision, deep learning, and multimedia analysis. Students receive mentorship, access to computing resources, and opportunities to publish in top venues.</p>
+        <a href="https://www.ntnu.edu.tw/admission/foreign.html" target="_blank" class="btn btn--primary">Apply to NTNU</a>
+      </div>
+      
+      <div style="flex: 1; min-width: 250px; max-width: 350px; margin: 1rem; padding: 1.5rem; background-color: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+        <h3>Postdoctoral Positions</h3>
+        <p>We regularly have openings for postdoctoral researchers to lead projects, mentor students, and collaborate with international partners.</p>
+        <a href="mailto:mailab@ntnu.edu.tw" class="btn btn--primary">Contact Us</a>
+      </div>
+      
+      <div style="flex: 1; min-width: 250px; max-width: 350px; margin: 1rem; padding: 1.5rem; background-color: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+        <h3>Undergraduate Research</h3>
+        <p>NTNU undergraduates can gain research experience working on components of larger projects while receiving mentorship from graduate students and faculty.</p>
+        <a href="mailto:mailab@ntnu.edu.tw" class="btn btn--primary">Contact Us</a>
+      </div>
+    </div>
+    
+    <div style="max-width: 800px; margin: 0 auto; background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px;">
+      <h3 style="color: #1E5F74;">How to Apply</h3>
+      <p>If you're interested in joining our lab, please email us at <a href="mailto:mailab@ntnu.edu.tw">mailab@ntnu.edu.tw</a> with:</p>
+      <ul>
+        <li>Your CV/resume</li>
+        <li>Brief description of your research interests</li>
+        <li>Why you're interested in our lab specifically</li>
+        <li>For postdocs: Include a research statement and 1-2 representative publications</li>
+      </ul>
+      <p>We encourage you to review our <a href="/research/">research areas</a> and <a href="/publications/">publications</a> before applying.</p>
+    </div>
+  </div>
+</div>
+
+<div class="feature-section">
   <div class="feature-container">
     <div class="section-heading">
       <h2>Collaborations & Partnerships</h2>
