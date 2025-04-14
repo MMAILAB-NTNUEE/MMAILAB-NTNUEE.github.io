@@ -1,10 +1,12 @@
 main:
-  - title: "Research"
-    # url: /research/
-  - title: "Publications"
-    # url: /publications/
+  - title: "Professor"
+    url: /professor/
   - title: "Members"
-    # url: /member/
+    url: /member/
+  - title: "Research"
+    url: /research/
+  - title: "Publications"
+    url: /publications/
   - title: "News"
     # url: /news/
   - title: "Join Us"
