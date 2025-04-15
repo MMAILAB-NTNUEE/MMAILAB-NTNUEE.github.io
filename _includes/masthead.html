@@ -4,9 +4,15 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        {% unless logo_path == empty %}
+        <!-- with icon snipet -->
+        <!-- {% unless logo_path == empty %}
           <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.abbreviation }}"></a>
-        {% endunless %}
+        {% else %}
+          <a class="site-title" href="{{ '/' | relative_url }}">{{ site.abbreviation }}</a>
+        {% endunless %} -->
+        
+        <!-- without icon snipet -->
+        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.abbreviation }}</a>
         
         <!-- Mobile toggle button - only visible on small screens -->
         <button class="mobile-menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false">

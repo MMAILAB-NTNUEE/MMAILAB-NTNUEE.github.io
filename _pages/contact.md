@@ -1,6 +1,6 @@
 ---
 title: "Contact Us"
-layout: single
+layout: splash
 permalink: /contact/
 classes:
   - wide
@@ -18,17 +18,17 @@ header:
     <div style="display: flex; flex-wrap: wrap; margin-bottom: 3rem;">
       <div style="flex: 1; min-width: 300px; padding: 1rem;">
         <h3 style="color: #1E5F74;"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Lab Location</h3>
-        <p>Room 501, Technology Building<br>
+        <p>4F, Technology Building<br>
         Department of Electrical Engineering<br>
         National Taiwan Normal University<br>
         162, Section 1, Heping East Road<br>
         Taipei 10610, Taiwan</p>
         
         <h3 style="color: #1E5F74; margin-top: 2rem;"><i class="fas fa-envelope" aria-hidden="true"></i> Email</h3>
-        <p><a href="mailto:mailab@ntnu.edu.tw">mailab@ntnu.edu.tw</a></p>
+        <p><a href="mailto:mailab@ntnu.edu.tw">lwkang@ntnu.edu.tw</a></p>
         
         <h3 style="color: #1E5F74; margin-top: 2rem;"><i class="fas fa-phone" aria-hidden="true"></i> Phone</h3>
-        <p>+886-2-7749-3535</p>
+        <p>(02)7749-3563</p>
         
         <h3 style="color: #1E5F74; margin-top: 2rem;"><i class="fas fa-clock" aria-hidden="true"></i> Office Hours</h3>
         <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
@@ -43,7 +43,7 @@ header:
   </div>
 </div>
 
-<div class="feature-section grid-pattern">
+<!-- <div class="feature-section grid-pattern">
   <div class="feature-container">
     <div class="section-heading">
       <h2>Collaborations & Partnerships</h2>
@@ -74,7 +74,7 @@ header:
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="feature-section">
   <div class="feature-container">
@@ -87,7 +87,7 @@ header:
       
       <div style="margin: 2rem 0; padding: 1.5rem; background-color: #f8f9fa; border-radius: 8px;">
         <h3 style="color: #1E5F74;">Directions from MRT (Taipei Metro)</h3>
-        <p>From <strong>Guting Station</strong> (Green Line): Take Exit 2 and walk east on Heping East Road for about 10 minutes to reach the NTNU campus.</p>
+        <p>From <strong>Guting Station</strong> (Green Line): Take Exit 5 and walk east on Heping East Road for about 10 minutes to reach the NTNU campus.</p>
         <p>From <strong>Technology Building Station</strong> (Brown Line): Take Exit 3 and walk south for about a 5-minute walk to reach the NTNU campus.</p>
       </div>
     </div>

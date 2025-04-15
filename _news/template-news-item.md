@@ -1,5 +1,6 @@
 ---
 title: "Template: New Research Grant Awarded"
+layout: post
 date: 2025-04-10
 categories:
   - Funding

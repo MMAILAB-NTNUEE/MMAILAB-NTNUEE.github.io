@@ -1,10 +1,16 @@
 ---
-title: "news update_describtion"
+title: "News System Guide"
+layout: post
 date: 2025-04-11
+excerpt: "A comprehensive guide to the new news system implemented on our website."
 categories:
-  - Description
+  - Documentation
 tags:
-  - guided content
+  - guide
+  - website
+  - documentation
+header:
+  teaser: "/assets/images/mailab-logo.png"
 ---
 
 Let me summarize what's now in place in your website:
