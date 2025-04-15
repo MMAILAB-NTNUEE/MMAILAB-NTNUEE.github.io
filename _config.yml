@@ -86,7 +86,7 @@ defaults:
       path: ""
       type: news
     values:
-      layout: news-single
+      layout: single
       author_profile: false
       share: true
       show_date: true

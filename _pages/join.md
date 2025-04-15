@@ -8,8 +8,23 @@ header:
   overlay_image: /assets/images/join-header.jpg
   overlay_filter: 0.5
 ---
-
 <div class="feature-section">
+  <div class="feature-container">
+    <div class="section-heading">
+      <h2>Coming Soon</h2>
+    </div>
+    
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+      We're currently updating our recruitment information. Please check back soon for details about joining our lab!
+    </p>
+    
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <p>For urgent inquiries about research opportunities, please contact us at:</p>
+      <a href="mailto:mailab@ntnu.edu.tw" class="btn btn--primary">mailab@ntnu.edu.tw</a>
+    </div>
+  </div>
+</div>
+<!-- <div class="feature-section">
   <div class="feature-container">
     <div class="section-heading">
       <h2>Opportunities at MAILAB</h2>
@@ -179,4 +194,4 @@ header:
       </div>
     </div>
   </div>
-</div>
+</div> -->

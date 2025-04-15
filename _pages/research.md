@@ -1,13 +1,13 @@
 ---
 title: "Our Research"
-layout: single
+layout: splash
 permalink: /research/
 classes:
   - wide
 header:
   overlay_image: /assets/images/research-vision.jpg
   overlay_filter: 0.4
-  caption: "Advancing the frontiers of machine learning and artificial intelligence"
+  # caption: "Advancing the frontiers of machine learning and artificial intelligence"
 ---
 
 <div class="hero-section" style="text-align: center; margin-bottom: 3rem;">
@@ -26,16 +26,6 @@ header:
     
     <div class="research-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
       <div class="research-card" style="background-color: #f9f9f9; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        <div style="height: 180px; background-color: #1E5F74; display: flex; justify-content: center; align-items: center;">
-          <i class="fas fa-eye" style="font-size: 4em; color: white;"></i>
-        </div>
-        <div style="padding: 1.5rem;">
-          <h3 style="color: #1E5F74; margin-top: 0;">Computer Vision</h3>
-          <p>Developing advanced visual understanding algorithms for object detection, segmentation, and scene understanding. Our research pushes the boundaries of what machines can perceive from visual data.</p>
-        </div>
-      </div>
-      
-      <div class="research-card" style="background-color: #f9f9f9; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
         <div style="height: 180px; background-color: #117864; display: flex; justify-content: center; align-items: center;">
           <i class="fas fa-brain" style="font-size: 4em; color: white;"></i>
         </div>
@@ -47,41 +37,21 @@ header:
       
       <div class="research-card" style="background-color: #f9f9f9; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
         <div style="height: 180px; background-color: #2874A6; display: flex; justify-content: center; align-items: center;">
-          <i class="fas fa-comment-dots" style="font-size: 4em; color: white;"></i>
+          <i class="fas fa-image" style="font-size: 4em; color: white;"></i>
         </div>
         <div style="padding: 1.5rem;">
-          <h3 style="color: #2874A6; margin-top: 0;">Natural Language Processing</h3>
-          <p>Creating intelligent systems that understand, interpret, and generate human language. Our NLP research focuses on semantic understanding, multilingual capabilities, and contextual reasoning.</p>
+          <h3 style="color: #2874A6; margin-top: 0;">Image Processing</h3>
+          <p>Developing advanced techniques for image enhancement, restoration, and analysis. Our research aims to extract meaningful information from visual data for various applications.</p>
         </div>
       </div>
       
       <div class="research-card" style="background-color: #f9f9f9; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        <div style="height: 180px; background-color: #7D3C98; display: flex; justify-content: center; align-items: center;">
-          <i class="fas fa-laptop-medical" style="font-size: 4em; color: white;"></i>
+        <div style="height: 180px; background-color: #1E5F74; display: flex; justify-content: center; align-items: center;">
+          <i class="fas fa-eye" style="font-size: 4em; color: white;"></i>
         </div>
         <div style="padding: 1.5rem;">
-          <h3 style="color: #7D3C98; margin-top: 0;">Medical AI</h3>
-          <p>Applying machine learning techniques to medical imaging, diagnosis, and treatment planning. We develop AI systems that assist healthcare professionals in providing better patient care.</p>
-        </div>
-      </div>
-      
-      <div class="research-card" style="background-color: #f9f9f9; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        <div style="height: 180px; background-color: #D35400; display: flex; justify-content: center; align-items: center;">
-          <i class="fas fa-robot" style="font-size: 4em; color: white;"></i>
-        </div>
-        <div style="padding: 1.5rem;">
-          <h3 style="color: #D35400; margin-top: 0;">Robotics & Reinforcement Learning</h3>
-          <p>Developing intelligent agents that learn optimal behaviors through interaction with their environment. Our research enables robots and autonomous systems to make better decisions.</p>
-        </div>
-      </div>
-      
-      <div class="research-card" style="background-color: #f9f9f9; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        <div style="height: 180px; background-color: #1ABC9C; display: flex; justify-content: center; align-items: center;">
-          <i class="fas fa-project-diagram" style="font-size: 4em; color: white;"></i>
-        </div>
-        <div style="padding: 1.5rem;">
-          <h3 style="color: #1ABC9C; margin-top: 0;">Multimodal Learning</h3>
-          <p>Investigating how to effectively combine information from multiple modalities (vision, text, audio) to create more robust and comprehensive AI systems.</p>
+          <h3 style="color: #1E5F74; margin-top: 0;">Computer Vision</h3>
+          <p>Developing advanced visual understanding algorithms for object detection, segmentation, and scene understanding. Our research pushes the boundaries of what machines can perceive from visual data.</p>
         </div>
       </div>
     </div>
@@ -93,12 +63,12 @@ header:
     <div class="section-heading" style="text-align: center; margin-bottom: 3rem;">
       <h2 style="font-size: 2em; color: #1E5F74;">Featured Projects</h2>
       <div style="width: 50px; height: 4px; background-color: #1E5F74; margin: 0.5rem auto;"></div>
-      <p style="max-width: 700px; margin: 1rem auto; color: #666;">Explore our latest research projects that are pushing the boundaries of machine learning and artificial intelligence.</p>
+      <p style="max-width: 700px; margin: 1rem auto; color: #666;">Explore our latest research projects that are pushing the boundaries of machine learning and artificial intelligence. ( WIP. Coming Soon )</p>
     </div>
     
     <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; max-width: 1000px; margin: 0 auto;">
       <!-- Project 1 -->
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+      <!-- <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
         <div>
           <img src="/assets/images/research-vision.jpg" alt="Medical Imaging Project" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
         </div>
@@ -108,10 +78,10 @@ header:
           <p style="color: #666; font-style: italic; margin-bottom: 1.5rem;">Techniques: U-Net architectures, transfer learning, attention mechanisms</p>
           <a href="/research/2025/03/15/medical-imaging-project.html" class="btn btn--primary">Learn More</a>
         </div>
-      </div>
+      </div> -->
       
       <!-- Project 2 -->
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+      <!-- <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
         <div style="order: 2;">
           <img src="/assets/images/research-vision.jpg" alt="Vision Language Model" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
         </div>
@@ -121,10 +91,10 @@ header:
           <p style="color: #666; font-style: italic; margin-bottom: 1.5rem;">Techniques: Transformer architectures, contrastive learning, cross-modal attention</p>
           <a href="/publications" class="btn btn--primary">View Related Publications</a>
         </div>
-      </div>
+      </div> -->
       
       <!-- Project 3 -->
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+      <!-- <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
         <div>
           <img src="/assets/images/research-vision.jpg" alt="Efficient Deep Learning" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
         </div>
@@ -134,12 +104,12 @@ header:
           <p style="color: #666; font-style: italic; margin-bottom: 1.5rem;">Techniques: Network pruning, knowledge distillation, quantization, neural architecture search</p>
           <a href="/events/2025/04/05/multimodal-workshop.html" class="btn btn--primary">Related Workshop</a>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
 
-<div class="feature-section" style="margin: 4rem 0;">
+<!-- <div class="feature-section" style="margin: 4rem 0;">
   <div class="feature-container">
     <div class="section-heading" style="text-align: center; margin-bottom: 3rem;">
       <h2 style="font-size: 2em; color: #1E5F74;">Research Methodology</h2>
@@ -188,9 +158,9 @@ header:
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
-<div class="feature-section grid-pattern" style="padding: 4rem 0; background-color: #f5f5f5;">
+<!-- <div class="feature-section grid-pattern" style="padding: 4rem 0; background-color: #f5f5f5;">
   <div class="feature-container">
     <div class="section-heading" style="text-align: center; margin-bottom: 3rem;">
       <h2 style="font-size: 2em; color: #1E5F74;">Research Metrics</h2>
@@ -219,9 +189,9 @@ header:
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
-<div class="feature-section" style="margin: 4rem 0;">
+<!-- <div class="feature-section" style="margin: 4rem 0;">
   <div class="feature-container">
     <div class="section-heading" style="text-align: center; margin-bottom: 3rem;">
       <h2 style="font-size: 2em; color: #1E5F74;">Research Collaborations</h2>
@@ -268,9 +238,9 @@ header:
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
-<div class="cta-section" style="background-color: #1E5F74; padding: 4rem 0; margin-top: 4rem;">
+<!-- <div class="cta-section" style="background-color: #1E5F74; padding: 4rem 0; margin-top: 4rem;">
   <div style="max-width: 800px; margin: 0 auto; text-align: center; color: white;">
     <h2 style="font-size: 2em; margin-bottom: 1rem;">Interested in Our Research?</h2>
     <p style="font-size: 1.2em; margin-bottom: 2rem;">Explore our publications, join our lab, or collaborate with us.</p>
@@ -280,7 +250,7 @@ header:
       <a href="/contact/" class="btn btn--light" style="background-color: white; color: #1E5F74; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: bold;">Contact Us</a>
     </div>
   </div>
-</div>
+</div> -->
 
 <script>
   // Add hover effect to research cards

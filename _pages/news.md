@@ -1,96 +1,122 @@
 ---
-title: "News"
-layout: single
+title: "News & Updates"
+layout: splash
 permalink: /news/
-classes:
-  - wide
+# show_filters: true
+# active_filter: all
 header:
   overlay_image: /assets/images/research-vision.jpg
   overlay_filter: 0.5
 ---
 
-<div class="news-container">
-  <div class="news-intro">
-    <div class="filter-categories">
-      <div class="news-filter-bar">
-        <div class="news-filter-heading">Filter By:</div>
-        <div class="news-filter-tags">
-          <a href="/news/" class="news-filter-tag {% unless include.tag %}active{% endunless %}">All</a>
-          {% assign all_tags = "" | split: "" %}
-          {% for news in site.news %}
-            {% for tag in news.tags %}
-              {% unless all_tags contains tag %}
-                {% assign all_tags = all_tags | push: tag %}
-              {% endunless %}
-            {% endfor %}
-          {% endfor %}
-          
-          {% for tag in all_tags %}
-            <a href="/news/?tag={{ tag | slugify }}" class="news-filter-tag {% if include.tag == tag %}active{% endif %}">{{ tag }}</a>
-          {% endfor %}
+{% assign news_by_year = site.news | group_by_exp: "item", "item.date | date: '%Y'" | sort: "name" | reverse %}
+
+{% for year in news_by_year %}
+<div class="publication-year news-year" id="{{ year.name }}">
+  <h2>{{ year.name }}</h2>
+  
+  <div class="news-items">
+    {% assign sorted_items = year.items | sort: "date" | reverse %}
+    {% for news_item in sorted_items %}
+    <article class="news-item" data-categories="{% for category in news_item.categories %}{{ category | downcase }} {% endfor %}">
+      <div class="news-item-date">
+        <div class="date-box">
+          <span class="day">{{ news_item.date | date: "%d" }}</span>
+          <span class="month">{{ news_item.date | date: "%b" }}</span>
+          <span class="year">{{ news_item.date | date: "%Y" }}</span>
         </div>
       </div>
-    </div>
-
-    <div class="news-list">
-      {% assign filtered_news = site.news %}
-      {% if include.tag %}
-        {% assign filtered_news = site.news | where_exp: "item", "item.tags contains include.tag" %}
-      {% endif %}
       
-      <ul class="news-items">
-        {% for news in filtered_news %}
-          <li class="news-item">
-            <div class="news-item-date">
-              <span class="date-box">
-                <span class="day">{{ news.date | date: "%d" }}</span>
-                <span class="month">{{ news.date | date: "%b" }}</span>
-                <span class="year">{{ news.date | date: "%Y" }}</span>
-              </span>
-            </div>
-            
-            <div class="news-item-content">
-              <h3 class="news-item-title">
-                <a href="{{ news.url | relative_url }}">{{ news.title }}</a>
-              </h3>
-              
-              {% if news.categories.first %}
-                <span class="news-item-category">{{ news.categories.first }}</span>
-              {% endif %}
-              
-              <p class="news-item-excerpt">
-                {{ news.excerpt | strip_html | truncate: 180 }}
-              </p>
-              
-              {% if news.tags %}
-                <div class="news-item-tags">
-                  {% for tag in news.tags limit:4 %}
-                    <a href="/news/?tag={{ tag | slugify }}" class="news-tag">#{{ tag }}</a>
-                  {% endfor %}
-                </div>
-              {% endif %}
-              
-              <a href="{{ news.url | relative_url }}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            {% if news.featured_image or news.header.teaser %}
-            <div class="news-item-image">
-              {% if news.featured_image %}
-                <img src="{{ news.featured_image | relative_url }}" alt="{{ news.title }}">
-              {% elsif news.header.teaser %}
-                <img src="{{ news.header.teaser | relative_url }}" alt="{{ news.title }}">
-              {% endif %}
-            </div>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    {% if site.news.size > 10 %}
-    <div class="pagination">
-      <a href="/news/archive/" class="view-all-news">View All News <i class="fas fa-chevron-right"></i></a>
-    </div>
-    {% endif %}
+      <div class="news-item-content">
+        {% if news_item.categories.size > 0 %}
+        <span class="news-item-category">{{ news_item.categories | first }}</span>
+        {% endif %}
+        
+        <h3 class="news-item-title"><a href="{{ news_item.url | relative_url }}">{{ news_item.title }}</a></h3>
+        
+        <div class="news-item-excerpt">
+          {{ news_item.excerpt | strip_html | truncate: 150 }}
+        </div>
+        
+        {% if news_item.tags.size > 0 %}
+        <div class="news-item-tags">
+          {% for tag in news_item.tags %}
+          <span class="news-tag">#{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        
+        <a href="{{ news_item.url | relative_url }}" class="read-more">
+          Read Full Story
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+      
+      {% if news_item.header.teaser %}
+      <div class="news-item-image">
+        <img src="{{ news_item.header.teaser | relative_url }}" alt="{{ news_item.title }}" loading="lazy">
+      </div>
+      {% endif %}
+    </article>
+    {% endfor %}
   </div>
 </div>
+{% endfor %}
+
+<div class="news-stats">
+  <div class="container">
+    <h2>News Statistics</h2>
+    
+    <div class="stats-grid">
+      <div class="stat-card" data-aos="fade-up">
+        <div class="stat-icon"><i class="fas fa-newspaper"></i></div>
+        <div class="stat-counter">{{ site.news | size }}</div>
+        <div class="stat-title">Total News Items</div>
+      </div>
+      
+      {% assign categories = site.news | map: "categories" | compact | flatten | group_by_exp: "item", "item" | sort: "size" | reverse %}
+      
+      {% for category in categories limit:2 %}
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="{{ forloop.index | times: 100 }}">
+        <div class="stat-icon"><i class="fas fa-tag"></i></div>
+        <div class="stat-counter">{{ category.size }}</div>
+        <div class="stat-title">{{ category.name | capitalize }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Category filtering
+  const filterTabs = document.querySelectorAll('.news-filter-tag');
+  const newsItems = document.querySelectorAll('.news-item');
+  
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Update active tab
+      filterTabs.forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+      
+      const category = this.getAttribute('href').split('/').pop().replace('/', '');
+      
+      // Filter items
+      newsItems.forEach(item => {
+        if (category === 'all') {
+          item.style.display = '';
+        } else {
+          const itemCategories = item.getAttribute('data-categories');
+          if (itemCategories && itemCategories.includes(category)) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+});
+</script>
