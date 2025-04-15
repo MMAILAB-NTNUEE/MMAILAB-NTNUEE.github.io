@@ -107,7 +107,7 @@ footer:
       url: "https://github.com/MAILAB-NTNUEE"
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
-      url: "#" # Add your Google Scholar profile URL
+      url: "https://scholar.google.com/citations?user=QwSzhgEAAAAJ&hl=zh-TW" # Add your Google Scholar profile URL
 
 # Collections
 collections:
