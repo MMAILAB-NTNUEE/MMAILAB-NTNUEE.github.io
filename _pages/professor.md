@@ -369,13 +369,13 @@ header:
         <p class="professor-title">Lab Director & Professor, Department of Electrical Engineering</p>
         
         <div class="professor-bio">
-          <p>Prof. Li-Wei Kang is a Professor in the Department of Electrical Engineering and the Graduate Institute of AI Interdisciplinary Applied Technology at National Taiwan Normal University (NTNU) in Taipei, Taiwan. He earned his B.S., M.S., and Ph.D. degrees in Computer Science from National Chung Cheng University in 1997, 1999, and 2005, respectively.</p>
+          <p>Prof. Li-Wei Kang is a Professor in the Department of Electrical Engineering at National Taiwan Normal University (NTNU) in Taipei, Taiwan. He also serves in the Graduate Institute of AI Interdisciplinary Applied Technology at NTNU. He earned his B.S., M.S., and Ph.D. degrees in Computer Science from National Chung Cheng University in 1997, 1999, and 2005, respectively.</p>
           
-          <p>Dr. Kang's research interests encompass multimedia content analysis, multimedia communications, and artificial intelligence. He leads the Multimedia and Artificial Intelligence Lab at NTNU, which focuses on computer vision, image processing, and various multimedia applications.</p>
+          <p>Dr. Kang's research interests span computer vision, image processing, multimedia content analysis, and artificial intelligence applications. He leads the Multimedia and Artificial Intelligence Lab at NTNU, which focuses on developing innovative solutions in these areas.</p>
           
-          <p>Throughout his career, Dr. Kang has held several academic positions, including roles at Academia Sinica and National Yunlin University of Science and Technology. He has also contributed to the academic community as an Associate Editor and Guest Editor for various journals and has been involved in organizing committees for conferences such as IEEE ICCE-TW and APSIPA ASC.</p>
+          <p>Throughout his career, Dr. Kang has held several academic positions, including roles at Academia Sinica and National Yunlin University of Science and Technology. He has made significant contributions to the academic community as an Associate Editor for several journals including IEEE Transactions on Multimedia and has served on organizing committees for international conferences such as IEEE ICCE-TW and APSIPA ASC.</p>
           
-          <p>Dr. Kang has received multiple accolades for his work, including the Top 10% Paper Award at IEEE MMSP 2013, the Best Performance Award in the Social Media Prediction Challenge at ACM MM 2019, and the Best Paper Award at APSIPA ASC 2020.</p>
+          <p>Dr. Kang's work has been recognized with multiple awards, including the Top 10% Paper Award at IEEE MMSP 2013, the Best Performance Award in the Social Media Prediction Challenge at ACM Multimedia 2019, and the Best Paper Award at APSIPA ASC 2020. He has published extensively in prestigious journals and conferences, with over 100 research papers to his credit.</p>
         </div>
         
         <h3 class="section-title">Research Interests</h3>
@@ -385,6 +385,7 @@ header:
             <span class="interest-tag">Multimedia Analysis</span>
             <span class="interest-tag">Artificial Intelligence</span>
             <span class="interest-tag">Deep Learning</span>
+            <span class="interest-tag">Pattern Recognition</span>
             </div>
         
         <h3 class="section-title">Education</h3>
@@ -411,9 +412,9 @@ header:
                 <div class="award-item" style="margin-bottom: 1.5rem;">
                 <div class="award-icon"><i class="fas fa-trophy"></i></div>
                 <div class="award-content">
-                <div class="award-name">Top 10% Paper Award</div>
-                <div class="award-org">IEEE MMSP</div>
-                <div class="award-year">2013</div>
+                <div class="award-name">Best Paper Award</div>
+                <div class="award-org">APSIPA ASC</div>
+                <div class="award-year">2020</div>
                 </div>
                 </div>
                 <div class="award-item" style="margin-bottom: 1.5rem;">
@@ -424,12 +425,20 @@ header:
                 <div class="award-year">2019</div>
                 </div>
                 </div>
-                <div class="award-item">
+                <div class="award-item" style="margin-bottom: 1.5rem;">
                 <div class="award-icon"><i class="fas fa-medal"></i></div>
                 <div class="award-content">
+                <div class="award-name">Top 10% Paper Award</div>
+                <div class="award-org">IEEE MMSP</div>
+                <div class="award-year">2013</div>
+                </div>
+                </div>
+                <div class="award-item">
+                <div class="award-icon"><i class="fas fa-certificate"></i></div>
+                <div class="award-content">
                 <div class="award-name">Best Paper Award</div>
-                <div class="award-org">APSIPA ASC</div>
-                <div class="award-year">2020</div>
+                <div class="award-org">IEEE ICCE-TW</div>
+                <div class="award-year">2012</div>
                 </div>
                 </div>
             </div>
@@ -444,8 +453,23 @@ header:
                 <div class="teaching-course"><i class="fas fa-code"></i> 物件導向程式設計 (Object-Oriented Programming)</div>
               </div>
               
-              <div class="teaching-item">
+              <div class="teaching-item" style="margin-bottom: 1.5rem;">
                 <div class="teaching-course"><i class="fas fa-brain"></i> 深度學習 (Deep Learning)</div>
+              </div>
+            </div>
+
+            <h3 class="section-title">Professional Activities</h3>
+            <div class="teaching-list" style="margin-top: 1rem;">
+              <div class="teaching-item" style="margin-bottom: 1.5rem;">
+                <div class="teaching-course"><i class="fas fa-edit"></i> Associate Editor, IEEE Transactions on Multimedia</div>
+              </div>
+              
+              <div class="teaching-item" style="margin-bottom: 1.5rem;">
+                <div class="teaching-course"><i class="fas fa-users"></i> General Chair, IEEE ICCE-Taiwan 2023</div>
+              </div>
+              
+              <div class="teaching-item">
+                <div class="teaching-course"><i class="fas fa-globe"></i> Technical Program Committee Member for multiple international conferences</div>
               </div>
             </div>    
 
