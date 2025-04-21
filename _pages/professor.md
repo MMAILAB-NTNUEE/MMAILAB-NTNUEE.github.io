@@ -409,82 +409,127 @@ header:
 
          <h3 class="section-title">Selected Awards & Honors</h3>
             <div class="awards-list" style="margin-top: 1rem;">
-                <div class="award-item" style="margin-bottom: 1.5rem;">
+              <div class="award-item" style="margin-bottom: 1.5rem;">
                 <div class="award-icon"><i class="fas fa-trophy"></i></div>
                 <div class="award-content">
-                <div class="award-name">Best Paper Award</div>
-                <div class="award-org">APSIPA ASC</div>
-                <div class="award-year">2020</div>
+                  <div class="award-name">World's Top 2% Scientist</div>
+                  <div class="award-org">Stanford University</div>
+                  <div class="award-year">2024, 2022</div>
                 </div>
-                </div>
-                <div class="award-item" style="margin-bottom: 1.5rem;">
+              </div>
+              <div class="award-item" style="margin-bottom: 1.5rem;">
                 <div class="award-icon"><i class="fas fa-award"></i></div>
                 <div class="award-content">
-                <div class="award-name">Best Performance Award – SMP Challenge</div>
-                <div class="award-org">ACM Multimedia</div>
-                <div class="award-year">2019</div>
+                  <div class="award-name">Best Presentation Award</div>
+                  <div class="award-org">IEEE GCCE</div>
+                  <div class="award-year">2024</div>
                 </div>
-                </div>
-                <div class="award-item" style="margin-bottom: 1.5rem;">
+              </div>
+              <div class="award-item" style="margin-bottom: 1.5rem;">
                 <div class="award-icon"><i class="fas fa-medal"></i></div>
                 <div class="award-content">
-                <div class="award-name">Top 10% Paper Award</div>
-                <div class="award-org">IEEE MMSP</div>
-                <div class="award-year">2013</div>
+                  <div class="award-name">Best Paper Award</div>
+                  <div class="award-org">APSIPA ASC</div>
+                  <div class="award-year">2020</div>
                 </div>
-                </div>
-                <div class="award-item">
+              </div>
+              <div class="award-item" style="margin-bottom: 1.5rem;">
                 <div class="award-icon"><i class="fas fa-certificate"></i></div>
                 <div class="award-content">
-                <div class="award-name">Best Paper Award</div>
-                <div class="award-org">IEEE ICCE-TW</div>
-                <div class="award-year">2012</div>
+                  <div class="award-name">Best Performance Award – SMP Challenge</div>
+                  <div class="award-org">ACM Multimedia</div>
+                  <div class="award-year">2019</div>
                 </div>
+              </div>
+              <div class="award-item" style="margin-bottom: 1.5rem;">
+                <div class="award-icon"><i class="fas fa-ribbon"></i></div>
+                <div class="award-content">
+                  <div class="award-name">IEEE Service Awards</div>
+                  <div class="award-org">IEEE ICCE-TW</div>
+                  <div class="award-year">2015-2018</div>
                 </div>
-            </div>
-                
-            <h3 class="section-title">Current Teaching</h3>
-            <div class="teaching-list" style="margin-top: 1rem;">
-              <div class="teaching-item" style="margin-bottom: 1.5rem;">
-                <div class="teaching-course"><i class="fas fa-book"></i>  程式設計 (Programming)</div>
               </div>
-              
-              <div class="teaching-item" style="margin-bottom: 1.5rem;">
-                <div class="teaching-course"><i class="fas fa-code"></i> 物件導向程式設計 (Object-Oriented Programming)</div>
-              </div>
-              
-              <div class="teaching-item" style="margin-bottom: 1.5rem;">
-                <div class="teaching-course"><i class="fas fa-brain"></i> 深度學習 (Deep Learning)</div>
+              <div class="award-item">
+                <div class="award-icon"><i class="fas fa-star"></i></div>
+                <div class="award-content">
+                  <div class="award-name">Top 10% Paper Award</div>
+                  <div class="award-org">IEEE MMSP</div>
+                  <div class="award-year">2013</div>
+                </div>
               </div>
             </div>
 
-            <h3 class="section-title">Professional Activities</h3>
+         <h3 class="section-title">Professional Service</h3>
+          <div class="service-list" style="margin-top: 1rem; margin-bottom: 2rem;">
+            <h4 style="color: #105E96; font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600;">Editorial Roles</h4>
+            <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+              <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-pen-fancy" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Guest Editor, Sensors, 2024</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-pen-fancy" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Guest Editor, APSIPA Transactions on Signal and Information Processing, 2019~2022</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-pen-fancy" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Associate Editor, International Journal of Distributed Sensor Networks, 2013~2015</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-pen-fancy" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Guest Editor, International Journal of Electrical Engineering, 2014</li>
+              </ul>
+            </div>
+            
+            <h4 style="color: #105E96; font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600;">Committee Leadership</h4>
+            <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+              <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-users" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Vice Chair, Image, Video, and Multimedia Technical Committee, APSIPA, 2023~2024</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-users" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Secretary, Image, Video, and Multimedia Technical Committee, APSIPA, 2022~2023</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-users" style="color: #17A589; margin-right: 15px; width: 20px;"></i> TC Member, Signal Processing Systems: Design and Implementation Technical Committee, APSIPA, 2017~2020</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-users" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Multimedia Systems and Applications Technical Committee, IEEE Circuits and Systems Society, 2020~2024</li>
+              </ul>
+            </div>
+            
+            <h4 style="color: #105E96; font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600;">Professional Society Roles</h4>
+            <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+              <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Director, APSIPA Taiwan Chapter, since 2022</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Director, Chinese Image Processing and Pattern Recognition Society, Taiwan, since 2024</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Supervisor, Chinese Image Processing and Pattern Recognition Society, Taiwan, 2020~2024</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Secretary, Chinese Image Processing and Pattern Recognition Society, Taiwan, 2018~2020</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Secretary, IEEE Signal Processing Society Tainan Chapter, 2017~2018</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Founding member, Taiwan ACM SIGMM Chapter, 2014</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Founding member, ACM ICPC Contest Council for Taiwan, 2014</li>
+              </ul>
+            </div>
+            
+            <h4 style="color: #105E96; font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600;">Conference Organization</h4>
+            <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+              <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-calendar-alt" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Organizing Co-Chair, ACM International Conference on Multimedia Retrieval, 2019</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-calendar-alt" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Organizing Co-Chair, Ph.D. Forum, APSIPA ASC, 2018</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-calendar-alt" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Organizing Co-Chair, APSIPA ASC, 2013</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-calendar-alt" style="color: #17A589; margin-right: 15px; width: 20px;"></i> TPC Member/Reviewer/Special Session Organizer/Area Chair for multiple international conferences (APSIPA ASC, ICIP, ISCAS, ICASSP, ICME, MMSP, CVPR, ICCV, ACM MM, ICMR, AAAI, and others)</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-calendar-alt" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Reviewer for prestigious international journals (IEEE TIP, TMM, TCSVT, TSP, TNNLS, TIFS, IJCV, ACM TOMM, and others)</li>
+              </ul>
+            </div>
+          </div>        
+        <h3 class="section-title">Current Teaching</h3>
             <div class="teaching-list" style="margin-top: 1rem;">
               <div class="teaching-item" style="margin-bottom: 1.5rem;">
-                <div class="teaching-course"><i class="fas fa-edit"></i> Associate Editor, IEEE Transactions on Multimedia</div>
+                <div class="teaching-course"><i class="fas fa-book"></i> Programming in C</div>
               </div>
               
               <div class="teaching-item" style="margin-bottom: 1.5rem;">
-                <div class="teaching-course"><i class="fas fa-users"></i> General Chair, IEEE ICCE-Taiwan 2023</div>
+                <div class="teaching-course"><i class="fas fa-code"></i> Object-Oriented Programming</div>
               </div>
               
               <div class="teaching-item">
-                <div class="teaching-course"><i class="fas fa-globe"></i> Technical Program Committee Member for multiple international conferences</div>
-              </div>
-            </div>    
-
+                <div class="teaching-course"><i class="fas fa-brain"></i> Deep Learning</div>
+            </div>
         <h3 class="section-title">Contact</h3>
-        <div class="contact-links">
-          <a href="mailto:lwkang@ntnu.edu.tw" class="contact-link">
-            <i class="fas fa-envelope"></i> Email
-          </a>
-          <a href="https://scholar.google.com/citations?user=QwSzhgEAAAAJ&hl=zh-TW" target="_blank" class="contact-link">
-            <i class="fas fa-graduation-cap"></i> Google Scholar
-          </a>
-          <a href="https://iipp.tw/mentor/638?utm_source" target="_blank" class="contact-link">
-            <i class="fas fa-globe"></i> Personal Website
-          </a>
-        </div>
+            <div class="contact-links">
+              <a href="mailto:lwkang@ntnu.edu.tw" class="contact-link">
+                <i class="fas fa-envelope"></i> Email
+              </a>
+              <a href="https://scholar.google.com/citations?user=QwSzhgEAAAAJ&hl=zh-TW" target="_blank" class="contact-link">
+                <i class="fas fa-graduation-cap"></i> Google Scholar
+              </a>
+              <a href="https://iipp.tw/mentor/638?utm_source" target="_blank" class="contact-link">
+                <i class="fas fa-globe"></i> Personal Website
+              </a>
+            </div>
           </div>
         </div>
   </div>
