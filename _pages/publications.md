@@ -28,24 +28,54 @@ header:
                         </div>
 
                         <div class="publication-year" id="highly-cited">
-                        <h2>Highly Cited Papers</h2>
-                        
-                        <div class="publications-grid">
-                            <div class="publication-card" data-aos="fade-up">
-                        <h3>Automatic single-image-based rain streaks removal via image decomposition</h3>
-                        <p class="authors"><strong>Kang, L. W.</strong>, Lin, C. W., & Fu, Y. H.</p>
-                        <p class="venue">IEEE Transactions on Image Processing, vol. 21, no. 4, pp. 1742–1755, Apr. 2012 (Google citations = 1028)</p>
+                            <h2>Highly Cited Papers</h2>
+                            
+                            <div class="publications-grid">
+                                <div class="publication-card" data-aos="fade-up">
+                                <h3>Automatic single-image-based rain streaks removal via image decomposition</h3>
+                                <p class="authors"><strong>Kang, L. W.</strong>, Lin, C. W., & Fu, Y. H.</p>
+                                <p class="venue">IEEE Transactions on Image Processing, vol. 21, no. 4, pp. 1742–1755, Apr. 2012</p>
+                                <p class="citations">Google citations: 1028</p>
                             </div>
                             <div class="publication-card" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Lightweight deep neural network for joint learning of underwater object detection and color conversion</h3>
-                        <p class="authors">Yeh, C. H., Lin, C. H., <strong>Kang, L. W.</strong>, Huang, C. H., Lin, M. H., Chang, C. Y., & Wang, C. C.</p>
-                        <p class="venue">IEEE Transactions on Neural Networks and Learning Systems, vol. 33, no. 11, pp. 6129–6143, Nov. 2022</p>
+                                <h3>Distributed compressive video sensing</h3>
+                                <p class="authors"><strong>Kang, L. W.</strong>, & Lu, C. S.</p>
+                                <p class="venue">Proc. IEEE Int. Conf. on Acoustics, Speech, and Signal Processing, pp. 1169-1172, Apr. 2009</p>
+                                <p class="citations">Google citations: 312</p>
                             </div>
-                        </div>
+                            <div class="publication-card" data-aos="fade-up" data-aos-delay="300">
+                                <h3>Self-learning based image decomposition with applications to single image denoising</h3>
+                                <p class="authors">Huang, D. A., <strong>Kang, L. W.</strong>, Wang, Y. C. F., & Lin, C. W.</p>
+                                <p class="venue">IEEE Transactions on Multimedia, vol. 16, no. 1, Jan. 2014</p>
+                                <p class="citations">Google citations: 287</p>
+                            </div>
+                            <div class="publication-card" data-aos="fade-up" data-aos-delay="400">
+                                <h3>Visual depth guided image rain streaks removal using sparse coding</h3>
+                                <p class="authors">Chen, D. Y., Chen, C. C., & <strong>Kang, L. W.</strong></p>
+                                <p class="venue">IEEE Transactions on Circuits and Systems for Video Technology, vol. 24, no. 8, pp. 1430-1455, 2014</p>
+                                <p class="citations">Google citations: 214</p>
+                            </div>
+                            <div class="publication-card" data-aos="fade-up" data-aos-delay="500">
+                                <h3>Lightweight deep neural network for joint learning of underwater object detection and color conversion</h3>
+                                <p class="authors">Yeh, C. H., Lin, C. H., <strong>Kang, L. W.</strong>, Huang, C. H., Lin, M. H., Chang, C. Y., & Wang, C. C.</p>
+                                <p class="venue">IEEE Transactions on Neural Networks and Learning Systems, vol. 33, no. 11, pp. 6129–6143, Nov. 2022</p>
+                                <p class="citations">Google citations: 210</p>
+                            </div>
+                            <div class="publication-card" data-aos="fade-up" data-aos-delay="600">
+                                <h3>Context-aware single image rain removal</h3>
+                                <p class="authors">Huang, D. A., <strong>Kang, L. W.</strong>, Yang, M. C., Lin, C. W., & Wang, Y. C. F.</p>
+                                <p class="venue">Proc. IEEE Int. Conf. on Multimedia and Expo, Melbourne, Australia, July 2012</p>
+                                <p class="citations">Google citations: 148</p>
+                            </div>
+                            <div class="publication-card" data-aos="fade-up" data-aos-delay="700">
+                                <h3>Multi-scale deep residual learning-based single image haze removal via image decomposition</h3>
+                                <p class="authors">Yeh, C. H., Huang, C. H., & <strong>Kang, L. W.</strong></p>
+                                <p class="venue">IEEE Transactions on Image Processing, vol. 29, 2020</p>
+                                <p class="citations">Google citations: 146</p>
                         </div>
 
                         <div class="publication-year" id="2024">
-                        <h2>2024</h2>
+                            <h2>2024</h2>
                         
                         <div class="publications-grid">
                             <div class="publication-card" data-aos="fade-up">

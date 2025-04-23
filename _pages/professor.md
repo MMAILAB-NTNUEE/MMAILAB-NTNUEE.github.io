@@ -474,7 +474,7 @@ header:
             <h4 style="color: #105E96; font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600;">Committee Leadership</h4>
             <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
               <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
-                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-users" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Vice Chair, Image, Video, and Multimedia Technical Committee, APSIPA, 2023~2024</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-users" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Chair, Image, Video, and Multimedia Technical Committee, APSIPA, 2023~2024</li>
                 <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-users" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Secretary, Image, Video, and Multimedia Technical Committee, APSIPA, 2022~2023</li>
                 <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-users" style="color: #17A589; margin-right: 15px; width: 20px;"></i> TC Member, Signal Processing Systems: Design and Implementation Technical Committee, APSIPA, 2017~2020</li>
                 <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-users" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Multimedia Systems and Applications Technical Committee, IEEE Circuits and Systems Society, 2020~2024</li>
@@ -483,16 +483,15 @@ header:
             
             <h4 style="color: #105E96; font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600;">Professional Society Roles</h4>
             <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-              <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
-                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Director, APSIPA Taiwan Chapter, since 2022</li>
+            <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
                 <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Director, Chinese Image Processing and Pattern Recognition Society, Taiwan, since 2024</li>
                 <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Supervisor, Chinese Image Processing and Pattern Recognition Society, Taiwan, 2020~2024</li>
+                <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Director, APSIPA Taiwan Chapter, since 2022</li>
                 <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Secretary, Chinese Image Processing and Pattern Recognition Society, Taiwan, 2018~2020</li>
                 <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Secretary, IEEE Signal Processing Society Tainan Chapter, 2017~2018</li>
                 <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Founding member, Taiwan ACM SIGMM Chapter, 2014</li>
                 <li style="margin-bottom: 0.7rem; display: flex;"><i class="fas fa-user-tie" style="color: #17A589; margin-right: 15px; width: 20px;"></i> Founding member, ACM ICPC Contest Council for Taiwan, 2014</li>
-              </ul>
-            </div>
+            </ul>    </div>
             
             <h4 style="color: #105E96; font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600;">Conference Organization</h4>
             <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
@@ -508,7 +507,7 @@ header:
         <h3 class="section-title">Current Teaching</h3>
             <div class="teaching-list" style="margin-top: 1rem;">
               <div class="teaching-item" style="margin-bottom: 1.5rem;">
-                <div class="teaching-course"><i class="fas fa-book"></i> Programming in C</div>
+                <div class="teaching-course"><i class="fas fa-book"></i> Computer Programing</div>
               </div>
               
               <div class="teaching-item" style="margin-bottom: 1.5rem;">
