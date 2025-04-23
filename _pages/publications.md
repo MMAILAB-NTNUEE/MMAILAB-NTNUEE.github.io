@@ -25,7 +25,6 @@ header:
                             <a href="#2020" class="year-tab">2020</a>
                             <a href="#older" class="year-tab">Older</a>
                         </div>
-                        </div>
 
                         <div class="publication-year" id="highly-cited">
                             <h2>Highly Cited Papers</h2>
@@ -72,8 +71,9 @@ header:
                                 <p class="authors">Yeh, C. H., Huang, C. H., & <strong>Kang, L. W.</strong></p>
                                 <p class="venue">IEEE Transactions on Image Processing, vol. 29, 2020</p>
                                 <p class="citations">Google citations: 146</p>
+                            </div>
                         </div>
-
+                        
                         <div class="publication-year" id="2024">
                             <h2>2024</h2>
                         
