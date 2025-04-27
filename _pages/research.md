@@ -40,9 +40,9 @@ Developing advanced algorithms to generate high-resolution images from low-resol
 
 [View Intro](/publications/image-enhancement/){: .btn .btn--primary} -->
 
-## Featured Projects
+<!-- ## Featured Projects
 
-*Coming Soon*
+*Coming Soon* -->
 
 <!--
 ## Research Methodology

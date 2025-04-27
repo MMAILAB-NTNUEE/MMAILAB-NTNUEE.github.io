@@ -5,8 +5,8 @@ date: 2025-04-11
 excerpt: "MAILAB has launched a new website!"
 categories: [announcements]
 tags: [website, launch]
-header:
-  teaser: "/assets/images/mailab-logo.png"
+# header:
+#   teaser: "/assets/images/mailab-logo.png"
 ---
 
 # Welcome to the New MAILAB Website!
