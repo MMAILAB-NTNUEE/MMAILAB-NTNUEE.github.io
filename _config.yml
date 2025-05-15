@@ -1,0 +1,160 @@
+# website config
+title: Multimedia and Artificial Intelligence Laboratory
+subtitle: National Taiwan Normal University (NTNU)
+abbreviation: "MMAI Lab"
+description: "MMAILAB at National Taiwan Normal University conducts cutting-edge research in multimedia analysis, artificial intelligence, and machine learning with applications in computer vision and signal processing."
+url: https://mmailab-ntnuee.github.io
+repository: MMAILAB-NTNUEE/MMAILAB-NTNUEE.github.io
+
+# theme config
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes@4.24.0
+minimal_mistakes_skin: "dark" # Changed to dark for a more modern, professional look
+search: true
+search_full_content: true
+logo: "/assets/images/mailab-logo.png"
+
+# Custom color variables
+colors:
+  primary: "#0066cc"    # Deep blue for research/tech feel
+  secondary: "#00a6a6"  # Teal accent for visual interest
+  tertiary: "#f39c12"   # Amber for highlighting important elements
+  background: "#f8f9fa" # Light gray for content areas
+  text: "#333333"       # Dark gray for text
+
+# plugin config
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+# Defaults
+defaults:
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      comments: false
+      share: true
+      related: true
+      show_date: true
+      header:
+        overlay_filter: 0.5
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  # _team
+  - scope:
+      path: ""
+      type: team
+    values:
+      layout: single
+      author_profile: true
+      share: false
+  # _research
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      toc: true
+      toc_sticky: true
+  # _news
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      show_date: true
+      read_time: false
+      classes: wide
+      related: false
+      sidebar:
+        nav: "news"
+
+# Site footer
+footer:
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:mmailab@ntnu.edu.tw"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/MMAILAB-NTNUEE"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=QwSzhgEAAAAJ&hl=zh-TW" # Add your Google Scholar profile URL
+
+# Collections
+collections:
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  team:
+    output: true
+    permalink: /:collection/:path/
+  research:
+    output: true
+    permalink: /:collection/:path/
+  news:
+    output: true
+    permalink: /:collection/:path/
+
+# sitemap config
+include:
+  - _pages
+
+# website author
+author:
+  name   : "MMAILAB NTNU"
+  avatar : "/assets/images/mailab-logo.png"
+  bio    : "Multimedia and Artificial Intelligence Lab at National Taiwan Normal University, focusing on computer vision, machine learning, and signal processing."
+  location: "Taipei, Taiwan"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:mmailab@ntnu.edu.tw"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/MMAILAB-NTNUEE"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "#" # Add your Google Scholar profile URL
+
+# Analytics
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "" # Add your Google Analytics tracking ID
+    anonymize_ip: false
+
+# SEO Related
+social:
+  links:
+    - "https://github.com/MMAILAB-NTNUEE"
+twitter_cards: true
+og_image: "/assets/images/mailab-logo.png"

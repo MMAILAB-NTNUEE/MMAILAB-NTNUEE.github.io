@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    <!-- Critical CSS for fastest initial render -->
+    {% include head/critical-css.html %}
+    
+    <!-- DNS prefetch and preconnect for key domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
+    {% include head.html %}
+    {% include head/custom.html %}
+    
+    <!-- Font Awesome with deferred loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></noscript>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="{{ site.locale | slice: 0,2 | default: "en" }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
+    <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    {% if page.header.image %}
+    <meta property="og:image" content="{{ site.url }}{{ page.header.image | relative_url }}">
+    {% endif %}
+    
+    <!-- Animation library - AOS with deferred loading -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"></noscript>
+    
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ResearchOrganization",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.url }}/assets/images/mailab-logo.png",
+      "description": "{{ site.description }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Taipei",
+        "addressCountry": "TW"
+      },
+      "parentOrganization": {
+        "@type": "EducationalOrganization",
+        "name": "National Taiwan Normal University"
+      }
+    }
+    </script>
+  </head>
+
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+    <!-- Skip to main content for accessibility -->
+    <a class="skip-link" href="#primary-content">Skip to content</a>
+    
+    {% include loader.html %}
+    {% include masthead.html %}
+
+    <div id="primary-content" class="initial-content">
+      {{ content }}
+    </div>
+
+    {% if site.search == true %}
+      <div class="search-content">
+        {% include search/search_form.html %}
+      </div>
+    {% endif %}
+
+    <div id="footer" class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+    
+    <!-- Deferred script loading for performance -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+    <script src="{{ '/assets/js/custom-nav-fix.js' | relative_url }}" defer></script>
+    <script>
+      // Initialize functionality after DOM is ready
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize AOS animations only if not on mobile devices
+        if (typeof AOS !== 'undefined') {
+          AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            disable: window.innerWidth < 768 // Disable on mobile for better performance
+          });
+        }
+        
+        // Remove preloader after page is fully loaded
+        window.addEventListener('load', function() {
+          const preloader = document.querySelector('.preloader');
+          if (preloader) {
+            preloader.classList.add('fade-out');
+            setTimeout(function() {
+              preloader.style.display = 'none';
+            }, 500);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
