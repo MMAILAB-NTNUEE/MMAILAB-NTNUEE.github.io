@@ -9,6 +9,16 @@ header:
 classes: wide
 ---
 
+<!-- Temporary redirect to professor page while site is in beta -->
+<script>
+  window.location.href = "{{ site.baseurl }}/professor/";
+</script>
+
+<!-- Fallback for users with JavaScript disabled -->
+<noscript>
+  <meta http-equiv="refresh" content="0; url={{ site.baseurl }}/professor/">
+</noscript>
+
 <!-- Modern immersive hero section with parallax effect -->
 <div class="immersive-hero">
   <div class="parallax-background" style="background-image: url('{{ site.baseurl }}/assets/images/college.png');"></div>
