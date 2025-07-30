@@ -4,23 +4,27 @@
 
 @charset "utf-8";
 
-/* Custom SCSS for MMAILAB */
+/* === CUSTOM SCSS FOR MMAILAB === */
 
-/* Enhanced Global Color Scheme */
+/* === VARIABLES === */
+
+/* Color Scheme */
 $background-color: #ffffff;
-$text-color: #2D3142;  /* Darker for better readability */
-$primary-color: #105E96;  /* Deep blue for primary elements - research focus */
+$text-color: #2D3142; /* Darker for better readability */
+$primary-color: #105E96; /* Deep blue for primary elements - research focus */
 $secondary-color: #17A589; /* Teal green for accent elements - innovation */
-$tertiary-color: #f8f9fa;  /* Light gray for sections */
-$accent-color: #FF5252;    /* Accent color for highlights and attention */
+$tertiary-color: #f8f9fa; /* Light gray for sections */
+$accent-color: #FF5252; /* Accent color for highlights and attention */
 $border-color: #e9ecef;
 $link-color: $primary-color;
 $link-color-hover: $secondary-color;
+
+/* Shadows and Transitions */
 $box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 $transition-standard: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 $transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-/* Typography Improvements */
+/* Typography */
 $serif: Georgia, Times, serif;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $monospace: Monaco, Consolas, "Lucida Console", monospace;
@@ -29,13 +33,14 @@ $global-font-family: $sans-serif;
 $header-font-family: $sans-serif;
 $caption-font-family: $serif;
 
-/* Enhanced Card Design System - Define mixin before usage */
+/* === MIXINS === */
+
 @mixin card-base {
   background: white;
   border-radius: 12px;
   box-shadow: $box-shadow;
   transition: $transition-standard;
-  border: 1px solid rgba(0,0,0,0.03);
+  border: 1px solid rgba(0, 0, 0, 0.03);
   overflow: hidden;
   
   &:hover {
@@ -44,7 +49,6 @@ $caption-font-family: $serif;
   }
 }
 
-/* Mixins */
 @mixin glassmorphism {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
@@ -54,13 +58,14 @@ $caption-font-family: $serif;
 
 @mixin card-hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
   }
 }
 
-/* New Immersive Hero Section */
+/* === HERO SECTION === */
 .immersive-hero {
   position: relative;
   height: 100vh;
@@ -140,17 +145,21 @@ $caption-font-family: $serif;
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .hero-tagline {
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
   opacity: 0;
   animation: fadeIn 1s 1.2s forwards;
   color: $text-color;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .hero-cta-container {
@@ -210,7 +219,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Scroll indicator animation */
+/* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
   bottom: 30px;
@@ -303,7 +312,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Research Showcase Section */
+/* === RESEARCH SHOWCASE SECTION === */
 .research-showcase {
   padding: 5rem 0;
   max-width: 1200px;
@@ -457,7 +466,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Research Page Redesign */
+/* === RESEARCH PAGE === */
 .research-hero {
   position: relative;
   height: 300px;
@@ -650,7 +659,7 @@ $caption-font-family: $serif;
   flex-grow: 1;
 }
 
-/* Responsive adjustments */
+/* Research Page Responsive */
 @media (max-width: 992px) {
   .research-hero-title {
     font-size: 2.5rem;
@@ -706,7 +715,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Latest Publications Section */
+/* === LATEST PUBLICATIONS SECTION === */
 .latest-research {
   position: relative;
   padding: 7rem 0;
@@ -896,7 +905,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Publications Page Styling */
+/* === PUBLICATIONS PAGE === */
 .publications-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1013,13 +1022,13 @@ $caption-font-family: $serif;
   }
 }
 
-/* Ensure all page content is properly positioned relative to patterns */
+/* Page Content Positioning */
 .page__content > * {
   position: relative;
   z-index: 1;
 }
 
-/* News Section */
+/* === NEWS SECTION === */
 .news-section {
   padding-bottom: 7rem;
   max-width: 1200px;
@@ -1169,7 +1178,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Enhanced News Page Styling */
+/* === NEWS PAGE === */
 .immersive-news-hero {
   padding-top: 3rem;
   position: relative;
@@ -1194,7 +1203,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Improved News Filter Bar */
+/* News Filter Bar */
 .news-filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -1252,7 +1261,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Improved News Grid */
+/* News Grid */
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -1264,7 +1273,6 @@ $caption-font-family: $serif;
   }
 }
 
-/* News Card Design */
 .news-card {
   border-radius: 12px;
   overflow: hidden;
@@ -1319,14 +1327,14 @@ $caption-font-family: $serif;
       font-size: 1.5rem;
       font-weight: 700;
       line-height: 1.1;
-      color: #105E96;
+      color: $primary-color;
     }
     
     .month {
       font-size: 0.8rem;
       text-transform: uppercase;
       font-weight: 600;
-      color: #17A589;
+      color: $secondary-color;
     }
   }
   
@@ -1334,7 +1342,7 @@ $caption-font-family: $serif;
     position: absolute;
     bottom: 15px;
     right: 15px;
-    background: #17A589;
+    background: $secondary-color;
     color: white;
     padding: 0.3rem 1rem;
     border-radius: 30px;
@@ -1357,12 +1365,12 @@ $caption-font-family: $serif;
     line-height: 1.4;
     
     a {
-      color: #105E96;
+      color: $primary-color;
       text-decoration: none;
       transition: color 0.3s ease;
       
       &:hover {
-        color: #17A589;
+        color: $secondary-color;
       }
     }
   }
@@ -1386,12 +1394,12 @@ $caption-font-family: $serif;
       border-radius: 30px;
       font-size: 0.8rem;
       text-decoration: none;
-      background: rgba(16, 94, 150, 0.1);
-      color: #105E96;
+      background: rgba($primary-color, 0.1);
+      color: $primary-color;
       transition: all 0.3s ease;
       
       &:hover {
-        background: rgba(16, 94, 150, 0.15);
+        background: rgba($primary-color, 0.15);
         transform: translateY(-2px);
       }
     }
@@ -1400,7 +1408,7 @@ $caption-font-family: $serif;
   .read-more {
     display: inline-flex;
     align-items: center;
-    color: #17A589;
+    color: $secondary-color;
     font-weight: 600;
     font-size: 0.9rem;
     text-decoration: none;
@@ -1412,79 +1420,23 @@ $caption-font-family: $serif;
     }
     
     &:hover {
-      color: darken(#17A589, 10%);
+      color: darken($secondary-color, 10%);
+      
+      i {
+        transform: translateX(5px);
+      }
     }
   }
 }
 
-/* News Filter Bar */
-.news-filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  background: white;
-  border-radius: 40px;
-  padding: 0.6rem 1.2rem;
-  margin: 1.5rem 0;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  gap: 0.8rem;
-  
-  .news-filter-heading {
-    font-weight: 600;
-    color: #105E96;
-    white-space: nowrap;
-  }
-  
-  .news-filter-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  
-  .news-filter-tag {
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    text-decoration: none;
-    color: #555;
-    transition: all 0.3s ease;
-    background: #f5f5f5;
-    
-    &:hover {
-      background: rgba(23, 165, 137, 0.1);
-      color: #17A589;
-    }
-    
-    &.active {
-      background: #17A589;
-      color: white;
-      box-shadow: 0 4px 12px rgba(23, 165, 137, 0.2);
-    }
-  }
-  
-  @media (max-width: 576px) {
-    flex-direction: column;
-    align-items: flex-start;
-    border-radius: 12px;
-    
-    .news-filter-heading {
-      margin-bottom: 0.5rem;
-    }
-    
-    .news-filter-tags {
-      width: 100%;
-    }
-  }
-}
 
-/* View All News Link */
+/* View All News */
 .view-all-news {
   display: inline-flex;
   align-items: center;
   padding: 0.8rem 1.5rem;
   background: white;
-  color: #105E96;
+  color: $primary-color;
   text-decoration: none;
   border-radius: 40px;
   font-weight: 600;
@@ -1498,9 +1450,10 @@ $caption-font-family: $serif;
   }
   
   &:hover {
-    background: #105E96;
+    background: $primary-color;
     color: white;
     transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
     
     i {
       transform: translateX(3px);
@@ -1518,7 +1471,7 @@ $caption-font-family: $serif;
   margin: 2rem 0;
   
   h3 {
-    color: #105E96;
+    color: $primary-color;
     margin-top: 0;
     margin-bottom: 1rem;
   }
@@ -1532,7 +1485,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Single News Page Styling */
+/* === SINGLE NEWS PAGE === */
 .news-single-page {
   .news-container {
     max-width: 800px;
@@ -1552,7 +1505,8 @@ $caption-font-family: $serif;
       margin-right: 0.4rem;
     }
     
-    .news-date, .news-categories {
+    .news-date,
+    .news-categories {
       display: flex;
       align-items: center;
     }
@@ -1591,14 +1545,14 @@ $caption-font-family: $serif;
     color: #333;
     
     h2 {
-      color: #105E96;
+      color: $primary-color;
       margin-top: 2rem;
-      border-bottom: 2px solid rgba(16, 94, 150, 0.1);
+      border-bottom: 2px solid rgba($primary-color, 0.1);
       padding-bottom: 0.5rem;
     }
     
     a {
-      color: #17A589;
+      color: $secondary-color;
       text-decoration: none;
       font-weight: 500;
       
@@ -1607,7 +1561,8 @@ $caption-font-family: $serif;
       }
     }
     
-    ul, ol {
+    ul,
+    ol {
       padding-left: 1.5rem;
       margin: 1rem 0;
     }
@@ -1639,12 +1594,12 @@ $caption-font-family: $serif;
       border-radius: 30px;
       font-size: 0.85rem;
       text-decoration: none;
-      background: rgba(16, 94, 150, 0.1);
-      color: #105E96;
+      background: rgba($primary-color, 0.1);
+      color: $primary-color;
       transition: all 0.3s ease;
       
       &:hover {
-        background: rgba(16, 94, 150, 0.15);
+        background: rgba($primary-color, 0.15);
         transform: translateY(-2px);
       }
     }
@@ -1653,13 +1608,13 @@ $caption-font-family: $serif;
   .news-links {
     margin: 2rem 0;
     padding: 1.5rem;
-    background: #f8f9fa;
+    background: $tertiary-color;
     border-radius: 12px;
     
     h3 {
       margin-top: 0;
       font-size: 1.2rem;
-      color: #105E96;
+      color: $primary-color;
       margin-bottom: 1rem;
     }
     
@@ -1669,7 +1624,7 @@ $caption-font-family: $serif;
     }
     
     a {
-      color: #17A589;
+      color: $secondary-color;
       text-decoration: none;
       
       &:hover {
@@ -1686,7 +1641,7 @@ $caption-font-family: $serif;
     .back-to-news {
       display: inline-flex;
       align-items: center;
-      color: #105E96;
+      color: $primary-color;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.3s ease;
@@ -1696,14 +1651,14 @@ $caption-font-family: $serif;
       }
       
       &:hover {
-        color: #17A589;
+        color: $secondary-color;
         transform: translateX(-5px);
       }
     }
   }
 }
 
-/* Research Spotlight Section */
+/* === RESEARCH SPOTLIGHT SECTION === */
 .research-spotlight {
   background: #f8f9fa;
   
@@ -1811,7 +1766,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Latest Achievements Section */
+/* === LATEST ACHIEVEMENTS SECTION === */
 .latest-achievements {
   .section-heading h2 .highlight {
     color: $secondary-color;
@@ -1919,7 +1874,8 @@ $caption-font-family: $serif;
   }
 }
 
-/* Call to Action Section */
+/* === NEWS CALL TO ACTION === */
+
 .news-call-to-action {
   .cta-card {
     background: white;
@@ -2012,7 +1968,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Team Section */
+/* === TEAM SECTION === */
 .team-section {
   position: relative;
   padding: 7rem 0;
@@ -2177,7 +2133,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Impact Statistics Section */
+/* === IMPACT STATISTICS SECTION === */
 .impact-section {
   padding: 5rem 0;
   max-width: 1200px;
@@ -2249,10 +2205,11 @@ $caption-font-family: $serif;
   line-height: 1.5;
 }
 
-/* Call to Action Section */
+/* === CALL TO ACTION SECTION === */
+
 .cta-section {
   padding: 5rem 0;
-  background: #f8f9fa;
+  background: $tertiary-color;
   position: relative;
   overflow: hidden;
   
@@ -2263,8 +2220,9 @@ $caption-font-family: $serif;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(circle at 20% 50%, rgba(16, 94, 150, 0.03) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 20%, rgba(23, 165, 137, 0.03) 0%, transparent 50%);
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba($primary-color, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba($secondary-color, 0.03) 0%, transparent 50%);
   }
 }
 
@@ -2334,7 +2292,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Responsive Adjustments */
+/* === RESPONSIVE ADJUSTMENTS === */
 @media (max-width: 992px) {
   .hero-content {
     padding: 2rem;
@@ -2430,7 +2388,9 @@ $caption-font-family: $serif;
   }
 }
 
-// Grid pattern for subtle background texture 
+/* === BACKGROUND PATTERNS === */
+
+/* Grid Pattern */
 .grid-pattern {
   position: relative;
   
@@ -2441,8 +2401,8 @@ $caption-font-family: $serif;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-      linear-gradient(rgba(200, 200, 200, 0.1) 1px, transparent 1px), 
+    background-image:
+      linear-gradient(rgba(200, 200, 200, 0.1) 1px, transparent 1px),
       linear-gradient(90deg, rgba(200, 200, 200, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
     background-position: center center;
@@ -2451,14 +2411,14 @@ $caption-font-family: $serif;
   }
 }
 
-/* Prevent duplicate patterns in nested elements */
+/* Prevent Duplicate Patterns */
 .grid-pattern .grid-pattern:before,
 .pattern-bg .grid-pattern:before,
 .pattern-bg .pattern-bg:before {
   display: none;
 }
 
-/* Layered Background Pattern */
+/* Layered Pattern */
 .pattern-bg {
   position: relative;
   
@@ -2469,7 +2429,7 @@ $caption-font-family: $serif;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
+    background-image:
       radial-gradient(rgba(0, 91, 150, 0.03) 2px, transparent 2px),
       radial-gradient(rgba(0, 91, 150, 0.02) 2px, transparent 2px);
     background-size: 40px 40px;
@@ -2479,7 +2439,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Section styling */
+/* === SECTION COMPONENTS === */
 .section-heading {
   text-align: center;
   margin-bottom: 3rem;
@@ -2501,7 +2461,7 @@ $caption-font-family: $serif;
   }
 }
 
-/* Feature sections */
+/* Feature Sections */
 .feature-section {
   padding: 4rem 0;
   &:nth-child(even) {
@@ -2516,7 +2476,7 @@ $caption-font-family: $serif;
   padding: 0 1rem;
 }
 
-/* Helper Classes */
+/* === HELPER CLASSES === */
 .text-center {
   text-align: center;
 }
@@ -2525,7 +2485,7 @@ $caption-font-family: $serif;
   margin-top: 2rem;
 }
 
-/* News List Layout */
+/* === NEWS LIST LAYOUT === */
 .news-list {
   margin: 2rem 0 3rem;
 }
@@ -2700,6 +2660,6 @@ $caption-font-family: $serif;
   }
 }
 
-/* Import Minimal Mistakes theme */
+/* === THEME IMPORTS === */
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'contrast' }}";
 @import "minimal-mistakes";

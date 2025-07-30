@@ -1,4 +1,4 @@
-# website config
+# Website Configuration
 title: Multimedia and Artificial Intelligence Laboratory
 subtitle: National Taiwan Normal University (NTNU)
 abbreviation: "MMAI Lab"
@@ -6,23 +6,23 @@ description: "MMAILAB at National Taiwan Normal University conducts cutting-edge
 url: https://mmailab-ntnuee.github.io
 repository: MMAILAB-NTNUEE/MMAILAB-NTNUEE.github.io
 
-# theme config
+# Theme Configuration
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes@4.24.0
-minimal_mistakes_skin: "dark" # Changed to dark for a more modern, professional look
+minimal_mistakes_skin: "dark"
 search: true
 search_full_content: true
 logo: "/assets/images/mailab-logo.png"
 
-# Custom color variables
+# Custom Color Variables
 colors:
-  primary: "#0066cc"    # Deep blue for research/tech feel
-  secondary: "#00a6a6"  # Teal accent for visual interest
-  tertiary: "#f39c12"   # Amber for highlighting important elements
-  background: "#f8f9fa" # Light gray for content areas
-  text: "#333333"       # Dark gray for text
+  primary: "#0066cc"      # Deep blue for research/tech feel
+  secondary: "#00a6a6"    # Teal accent for visual interest
+  tertiary: "#f39c12"     # Amber for highlighting important elements
+  background: "#f8f9fa"   # Light gray for content areas
+  text: "#333333"         # Dark gray for text
 
-# plugin config
+# Plugin Configuration
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -32,16 +32,16 @@ plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
 
-# Defaults
+# Content Defaults
 defaults:
-  # _pages
+  # Pages
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: single
       author_profile: false
-  # _posts
+  # Posts
   - scope:
       path: ""
       type: posts
@@ -55,7 +55,7 @@ defaults:
       show_date: true
       header:
         overlay_filter: 0.5
-  # _publications
+  # Publications
   - scope:
       path: ""
       type: publications
@@ -63,7 +63,7 @@ defaults:
       layout: single
       author_profile: false
       share: true
-  # _team
+  # Team
   - scope:
       path: ""
       type: team
@@ -71,7 +71,7 @@ defaults:
       layout: single
       author_profile: true
       share: false
-  # _research
+  # Research
   - scope:
       path: ""
       type: research
@@ -81,7 +81,7 @@ defaults:
       share: true
       toc: true
       toc_sticky: true
-  # _news
+  # News
   - scope:
       path: ""
       type: news
@@ -96,7 +96,7 @@ defaults:
       sidebar:
         nav: "news"
 
-# Site footer
+# Site Footer
 footer:
   links:
     - label: "Email"
@@ -107,7 +107,7 @@ footer:
       url: "https://github.com/MMAILAB-NTNUEE"
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=QwSzhgEAAAAJ&hl=zh-TW" # Add your Google Scholar profile URL
+      url: "https://scholar.google.com/citations?user=QwSzhgEAAAAJ&hl=zh-TW"
 
 # Collections
 collections:
@@ -124,15 +124,15 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-# sitemap config
+# Sitemap Configuration
 include:
   - _pages
 
-# website author
+# Website Author
 author:
-  name   : "MMAILAB NTNU"
-  avatar : "/assets/images/mailab-logo.png"
-  bio    : "Multimedia and Artificial Intelligence Lab at National Taiwan Normal University, focusing on computer vision, machine learning, and signal processing."
+  name: "MMAILAB NTNU"
+  avatar: "/assets/images/mailab-logo.png"
+  bio: "Multimedia and Artificial Intelligence Lab at National Taiwan Normal University, focusing on computer vision, machine learning, and signal processing."
   location: "Taipei, Taiwan"
   links:
     - label: "Email"
@@ -143,13 +143,13 @@ author:
       url: "https://github.com/MMAILAB-NTNUEE"
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
-      url: "#" # Add your Google Scholar profile URL
+      url: "#"
 
 # Analytics
 analytics:
   provider: "google-gtag"
   google:
-    tracking_id: "" # Add your Google Analytics tracking ID
+    tracking_id: ""  # Add your Google Analytics tracking ID
     anonymize_ip: false
 
 # SEO Related

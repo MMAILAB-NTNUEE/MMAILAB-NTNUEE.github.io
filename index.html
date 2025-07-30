@@ -10,9 +10,9 @@ classes: wide
 ---
 
 <!-- Temporary redirect to professor page while site is in beta -->
-<script>
+<!-- <script>
   window.location.href = "{{ site.baseurl }}/professor/";
-</script>
+</script> -->
 
 <!-- Fallback for users with JavaScript disabled -->
 <noscript>
@@ -182,6 +182,7 @@ classes: wide
           {% if post.header.teaser %}
             <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}" loading="lazy">
           {% else %}
+          <!-- default teaser image, WIP -->
             <img src="{{ site.baseurl }}/assets/images/website-launch.png" alt="MMAILAB Research" loading="lazy" width="400" height="400">
           {% endif %}
           

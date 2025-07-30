@@ -1,3 +1,8 @@
+/**
+ * Service Worker for MMAILAB website
+ * Handles offline caching for better performance and offline support
+ */
+
 const CACHE_NAME = 'mmailab-cache-v1';
 const urlsToCache = [
   '/',

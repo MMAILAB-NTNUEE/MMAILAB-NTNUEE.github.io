@@ -1,15 +1,22 @@
+# Main Navigation Menu
 main:
   - title: "Professor"
     url: /professor/
+    
   - title: "Members"
     url: /member/
+    
   - title: "Research"
     url: /research/
+    
   - title: "Publications"
     url: /publications/
+    
   - title: "News"
     url: /news/
+    
   # - title: "Join Us"
-    # url: /join/
+  #   url: /join/
+  
   - title: "Contact & Join Us"
     url: /contact/

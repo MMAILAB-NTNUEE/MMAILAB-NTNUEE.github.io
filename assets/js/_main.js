@@ -1,3 +1,8 @@
+/**
+ * Main JavaScript file for MMAILAB website
+ * Handles animations, scroll effects, and interactive features
+ */
+
 // Navbar scroll effect
 $(window).scroll(function() {
   if ($(window).scrollTop() > 50) {
