@@ -27,99 +27,99 @@
 
 <!-- Custom styles for utility features -->
 <style>
-.back-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background: var(--background-color, white);
-  color: var(--text-color, #2D3142);
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-  border: none;
-  cursor: pointer;
-}
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--background-color, white);
+    color: var(--text-color, #2D3142);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border: none;
+    cursor: pointer;
+  }
 
-.back-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-}
+  .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
 
-.back-to-top:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
+  .back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
 
-.dark-mode .back-to-top {
-  background: var(--card-bg, #2d2d2d);
-  color: var(--text-color, #e0e0e0);
-}
+  .dark-mode .back-to-top {
+    background: var(--card-bg, #2d2d2d);
+    color: var(--text-color, #e0e0e0);
+  }
 
-.citation-copy {
-  position: relative;
-  display: inline-block;
-}
+  .citation-copy {
+    position: relative;
+    display: inline-block;
+  }
 
-.citation-tooltip {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0.5rem;
-  background: rgba(0,0,0,0.8);
-  color: white;
-  font-size: 0.8rem;
-  border-radius: 4px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s ease;
-}
+  .citation-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+  }
 
-.citation-copy:hover .citation-tooltip {
-  opacity: 1;
-  visibility: visible;
-}
+  .citation-copy:hover .citation-tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
 
-/* Code block enhancements */
-pre[class*="language-"] {
-  border-radius: 8px;
-  margin: 2rem 0;
-}
+  /* Code block enhancements */
+  pre[class*="language-"] {
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
 
-.code-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #2d2d2d;
-  padding: 0.5rem 1rem;
-  border-radius: 8px 8px 0 0;
-  color: #fff;
-  font-size: 0.9rem;
-}
+  .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2d2d2d;
+    padding: 0.5rem 1rem;
+    border-radius: 8px 8px 0 0;
+    color: #fff;
+    font-size: 0.9rem;
+  }
 
-.code-copy-button {
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.2);
-  color: #fff;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
+  .code-copy-button {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
 
-.code-copy-button:hover {
-  background: rgba(255,255,255,0.1);
-}
+  .code-copy-button:hover {
+    background: rgba(255,255,255,0.1);
+  }
 </style>
 
 <!-- Custom JavaScript -->
@@ -131,16 +131,16 @@ pre[class*="language-"] {
       once: true,
       offset: 100
     });
-    
+
     // Initialize counters for statistics
     const counters = document.querySelectorAll('.stat-number');
     const speed = 200;
-    
+
     counters.forEach(counter => {
       const target = +counter.getAttribute('data-target');
       const inc = target / speed;
       let count = 0;
-      
+
       const updateCount = () => {
         if (count < target) {
           count += inc;
@@ -150,13 +150,13 @@ pre[class*="language-"] {
           counter.innerText = target;
         }
       };
-      
+
       updateCount();
     });
 
     // Lazy Loading Implementation
     const lazyImages = document.querySelectorAll('img[data-src]');
-    
+
     const imageObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -170,7 +170,7 @@ pre[class*="language-"] {
       rootMargin: '50px 0px',
       threshold: 0.01
     });
-    
+
     lazyImages.forEach(img => imageObserver.observe(img));
 
     // Back to top button
@@ -230,13 +230,13 @@ pre[class*="language-"] {
 
 <!-- Service Worker Registration -->
 <script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/assets/js/sw.js').then(registration => {
-      console.log('ServiceWorker registration successful');
-    }).catch(err => {
-      console.log('ServiceWorker registration failed: ', err);
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/assets/js/sw.js').then(registration => {
+        console.log('ServiceWorker registration successful');
+      }).catch(err => {
+        console.log('ServiceWorker registration failed: ', err);
+      });
     });
-  });
-}
+  }
 </script>

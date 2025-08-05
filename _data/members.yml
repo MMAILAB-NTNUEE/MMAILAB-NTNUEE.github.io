@@ -1,0 +1,211 @@
+# Lab Members Data
+# This file contains all lab member information in YAML format
+# The website will automatically generate member cards from this data
+
+# Current Students
+
+# update layout
+# - name - Required
+#   - program - Required
+#   - email - Optional (displays in card footer)
+#   - github - Optional (displays as icon)
+#   - linkedin - Optional (displays as icon)
+#   - research_areas - Optional (displays as tags)
+#   - duration - Optional (for interns, shows internship period)
+#   - photo - Optional (not currently used in layout)
+#   - initials - Optional (not currently used in layout)
+
+current_students:
+  masters:
+    # - name: "xxx"
+    #   program: "2nd Year"
+    #   email: "xxx@ntnu.edu.tw"
+    #   github: "https://github.com/xxxx"
+    #   linkedin: "https://linkedin.com/in/xxxx"
+    #   # research_areas:
+    #   #   - "Deep Learning"
+    #   #   - "Computer Vision"
+    #   #   - "Medical AI"
+      
+    - name: "黃品慈"
+      program: "2nd Year"
+
+    - name: "顏伯諭"
+      program: "2nd Year"
+
+    - name: "林琮祐"
+      program: "2nd Year"
+    
+    - name: "吳政陽"
+      program: "2nd Year"
+    
+    - name: "何祐豪"
+      program: "2nd Year"
+
+    - name: "彭昶得"
+      initials: "CDP"
+      program: "1st Year"
+      email: "61375096h@gapps.ntnu.edu.tw"
+    
+    - name: "鐘佳妤"
+      program: "1st Year"
+    
+    - name: "陳柏安"
+      program: "1st Year"
+    
+    - name: "張耘翰"
+      program: "1st Year"
+    
+    - name: "陳品樺"
+      program: "1st Year"
+    
+    # - name: "xxx"
+      # program: "xxx"
+      # photo: null
+      # initials: "LH"
+      # research_areas:
+      #   - "Attention Mechanisms"
+      #   - "Efficient Computing"
+      #   - "Visual Recognition"
+      # email: "lisa.huang@ntnu.edu.tw"
+      # github: "#"
+      # linkedin: "#"
+
+
+  undergraduates:
+    # - name: "Alex Chen"
+    #   program: "Computer Science (4th Year)"
+    #   photo: "/assets/images/student-undergrad1.jpg"
+    #   initials: "AC"
+    #   research_areas:
+    #     - "Image Classification"
+    #     - "Conservation"
+    #     - "Wildlife"
+    #   email: "alex.chen@ntnu.edu.tw"
+    #   github: "#"
+      
+    # - name: "Maria Kim"
+    #   program: "Electrical Engineering (3rd Year)"
+    #   photo: null
+    #   initials: "MK"
+    #   research_areas:
+    #     - "Model Compression"
+    #     - "Mobile AI"
+    #     - "IoT"
+    #   email: "maria.kim@ntnu.edu.tw"
+    #   github: "#"
+      
+    # - name: "David Lee"
+    #   program: "Information Engineering (2nd Year)"
+    #   photo: null
+    #   initials: "DL"
+    #   research_areas:
+    #     - "Medical AI"
+    #     - "Healthcare"
+    #     - "X-ray Analysis"
+    #   email: "david.lee@ntnu.edu.tw"
+    #   github: "#"
+
+  interns:
+    # - name: "Jenny Smith"
+    #   program: "Computer Science (3rd Year)"
+    #   duration: "Summer 2024 Intern"
+    #   photo: null
+    #   initials: "JS"
+    #   research_areas:
+    #     - "Data Augmentation"
+    #     - "Small Datasets"
+    #     - "Deep Learning"
+    #   email: "jenny.smith@ntnu.edu.tw"
+    #   github: "#"
+      
+    # - name: "Kevin Wang"
+    #   program: "Information Engineering (2nd Year)"
+    #   duration: "Fall 2024 Intern"
+    #   photo: "/assets/images/intern-student1.jpg"
+    #   initials: "KW"
+    #   research_areas:
+    #     - "ML Testing"
+    #     - "Automation"
+    #     - "Quality Assurance"
+    #   email: "kevin.wang@ntnu.edu.tw"
+    #   github: "#"
+      
+    # - name: "Amy Liu"
+    #   program: "Electrical Engineering (1st Year)"
+    #   duration: "Spring 2024 Intern"
+    #   photo: null
+    #   initials: "AL"
+    #   research_areas:
+    #     - "Computer Vision"
+    #     - "Image Processing"
+    #     - "Feature Extraction"
+    #   email: "amy.liu@ntnu.edu.tw"
+    #   github: "#"
+      
+    # - name: "Ryan Thompson"
+    #   program: "Mathematics (4th Year)"
+    #   duration: "Summer 2024 Intern"
+    #   photo: null
+    #   initials: "RT"
+    #   research_areas:
+    #     - "Optimization"
+    #     - "Neural Networks"
+    #     - "Mathematics"
+    #   email: "ryan.thompson@ntnu.edu.tw"
+    #   github: "#"
+
+# Graduated Students & Thesis Archive
+graduated_students:
+  - year: 2024
+    students:
+      - name: "王鬱紹"
+        name_en: "Wang, Yu-Shao"
+        thesis_cn: "基於 Retinex 理論之輕量化自監督式影像節能顯示深度學習網路"
+        thesis_en: "Lightweight Retinex-based Self-Supervised Deep Learning Network for Power-Efficient Image Display"
+        
+  - year: 2023
+    students:
+      - name: "李汪翰"
+        name_en: "Lee, Wang-Han"
+        thesis_cn: "基於雙重注意力機制之逆半色調深度學習網路"
+        thesis_en: "Deep Inverse Halftoning Network based on Dual Attention Mechanisms"
+        
+      - name: "胡景閎"
+        name_en: "Hu, Jing-Hung"
+        thesis_cn: "基於雙重注意力機制之視網膜血管分割深度學習網路"
+        thesis_en: "Deep Retinal Vessel Segmentation Network based on Dual Attention Mechanism"
+        
+  - year: 2022
+    students:
+      - name: "倪至謙"
+        name_en: "Ni, Chih-Chien"
+        thesis_cn: "用於高光譜和多光譜影像融合的知識蒸餾師生網路"
+        thesis_en: "Knowledge Distillation Teacher-Student Network for Hyperspectral and Multispectral Image Fusion"
+        
+      - name: "黃冠樺"
+        name_en: "Huang, Guan-Hua"
+        thesis_cn: "基於雨嵌入一致性和注意力機制之單張影像去雨"
+        thesis_en: "Single Image Deraining Using Rain Embedding Consistency and Attention Mechanism"
+        
+      - name: "李沃晏"
+        name_en: "Li, Wo-Yen"
+        thesis_cn: "基於 SwinTransformer 及深度學習網路之高光譜影像融合"
+        thesis_en: "SwinDFN：Deep Hyperspectral and Multispectral Image Fusion based on SwinTransformer"
+        
+      - name: "宋奕泓"
+        name_en: "Sung, Yi-Hung"
+        thesis_cn: "基於非監督式生成對抗網路及對比學習之水下影像品質回復"
+        thesis_en: "Unsupervised Generative Adversarial Network and Contrastive Learning for Underwater Image Restoration"
+        
+  - year: 2021
+    students:
+      - name: "蔡洪弦"
+        name_en: "Tsai, Hong-Xian"
+        thesis_cn: "基於非監督式跨領域深度學習之單張影像雜訊去除"
+        thesis_en: "Unsupervised Cross Domain Deep Learning for Single Image Noise Removal"
+        
+      - name: "陳則光"
+        name_en: "Chen, Ze-Guang"
+        thesis_cn: "基於變分自動編碼器之解糾纏模型設計與應用:單細胞RNA定序之聚類與細胞擾動之預測"
+        thesis_en: "Variational autoencoder based disentangle model design and application: scRNA-seq clustering and cell perturbation prediction"

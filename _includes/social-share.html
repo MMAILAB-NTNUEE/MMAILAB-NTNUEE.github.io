@@ -20,226 +20,226 @@
 </div>
 
 <style>
-.page__share {
-  margin-top: 2em;
-  padding-top: 1em;
-  border-top: 1px solid #f2f3f3;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  align-items: center;
-}
-
-.page__share-title {
-  margin-bottom: 10px;
-  font-size: 0.75em;
-  text-transform: uppercase;
-  flex-basis: 100%;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.25em;
-  padding: 0.6em 1em;
-  font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
-  font-size: 0.75em;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border-width: 0;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.btn:active {
-  transform: translateY(0);
-}
-
-.btn--twitter {
-  background-color: #000000;
-  color: #fff;
-}
-
-.btn--facebook {
-  background-color: #3b5998;
-  color: #fff;
-}
-
-.btn--linkedin {
-  background-color: #007bb6;
-  color: #fff;
-}
-
-.btn--email {
-  background-color: #34495e;
-  color: #fff;
-}
-
-.btn--copy-url {
-  background-color: #9b59b6;
-  color: #fff;
-}
-
-.btn--copy-citation {
-  background-color: #2ecc71;
-  color: #fff;
-}
-
-.label {
-  margin-left: 0.5em;
-}
-
-/* Ripple effect */
-.btn:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 5px;
-  height: 5px;
-  background: rgba(255,255,255,.5);
-  opacity: 0;
-  border-radius: 100%;
-  transform: scale(1, 1) translate(-50%);
-  transform-origin: 50% 50%;
-}
-
-.btn:focus:not(:active)::after {
-  animation: ripple 1s ease-out;
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(0, 0);
-    opacity: 1;
+  .page__share {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #f2f3f3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    align-items: center;
   }
-  20% {
-    transform: scale(25, 25);
-    opacity: 1;
+
+  .page__share-title {
+    margin-bottom: 10px;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    flex-basis: 100%;
   }
-  100% {
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.25em;
+    padding: 0.6em 1em;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-width: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn:active {
+    transform: translateY(0);
+  }
+
+  .btn--twitter {
+    background-color: #000000;
+    color: #fff;
+  }
+
+  .btn--facebook {
+    background-color: #3b5998;
+    color: #fff;
+  }
+
+  .btn--linkedin {
+    background-color: #007bb6;
+    color: #fff;
+  }
+
+  .btn--email {
+    background-color: #34495e;
+    color: #fff;
+  }
+
+  .btn--copy-url {
+    background-color: #9b59b6;
+    color: #fff;
+  }
+
+  .btn--copy-citation {
+    background-color: #2ecc71;
+    color: #fff;
+  }
+
+  .label {
+    margin-left: 0.5em;
+  }
+
+  /* Ripple effect */
+  .btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, .5);
     opacity: 0;
-    transform: scale(40, 40);
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
   }
-}
 
-/* Tooltip to show copy confirmation */
-.tooltip {
-  position: relative;
-}
+  .btn:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+  }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(25, 25);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(40, 40);
+    }
+  }
 
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #333 transparent transparent transparent;
-}
+  /* Tooltip to show copy confirmation */
+  .tooltip {
+    position: relative;
+  }
 
-.tooltip.visible .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
 
-/* Dark mode adjustments */
-.dark-mode .page__share {
-  border-top-color: #3d3d3d;
-}
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+  }
+
+  .tooltip.visible .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* Dark mode adjustments */
+  .dark-mode .page__share {
+    border-top-color: #3d3d3d;
+  }
 </style>
 
 <script>
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).then(() => {
-    showCopyConfirmation(document.querySelector('.btn--copy-citation'), 'Citation copied!');
-  }).catch(() => {
-    // Fallback for browsers that don't support clipboard API
-    const textarea = document.createElement('textarea');
-    textarea.textContent = text;
-    textarea.style.position = 'fixed';
-    document.body.appendChild(textarea);
-    textarea.select();
-    
-    try {
-      document.execCommand('copy');
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
       showCopyConfirmation(document.querySelector('.btn--copy-citation'), 'Citation copied!');
-    } catch (err) {
-      console.error('Failed to copy: ', err);
-    } finally {
-      document.body.removeChild(textarea);
-    }
-  });
-}
-
-function copyPageUrlToClipboard() {
-  const url = window.location.href;
-  navigator.clipboard.writeText(url).then(() => {
-    showCopyConfirmation(document.querySelector('.btn--copy-url'), 'URL copied!');
-  }).catch(() => {
-    // Fallback
-    const textarea = document.createElement('textarea');
-    textarea.textContent = url;
-    textarea.style.position = 'fixed';
-    document.body.appendChild(textarea);
-    textarea.select();
-    
-    try {
-      document.execCommand('copy');
-      showCopyConfirmation(document.querySelector('.btn--copy-url'), 'URL copied!');
-    } catch (err) {
-      console.error('Failed to copy: ', err);
-    } finally {
-      document.body.removeChild(textarea);
-    }
-  });
-}
-
-function showCopyConfirmation(button, message) {
-  const originalContent = button.innerHTML;
-  
-  // Check if button already has tooltip
-  let tooltip = button.querySelector('.tooltiptext');
-  if (!tooltip) {
-    button.classList.add('tooltip');
-    tooltip = document.createElement('span');
-    tooltip.className = 'tooltiptext';
-    button.appendChild(tooltip);
+    }).catch(() => {
+      // Fallback for browsers that don't support clipboard API
+      const textarea = document.createElement('textarea');
+      textarea.textContent = text;
+      textarea.style.position = 'fixed';
+      document.body.appendChild(textarea);
+      textarea.select();
+      
+      try {
+        document.execCommand('copy');
+        showCopyConfirmation(document.querySelector('.btn--copy-citation'), 'Citation copied!');
+      } catch (err) {
+        console.error('Failed to copy: ', err);
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    });
   }
-  
-  tooltip.textContent = message;
-  button.classList.add('visible');
-  
-  setTimeout(() => {
-    button.classList.remove('visible');
-  }, 2000);
-}
+
+  function copyPageUrlToClipboard() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+      showCopyConfirmation(document.querySelector('.btn--copy-url'), 'URL copied!');
+    }).catch(() => {
+      // Fallback
+      const textarea = document.createElement('textarea');
+      textarea.textContent = url;
+      textarea.style.position = 'fixed';
+      document.body.appendChild(textarea);
+      textarea.select();
+      
+      try {
+        document.execCommand('copy');
+        showCopyConfirmation(document.querySelector('.btn--copy-url'), 'URL copied!');
+      } catch (err) {
+        console.error('Failed to copy: ', err);
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    });
+  }
+
+  function showCopyConfirmation(button, message) {
+    const originalContent = button.innerHTML;
+    
+    // Check if button already has tooltip
+    let tooltip = button.querySelector('.tooltiptext');
+    if (!tooltip) {
+      button.classList.add('tooltip');
+      tooltip = document.createElement('span');
+      tooltip.className = 'tooltiptext';
+      button.appendChild(tooltip);
+    }
+    
+    tooltip.textContent = message;
+    button.classList.add('visible');
+    
+    setTimeout(() => {
+      button.classList.remove('visible');
+    }, 2000);
+  }
 </script>

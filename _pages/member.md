@@ -158,106 +158,255 @@ header:
     margin-right: 0.5rem;
   }
   
-  /* Students section styles */
-  .students-container {
+  /* Enhanced Members Grid Styles */
+  .members-list {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
   }
   
-  .student-card {
-    background: white;
-    border-radius: 12px;
+  .member-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fffe 100%);
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(23, 165, 137, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    height: fit-content;
   }
   
-  .student-card:hover {
+  .member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #105E96, #17A589, #105E96);
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease-in-out infinite;
+  }
+  
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  .member-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    border-color: rgba(23, 165, 137, 0.3);
   }
   
-  .student-photo {
-    height: 180px;
-    overflow: hidden;
-  }
-  
-  .student-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.5s ease;
-  }
-  
-  .student-card:hover .student-photo img {
-    transform: scale(1.05);
-  }
-  
-  .student-info {
-    padding: 1.2rem;
+  .member-card-content {
     display: flex;
     flex-direction: column;
+    height: 100%;
+  }
+  
+  .member-card-header {
+    margin-bottom: 1.2rem;
+  }
+  
+  .member-card-body {
     flex-grow: 1;
+    margin-bottom: 1.2rem;
   }
   
-  .student-name {
-    font-size: 1.3rem;
+  .member-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .member-name {
+    font-size: 1.4rem;
     font-weight: 700;
-    color: #105E96;
+    background: linear-gradient(135deg, #105E96, #17A589);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin: 0 0 0.5rem;
+    line-height: 1.3;
+    position: relative;
   }
   
-  .student-program {
-    font-size: 0.95rem;
+  .member-program {
+    display: block;
+    font-size: 1.05rem;
     color: #17A589;
     font-weight: 600;
     margin-bottom: 1rem;
+    padding-left: 1.2rem;
+    position: relative;
   }
   
+  .member-program::before {
+    content: '🎓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1rem;
+  }
   
-  .student-tags {
+  .member-duration {
+    display: block;
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+  
+  .member-duration::before {
+    content: '📅';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.9rem;
+  }
+  
+  .member-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-bottom: 1rem;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
   }
   
-  .student-tag {
+  .member-tag {
     display: inline-block;
-    padding: 0.3rem 0.6rem;
+    padding: 0.4rem 0.9rem;
     border-radius: 20px;
-    background: rgba(16, 94, 150, 0.08);
+    background: linear-gradient(135deg, rgba(16, 94, 150, 0.1), rgba(23, 165, 137, 0.08));
     color: #105E96;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(16, 94, 150, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
   }
   
-  .student-links {
+  .member-tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s;
+  }
+  
+  .member-row:hover .member-tag::before {
+    left: 100%;
+  }
+  
+  .member-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 94, 150, 0.2);
+  }
+  
+  .member-links {
     display: flex;
-    gap: 0.8rem;
+    gap: 0.6rem;
+    align-items: center;
   }
   
-  .student-link {
+  
+  .member-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    background: rgba(16, 94, 150, 0.1);
+    background: linear-gradient(135deg, rgba(16, 94, 150, 0.1), rgba(23, 165, 137, 0.1));
     color: #105E96;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(16, 94, 150, 0.15);
+    position: relative;
+    overflow: hidden;
   }
   
-  .student-link:hover {
-    background: #105E96;
+  .member-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: linear-gradient(135deg, #105E96, #17A589);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  
+  .member-link i {
+    position: relative;
+    z-index: 1;
+    font-size: 1.1rem;
+  }
+  
+  .member-link:hover::before {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .member-link:hover {
     color: white;
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(16, 94, 150, 0.3);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .members-list {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 1.5rem 1rem;
+    }
+    
+    .member-card {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .member-container {
+      padding: 1rem;
+    }
+    
+    .members-list {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      padding: 1rem;
+    }
+    
+    .member-card {
+      padding: 1.2rem;
+    }
+    
+    .member-name {
+      font-size: 1.2rem;
+    }
+    
+    .section-heading h2 {
+      font-size: 1.8rem;
+    }
+    
+    .section-heading h3 {
+      font-size: 1.4rem !important;
+    }
   }
   
   .alumni-list {
@@ -399,8 +548,7 @@ header:
     font-weight: 600;
     margin-bottom: 0.8rem;
   }
-  
-  
+
   .undergraduate-tags {
     display: flex;
     flex-wrap: wrap;
@@ -522,8 +670,7 @@ header:
     margin-bottom: 0.7rem;
     font-style: italic;
   }
-  
-  
+
   .intern-tags {
     display: flex;
     flex-wrap: wrap;
@@ -634,30 +781,30 @@ header:
     .professor-card {
       flex-direction: column;
     }
-    
+
     .professor-photo {
       width: 100%;
       height: 300px;
     }
-    
+
     .undergraduate-container {
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 1rem;
     }
-    
+
     .intern-container {
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 1rem;
     }
-    
+
     .thesis-item {
       padding: 1.5rem;
     }
-    
+
     .thesis-title-cn {
       font-size: 1.1rem;
     }
-    
+
     .thesis-title-en {
       font-size: 1rem;
     }
@@ -665,323 +812,192 @@ header:
 </style>
 
 <div class="member-container">
-  <!-- Current Students Section
+  <!-- Current Students Section -->
   <div class="section-heading">
     <h2>Current Students</h2>
-  </div> -->
+  </div>
   
   <!-- Master's Students -->
-  <!-- <div class="section-heading">
+  {% if site.data.members.current_students.masters %}
+  <div class="section-heading">
     <h3 style="font-size: 1.6rem; margin-bottom: 2rem;">Master's Students</h3>
-  </div> -->
-  
-  <!-- <div class="students-container">
-    <div class="student-card">
-      <div class="student-photo">
-        <img src="/assets/images/student3.jpg" alt="Thomas Wu">
-      </div>
-      <div class="student-info">
-        <h3 class="student-name">Thomas Wu</h3>
-        <p class="student-program">Master's Student (2nd Year)</p>
-        <div class="student-tags">
-          <span class="student-tag">3D Vision</span>
-          <span class="student-tag">Scene Understanding</span>
-          <span class="student-tag">Reconstruction</span>
-        </div>
-        <div class="student-links">
-          <a href="mailto:thomas.wu@ntnu.edu.tw" class="student-link" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="#" target="_blank" class="student-link" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="#" target="_blank" class="student-link" title="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="student-card">
-      <div class="student-photo no-image">
-        LH
-      </div>
-      <div class="student-info">
-        <h3 class="student-name">Lisa Huang</h3>
-        <p class="student-program">Master's Student (1st Year)</p>
-        <div class="student-tags">
-          <span class="student-tag">Attention Mechanisms</span>
-          <span class="student-tag">Efficient Computing</span>
-          <span class="student-tag">Visual Recognition</span>
-        </div>
-        <div class="student-links">
-          <a href="mailto:lisa.huang@ntnu.edu.tw" class="student-link" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="#" target="_blank" class="student-link" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="#" target="_blank" class="student-link" title="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
-   -->
+  
+  <div class="members-list">
+    {% for student in site.data.members.current_students.masters %}
+    <div class="member-card">
+      <div class="member-card-content">
+        <div class="member-card-header">
+          <h4 class="member-name">{{ student.name }}</h4>
+          <span class="member-program">{{ student.program }}</span>
+        </div>
+        
+        <div class="member-card-body">
+          {% if student.research_areas %}
+          <div class="member-tags">
+            {% for area in student.research_areas %}
+            <span class="member-tag">{{ area }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        
+        <div class="member-card-footer">
+          <div class="member-contact">
+            <!-- Contact info placeholder -->
+          </div>
+          <div class="member-links">
+            {% if student.email %}
+            <a href="mailto:{{ student.email }}" class="member-link" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            {% endif %}
+            {% if student.github %}
+            <a href="{{ student.github }}" target="_blank" class="member-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            {% endif %}
+            {% if student.linkedin %}
+            <a href="{{ student.linkedin }}" target="_blank" class="member-link" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  
   <!-- Undergraduate Students -->
-  <!-- <div class="section-heading">
+  {% if site.data.members.current_students.undergraduates %}
+  <div class="section-heading">
     <h3 style="font-size: 1.6rem; margin-bottom: 2rem;">Undergraduate Students</h3>
   </div>
   
-  <div class="undergraduate-container">
-    <div class="undergraduate-card">
-      <div class="undergraduate-photo">
-        <img src="/assets/images/student-undergrad1.jpg" alt="Alex Chen">
-      </div>
-      <div class="undergraduate-info">
-        <h3 class="undergraduate-name">Alex Chen</h3>
-        <p class="undergraduate-program">Computer Science (4th Year)</p>
-        <div class="undergraduate-tags">
-          <span class="undergraduate-tag">Image Classification</span>
-          <span class="undergraduate-tag">Conservation</span>
-          <span class="undergraduate-tag">Wildlife</span>
+  <div class="members-list">
+    {% for student in site.data.members.current_students.undergraduates %}
+    <div class="member-card">
+      <div class="member-card-content">
+        <div class="member-card-header">
+          <h4 class="member-name">{{ student.name }}</h4>
+          <span class="member-program">{{ student.program }}</span>
         </div>
-        <div class="undergraduate-links">
-          <a href="mailto:alex.chen@ntnu.edu.tw" class="undergraduate-link" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="#" target="_blank" class="undergraduate-link" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
+        
+        <div class="member-card-body">
+          {% if student.research_areas %}
+          <div class="member-tags">
+            {% for area in student.research_areas %}
+            <span class="member-tag">{{ area }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
         </div>
-      </div>
-    </div>
-    
-    <div class="undergraduate-card">
-      <div class="undergraduate-photo no-image">
-        MK
-      </div>
-      <div class="undergraduate-info">
-        <h3 class="undergraduate-name">Maria Kim</h3>
-        <p class="undergraduate-program">Electrical Engineering (3rd Year)</p>
-        <div class="undergraduate-tags">
-          <span class="undergraduate-tag">Model Compression</span>
-          <span class="undergraduate-tag">Mobile AI</span>
-          <span class="undergraduate-tag">IoT</span>
-        </div>
-        <div class="undergraduate-links">
-          <a href="mailto:maria.kim@ntnu.edu.tw" class="undergraduate-link" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="#" target="_blank" class="undergraduate-link" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
+        
+        <div class="member-card-footer">
+          <div class="member-contact">
+            <!-- Contact info placeholder -->
+          </div>
+          <div class="member-links">
+            {% if student.email %}
+            <a href="mailto:{{ student.email }}" class="member-link" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            {% endif %}
+            {% if student.github %}
+            <a href="{{ student.github }}" target="_blank" class="member-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            {% endif %}
+            {% if student.linkedin %}
+            <a href="{{ student.linkedin }}" target="_blank" class="member-link" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
-    
-    <div class="undergraduate-card">
-      <div class="undergraduate-photo no-image">
-        DL
-      </div>
-      <div class="undergraduate-info">
-        <h3 class="undergraduate-name">David Lee</h3>
-        <p class="undergraduate-program">Information Engineering (2nd Year)</p>
-        <div class="undergraduate-tags">
-          <span class="undergraduate-tag">Medical AI</span>
-          <span class="undergraduate-tag">Healthcare</span>
-          <span class="undergraduate-tag">X-ray Analysis</span>
-        </div>
-        <div class="undergraduate-links">
-          <a href="mailto:david.lee@ntnu.edu.tw" class="undergraduate-link" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="#" target="_blank" class="undergraduate-link" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
-   -->
+  {% endif %}
+  
   <!-- Undergraduate Intern Students -->
-  <!-- <div class="section-heading">
+  {% if site.data.members.current_students.interns %}
+  <div class="section-heading">
     <h3 style="font-size: 1.6rem; margin-bottom: 2rem;">Undergraduate Intern Students</h3>
   </div>
   
-  <div class="intern-container">
-    <div class="intern-card">
-      <div class="intern-photo no-image">
-        JS
-      </div>
-      <div class="intern-info">
-        <h3 class="intern-name">Jenny Smith</h3>
-        <p class="intern-program">Computer Science (3rd Year)</p>
-        <p class="intern-duration">Summer 2024 Intern</p>
-        <div class="intern-tags">
-          <span class="intern-tag">Data Augmentation</span>
-          <span class="intern-tag">Small Datasets</span>
-          <span class="intern-tag">Deep Learning</span>
+  <div class="members-list">
+    {% for student in site.data.members.current_students.interns %}
+    <div class="member-card">
+      <div class="member-card-content">
+        <div class="member-card-header">
+          <h4 class="member-name">{{ student.name }}</h4>
+          <span class="member-program">{{ student.program }}</span>
+          {% if student.duration %}
+          <span class="member-duration">{{ student.duration }}</span>
+          {% endif %}
         </div>
-        <div class="intern-links">
-          <a href="mailto:jenny.smith@ntnu.edu.tw" class="intern-link" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="#" target="_blank" class="intern-link" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
+        
+        <div class="member-card-body">
+          {% if student.research_areas %}
+          <div class="member-tags">
+            {% for area in student.research_areas %}
+            <span class="member-tag">{{ area }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
         </div>
-      </div>
-    </div>
-    
-    <div class="intern-card">
-      <div class="intern-photo">
-        <img src="/assets/images/intern-student1.jpg" alt="Kevin Wang">
-      </div>
-      <div class="intern-info">
-        <h3 class="intern-name">Kevin Wang</h3>
-        <p class="intern-program">Information Engineering (2nd Year)</p>
-        <p class="intern-duration">Fall 2024 Intern</p>
-        <div class="intern-tags">
-          <span class="intern-tag">ML Testing</span>
-          <span class="intern-tag">Automation</span>
-          <span class="intern-tag">Quality Assurance</span>
-        </div>
-        <div class="intern-links">
-          <a href="mailto:kevin.wang@ntnu.edu.tw" class="intern-link" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="#" target="_blank" class="intern-link" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
+        
+        <div class="member-card-footer">
+          <div class="member-contact">
+            <!-- Contact info placeholder -->
+          </div>
+          <div class="member-links">
+            {% if student.email %}
+            <a href="mailto:{{ student.email }}" class="member-link" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            {% endif %}
+            {% if student.github %}
+            <a href="{{ student.github }}" target="_blank" class="member-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            {% endif %}
+            {% if student.linkedin %}
+            <a href="{{ student.linkedin }}" target="_blank" class="member-link" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
-    
-    <div class="intern-card">
-      <div class="intern-photo no-image">
-        AL
-      </div>
-      <div class="intern-info">
-        <h3 class="intern-name">Amy Liu</h3>
-        <p class="intern-program">Electrical Engineering (1st Year)</p>
-        <p class="intern-duration">Spring 2024 Intern</p>
-        <div class="intern-tags">
-          <span class="intern-tag">Computer Vision</span>
-          <span class="intern-tag">Image Processing</span>
-          <span class="intern-tag">Feature Extraction</span>
-        </div>
-        <div class="intern-links">
-          <a href="mailto:amy.liu@ntnu.edu.tw" class="intern-link" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="#" target="_blank" class="intern-link" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="intern-card">
-      <div class="intern-photo no-image">
-        RT
-      </div>
-      <div class="intern-info">
-        <h3 class="intern-name">Ryan Thompson</h3>
-        <p class="intern-program">Mathematics (4th Year)</p>
-        <p class="intern-duration">Summer 2024 Intern</p>
-        <div class="intern-tags">
-          <span class="intern-tag">Optimization</span>
-          <span class="intern-tag">Neural Networks</span>
-          <span class="intern-tag">Mathematics</span>
-        </div>
-        <div class="intern-links">
-          <a href="mailto:ryan.thompson@ntnu.edu.tw" class="intern-link" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="#" target="_blank" class="intern-link" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
-   -->
+  {% endif %}
   <!-- Thesis Archives Section -->
   <div class="section-heading">
     <h2>Graduated Master & Thesis</h2>
   </div>
   
   <div class="thesis-list">
-    <!-- 2024 -->
+    {% for year_data in site.data.members.graduated_students %}
     <div class="thesis-year">
-      <h3>2024</h3>
+      <h3>{{ year_data.year }}</h3>
+      {% for student in year_data.students %}
       <div class="thesis-item">
-        <div class="thesis-title-cn">基於 Retinex 理論之輕量化自監督式影像節能顯示深度學習網路</div>
-        <div class="thesis-title-en">Lightweight Retinex-based Self-Supervised Deep Learning Network for Power-Efficient Image Display</div>
-        <div class="thesis-author">王鬱紹 (Wang, Yu-Shao)</div>
+        <div class="thesis-title-cn">{{ student.thesis_cn }}</div>
+        <div class="thesis-title-en">{{ student.thesis_en }}</div>
+        <div class="thesis-author">{{ student.name }} ({{ student.name_en }})</div>
       </div>
+      {% unless forloop.last %}
+      <hr class="thesis-divider">
+      {% endunless %}
+      {% endfor %}
     </div>
-    
-    <!-- 2023 -->
-    <div class="thesis-year">
-      <h3>2023</h3>
-      <div class="thesis-item">
-        <div class="thesis-title-cn">基於雙重注意力機制之逆半色調深度學習網路</div>
-        <div class="thesis-title-en">Deep Inverse Halftoning Network based on Dual Attention Mechanisms</div>
-        <div class="thesis-author">李汪翰 (Lee, Wang-Han)</div>
-      </div>
-      <hr class="thesis-divider">
-      <div class="thesis-item">
-        <div class="thesis-title-cn">基於雙重注意力機制之視網膜血管分割深度學習網路</div>
-        <div class="thesis-title-en">Deep Retinal Vessel Segmentation Network based on Dual Attention Mechanism</div>
-        <div class="thesis-author">胡景閎 (Hu, Jing-Hung)</div>
-      </div>
-    </div>
-    
-    <!-- 2022 -->
-    <div class="thesis-year">
-      <h3>2022</h3>
-      <div class="thesis-item">
-        <div class="thesis-title-cn">用於高光譜和多光譜影像融合的知識蒸餾師生網路</div>
-        <div class="thesis-title-en">Knowledge Distillation Teacher-Student Network for Hyperspectral and Multispectral Image Fusion</div>
-        <div class="thesis-author">倪至謙 (Ni, Chih-Chien)</div>
-      </div>
-      <hr class="thesis-divider">
-      <div class="thesis-item">
-        <div class="thesis-title-cn">基於雨嵌入一致性和注意力機制之單張影像去雨</div>
-        <div class="thesis-title-en">Single Image Deraining Using Rain Embedding Consistency and Attention Mechanism</div>
-        <div class="thesis-author">黃冠樺 (Huang, Guan-Hua)</div>
-      </div>
-      <hr class="thesis-divider">
-      <div class="thesis-item">
-        <div class="thesis-title-cn">基於 SwinTransformer 及深度學習網路之高光譜影像融合</div>
-        <div class="thesis-title-en">SwinDFN：Deep Hyperspectral and Multispectral Image Fusion based on SwinTransformer</div>
-        <div class="thesis-author">李沃晏 (Li, Wo-Yen)</div>
-      </div>
-      <hr class="thesis-divider">
-      <div class="thesis-item">
-        <div class="thesis-title-cn">基於非監督式生成對抗網路及對比學習之水下影像品質回復</div>
-        <div class="thesis-title-en">Unsupervised Generative Adversarial Network and Contrastive Learning for Underwater Image Restoration</div>
-        <div class="thesis-author">宋奕泓 (Sung, Yi-Hung)</div>
-      </div>
-    </div>
-    
-    <!-- 2021 -->
-    <div class="thesis-year">
-      <h3>2021</h3>
-      <div class="thesis-item">
-        <div class="thesis-title-cn">基於非監督式跨領域深度學習之單張影像雜訊去除</div>
-        <div class="thesis-title-en">Unsupervised Cross Domain Deep Learning for Single Image Noise Removal</div>
-        <div class="thesis-author">蔡洪弦 (Tsai, Hong-Xian)</div>
-      </div>
-      <hr class="thesis-divider">
-      <div class="thesis-item">
-        <div class="thesis-title-cn">基於變分自動編碼器之解糾纏模型設計與應用:單細胞RNA定序之聚類與細胞擾動之預測</div>
-        <div class="thesis-title-en">Variational autoencoder based disentangle model design and application: scRNA-seq clustering and cell perturbation prediction</div>
-        <div class="thesis-author">陳則光 (Chen, Ze-Guang)</div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </div>

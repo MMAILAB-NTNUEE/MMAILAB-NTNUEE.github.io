@@ -1,108 +1,110 @@
 <!-- Critical CSS for faster initial render -->
 <style>
-/* Critical path CSS - Only styles needed for initial rendering */
-:root {
-  --background-color: #ffffff;
-  --text-color: #2D3142;
-  --primary-color: #105E96;
-  --secondary-color: #17A589;
-  --border-color: #e9ecef;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: var(--text-color);
-  background-color: var(--background-color);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Critical navigation styles */
-.masthead {
-  position: relative;
-  border-bottom: 1px solid var(--border-color);
-  background-color: var(--background-color);
-  z-index: 20;
-}
-
-.masthead__inner-wrap {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.site-title {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
-/* Critical loader styles */
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--background-color);
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader {
-  width: 50px;
-  height: 50px;
-  border: 5px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  border-top-color: var(--primary-color);
-  animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-/* Skip link for accessibility */
-.skip-link {
-  position: absolute;
-  top: -50px;
-  left: 0;
-  background: var(--primary-color);
-  color: white;
-  padding: 8px 15px;
-  z-index: 100;
-  transition: top 0.3s ease;
-}
-
-.skip-link:focus {
-  top: 0;
-}
-
-/* Container styles */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-/* Basic responsive adjustments */
-@media (max-width: 768px) {
-  .masthead__inner-wrap {
-    padding: 0.5em;
+  /* Critical path CSS - Only styles needed for initial rendering */
+  :root {
+    --background-color: #ffffff;
+    --text-color: #2D3142;
+    --primary-color: #105E96;
+    --secondary-color: #17A589;
+    --border-color: #e9ecef;
   }
-}
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Critical navigation styles */
+  .masthead {
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    z-index: 20;
+  }
+
+  .masthead__inner-wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .site-title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+
+  /* Critical loader styles */
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-color);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+  }
+
+  @keyframes spin {
+    to { 
+      transform: rotate(360deg); 
+    }
+  }
+
+  /* Skip link for accessibility */
+  .skip-link {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    z-index: 100;
+    transition: top 0.3s ease;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Container styles */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Basic responsive adjustments */
+  @media (max-width: 768px) {
+    .masthead__inner-wrap {
+      padding: 0.5em;
+    }
+  }
 </style>
 
 <!-- Preload critical fonts and assets -->

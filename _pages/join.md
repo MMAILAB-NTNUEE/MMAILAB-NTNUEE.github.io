@@ -17,7 +17,7 @@ header:
     <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
       We're currently updating our recruitment information. Please check back soon for details about joining our lab!
     </p>
-    
+
     <div style="text-align: center; margin-bottom: 3rem;">
       <p>For urgent inquiries about research opportunities, please contact us at:</p>
       <a href="mailto:mmailab@ntnu.edu.tw" class="btn btn--primary">mmailab@ntnu.edu.tw</a>
@@ -31,10 +31,10 @@ header:
     </div>
     
     <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
-      We are always looking for talented and motivated individuals to join our research team. 
+      We are always looking for talented and motivated individuals to join our research team.
       We offer various opportunities for students and researchers at different career stages.
     </p>
-    
+
     <div class="feature-grid">
       <div class="feature-card">
         <img src="/assets/images/phd-students.jpg" alt="PhD Studies">
@@ -51,7 +51,7 @@ header:
           <a href="#application-process" class="btn btn--primary">How to Apply</a>
         </div>
       </div>
-      
+
       <div class="feature-card">
         <img src="/assets/images/masters-students.jpg" alt="Master's Studies">
         <div class="card-content">
@@ -67,7 +67,7 @@ header:
           <a href="#application-process" class="btn btn--primary">How to Apply</a>
         </div>
       </div>
-      
+
       <div class="feature-card">
         <img src="/assets/images/postdocs.jpg" alt="Postdoctoral Research">
         <div class="card-content">
@@ -83,7 +83,7 @@ header:
           <a href="mailto:mmailab@ntnu.edu.tw" class="btn btn--primary">Contact Us</a>
         </div>
       </div>
-      
+
       <div class="feature-card">
         <img src="/assets/images/undergrads.jpg" alt="Undergraduate Research">
         <div class="card-content">
@@ -111,7 +111,7 @@ header:
     
     <div style="max-width: 800px; margin: 0 auto;">
       <h3 style="color: #1E5F74;">For Prospective PhD and Master's Students</h3>
-      
+
       <ol style="margin-bottom: 2rem;">
         <li><strong>Review our research:</strong> Familiarize yourself with our <a href="/research/">research areas</a> and <a href="/publications/">publications</a> to ensure your interests align with our work.</li>
         <li><strong>Prepare your application:</strong> Applications to our graduate programs should be submitted through the <a href="https://www.ntnu.edu.tw/admission/foreign.html" target="_blank">NTNU admissions portal</a>. Required materials typically include:
@@ -133,7 +133,7 @@ header:
       </ol>
       
       <h3 style="color: #1E5F74;">For Postdoctoral Applicants</h3>
-      
+
       <p>If you're interested in a postdoctoral position, please email <a href="mailto:mmailab@ntnu.edu.tw">mmailab@ntnu.edu.tw</a> with the following:</p>
       <ul style="margin-bottom: 2rem;">
         <li>Your CV with publication list</li>
@@ -143,7 +143,7 @@ header:
       </ul>
       
       <h3 style="color: #1E5F74;">For Undergraduate Students</h3>
-      
+
       <p>If you're a current NTNU undergraduate student interested in research opportunities, please email us with:</p>
       <ul>
         <li>Your CV/resume</li>
