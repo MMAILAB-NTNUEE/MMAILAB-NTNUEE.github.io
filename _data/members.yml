@@ -27,52 +27,78 @@ current_students:
     #   #   - "Computer Vision"
     #   #   - "Medical AI"
       
-    - name: "黃品慈"
-      program: "2nd Year"
-
-    - name: "顏伯諭"
-      program: "2nd Year"
-
-    - name: "林琮祐"
-      program: "2nd Year"
-    
-    - name: "吳政陽"
-      program: "2nd Year"
-    
-    - name: "何祐豪"
-      program: "2nd Year"
 
     - name: "彭昶得"
       initials: "CDP"
-      program: "1st Year"
+      program: "1.5 st Year"
       email: "61375096h@gapps.ntnu.edu.tw"
     
     - name: "鍾佳妤"
-      program: "1st Year"
+      program: "2st Year"
     
     - name: "陳柏安"
-      program: "1st Year"
+      program: "2st Year"
     
     - name: "張耘翰"
-      program: "1st Year"
+      program: "2st Year"
     
     - name: "陳品樺"
-      program: "1st Year"
+      program: "2st Year"
     
-    # - name: "xxx"
-      # program: "xxx"
-      # photo: null
-      # initials: "LH"
-      # research_areas:
-      #   - "Attention Mechanisms"
-      #   - "Efficient Computing"
-      #   - "Visual Recognition"
-      # email: "lisa.huang@ntnu.edu.tw"
-      # github: "#"
-      # linkedin: "#"
+    - name: "林昱緯"
+      program: "2st Year"
 
+    - name: "游筑伊"
+      program: "1st Year"
+
+    - name: "謝銘元"
+      program: "1st Year"
+
+    - name: "連翊安"
+      program: "1st Year"
+
+    - name: "徐嵩德"
+      program: "1st Year"
+
+    - name: "劉冠承"
+      program: "1st Year"
+
+    - name: "陳毅"
+      program: "1st Year"
+
+    - name: "黃品慈"
+      program: "2nd Year (Graduated)"
+
+    - name: "顏伯諭"
+      program: "2nd Year (Graduated)"
+
+    - name: "林琮祐"
+      program: "2nd Year (Graduated)"
+    
+    - name: "吳政陽"
+      program: "2nd Year (Graduated)"
+    
+    - name: "何祐豪"
+      program: "2nd Year (Graduated)"
+
+    # - name: "xxx"
+    # program: "xxx"
+    # photo: null
+    # initials: "LH"
+    # research_areas:
+    #   - "Attention Mechanisms"
+    #   - "Efficient Computing"
+    #   - "Visual Recognition"
+    # email: "lisa.huang@ntnu.edu.tw"
+    # github: "#"
+    # linkedin: "#"
 
   undergraduates:
+    - name: "蘇賢晉"
+    - name: "林珈丞"
+    - name: "張榮翰"
+    - name: "曾昭諺"
+    - name: "蕭學應"
     # - name: "Alex Chen"
     #   program: "Computer Science (4th Year)"
     #   photo: "/assets/images/student-undergrad1.jpg"
