@@ -3,3 +3,6 @@ instrucment.md
 _site
 CLAUDE.md
 .claude
+.bundle
+rebuild.sh
+vendor
