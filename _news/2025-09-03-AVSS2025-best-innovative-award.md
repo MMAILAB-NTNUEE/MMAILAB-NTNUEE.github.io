@@ -1,5 +1,5 @@
 ---
-title: "Master's Degree Graduate - 林淙祐 2025 IEEE International Conference on Advanced Visual and Signal-Based Systems (AVSS 2025) Best Innovative Award"
+title: "Master's Degree Graduate - 林淙祐 2025 IEEE International Conference on Advanced Visual and Signal-Based Systems Best Innovative Award"
 layout: post
 date: 2025-09-03
 categories: [events]
