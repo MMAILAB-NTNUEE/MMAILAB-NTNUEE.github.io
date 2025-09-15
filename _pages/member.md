@@ -928,7 +928,7 @@ header:
   <div class="section-heading">
     <h3 style="font-size: 1.6rem; margin-bottom: 2rem;">Undergraduate Intern Students</h3>
   </div>
-  
+
   <div class="members-list">
     {% for student in site.data.members.current_students.interns %}
     <div class="member-card">
@@ -940,7 +940,7 @@ header:
           <span class="member-duration">{{ student.duration }}</span>
           {% endif %}
         </div>
-        
+
         <div class="member-card-body">
           {% if student.research_areas %}
           <div class="member-tags">
@@ -950,7 +950,66 @@ header:
           </div>
           {% endif %}
         </div>
-        
+
+        <div class="member-card-footer">
+          <div class="member-contact">
+            <!-- Contact info placeholder -->
+          </div>
+          <div class="member-links">
+            {% if student.email %}
+            <a href="mailto:{{ student.email }}" class="member-link" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            {% endif %}
+            {% if student.github %}
+            <a href="{{ student.github }}" target="_blank" class="member-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            {% endif %}
+            {% if student.linkedin %}
+            <a href="{{ student.linkedin }}" target="_blank" class="member-link" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Exchange Students -->
+  {% if site.data.members.current_students.exchange %}
+  <div class="section-heading">
+    <h3 style="font-size: 1.6rem; margin-bottom: 2rem;">Exchange Students</h3>
+  </div>
+
+  <div class="members-list">
+    {% for student in site.data.members.current_students.exchange %}
+    <div class="member-card">
+      <div class="member-card-content">
+        <div class="member-card-header">
+          <h4 class="member-name">{{ student.name }}</h4>
+          <span class="member-program">{{ student.program }}</span>
+          {% if student.home_university %}
+          <span class="member-duration">{{ student.home_university }}</span>
+          {% endif %}
+          {% if student.duration %}
+          <span class="member-duration">{{ student.duration }}</span>
+          {% endif %}
+        </div>
+
+        <div class="member-card-body">
+          {% if student.research_areas %}
+          <div class="member-tags">
+            {% for area in student.research_areas %}
+            <span class="member-tag">{{ area }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
         <div class="member-card-footer">
           <div class="member-contact">
             <!-- Contact info placeholder -->

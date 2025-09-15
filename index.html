@@ -5,175 +5,117 @@ excerpt: "NTNU Multimedia and Artificial Intelligence Laboratory"
 header:
   overlay_color: "#000"
   overlay_filter: 0.5
-  overlay_image: /assets/images/research-vision.jpg
+  overlay_image: /assets/images/lab_scene.jpg
+  image_description: "Lab Scene"
+  caption: ""
+header.overlay_image:
+  background-size: contain
+  background-position: center
 classes: wide
 ---
 
-<!-- Temporary redirect to professor page while site is in beta -->
-<script>
-  window.location.href = "{{ site.baseurl }}/professor/";
-</script>
-
-<!-- Fallback for users with JavaScript disabled -->
-<noscript>
-  <meta http-equiv="refresh" content="0; url={{ site.baseurl }}/professor/">
-</noscript>
-
-<!-- Modern immersive hero section with parallax effect -->
-<div class="immersive-hero">
-  <div class="parallax-background" style="background-image: url('{{ site.baseurl }}/assets/images/college.png');"></div>
-  <div class="hero-content-wrapper">
-    <div class="hero-content">
-      <h1 class="animated-title">
-        <span class="title-line" style="font-size: 2.5rem;">Solving Real-World</span>
-        <span class="title-line" style="font-size: 2.5rem;">Challenges with</span>
-        <span class="title-line highlight">Computer Vision</span>
-      </h1>
-      <p class="hero-tagline">Researching Super-Resolution, 3D Reconstruction, Image Restoration Improvement, Hyperspectral Image Enhancement and Autonomous Vehicles, etc.</p>
-      
-      <div class="hero-cta-container">
-        <a href="{{ site.baseurl }}/research/" class="cta-button primary pulse">Explore Research</a>
-        <a href="{{ site.baseurl }}/publications/" class="cta-button secondary">Publications</a>
-        <a href="{{ site.baseurl }}/contact/" class="cta-button secondary">Join Our Team</a>
+<!-- Hero Slideshow Section with Overlaid Content -->
+<section class="hero-slideshow-section">
+  <div class="hero-slideshow">
+    <div class="slide active" style="background-image: url('{{ site.baseurl }}/assets/images/raindrop.png')"></div>
+    <div class="slide" style="background-image: url('{{ site.baseurl }}/assets/images/LUT.png')"></div>
+    <div class="slide" style="background-image: url('{{ site.baseurl }}/assets/images/3dgs.png')"></div>
+  </div>
+  <!-- Overlaid Content at Bottom of Slideshow -->
+  <div class="hero-content-overlaid">
+    <div class="hero-content-container">
+      <div class="hero-content-wrapper">
+        <h1 class="hero-title">
+          <span class="title-main">Multimedia & AI Laboratory</span>
+          <span class="title-sub"><span class="highlight-text" id="dynamic-text">Computer Vision</span></span>
+        </h1>
       </div>
     </div>
   </div>
-  
-  <!-- Animated scroll indicator -->
-  <div class="scroll-indicator">
-    <div class="mouse">
-      <div class="wheel"></div>
-    </div>
-    <div>
-      <span class="scroll-arrows">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-    </div>
-  </div>
-</div>
-
-<!-- Research showcase with modern cards -->
-<section class="research-showcase"></section>
-    <div class="section-intro">
-        <h2 class="section-title">Areas of <span class="highlight">Research</span></h2>
-        <p class="section-description" style="text-align: center; margin: 0 auto; max-width: 800px;">We are driving cutting-edge advancements across these pivotal research domains</p>
-    </div>
-    
-    <div class="research-cards-container">
-        <div class="research-card" data-aos="fade-up">
-            <div class="card-icon">
-                <div class="icon-3d">
-                    <i class="fas fa-image"></i>
-                </div>
-            </div>
-            <h3>Image Processing</h3>
-            <p>Advancing techniques in image enhancement, restoration, and transformation for improved visual quality.</p>
-            <div class="card-footer">
-                <a href="{{ site.baseurl }}/research/#deep-learning" class="read-more">
-                    <span>Learn More</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-        
-        <div class="research-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-icon">
-                <div class="icon-3d">
-                    <i class="fas fa-eye"></i>
-                </div>
-            </div>
-            <h3>Computer Vision</h3>
-            <p>Developing algorithms for visual understanding, super resolution, and scene analysis using advanced AI techniques.</p>
-            <div class="card-footer">
-                <a href="{{ site.baseurl }}/research/#deep-learning" class="read-more">
-                    <span>Learn More</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-        
-        <div class="research-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-icon">
-                <div class="icon-3d">
-                    <i class="fas fa-robot"></i>
-                </div>
-            </div>
-            <h3>Deep Learning</h3>
-            <p>Innovating neural network architectures that learn from data to solve complex visual and computational problems with remarkable accuracy.</p>
-            <div class="card-footer">
-                <a href="{{ site.baseurl }}/research/#deep-learning" class="read-more">
-                    <span>Learn More</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </div>
 </section>
 
-
-
-<!-- Latest research highlights with visual impact -->
-<!-- <section class="latest-research">
-  <div class="research-bg-pattern"></div>
-  
-  <div class="section-intro dark">
-    <h2 class="section-title">Latest <span class="highlight">Publications</span></h2>
-    <p class="section-description">Our recent contributions to advancing the field of AI</p>
+<!-- Navigation Buttons Section -->
+<section class="hero-nav-section">
+  <div class="hero-nav-container">
+    <div class="hero-actions">
+      <a href="{{ site.baseurl }}/research/" class="btn-nav primary">
+        <span>Explore Research</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="{{ site.baseurl }}/publications/" class="btn-nav secondary">
+        <span>Publications</span>
+      </a>
+      <a href="{{ site.baseurl }}/contact/" class="btn-nav secondary">
+        <span>Contact Us</span>
+      </a>
+    </div>
   </div>
-  
-  <div class="publications-slider">
-    {% assign sorted_publications = site.publications | sort: "date" | reverse %}
-    {% for publication in sorted_publications limit:3 %}
-      <div class="publication-slide" data-aos="zoom-in" data-aos-delay="{{ forloop.index | minus: 1 | times: 100 }}">
-        <div class="publication-card">
-          <h3>{{ publication.title }}</h3>
-          <p class="authors">{{ publication.authors }}</p>
-          <p class="venue">{{ publication.journal }}, {{ publication.date | date: "%Y" }}</p>
-          
-          <div class="publication-links">
-            {% if publication.pdf %}
-              <a href="{{ publication.pdf }}" class="pub-link pdf" target="_blank">
-                <i class="fas fa-file-pdf"></i>
-                <span>PDF</span>
-              </a>
-            {% endif %}
-            
-            {% if publication.code %}
-              <a href="{{ publication.code }}" class="pub-link code" target="_blank">
-                <i class="fas fa-code"></i>
-                <span>Code</span>
-              </a>
-            {% endif %}
-            
-            {% if publication.doi %}
-              <a href="https://doi.org/{{ publication.doi }}" class="pub-link doi" target="_blank">
-                <i class="fas fa-external-link-alt"></i>
-                <span>DOI</span>
-              </a>
-            {% endif %}
-          </div>
+</section>
+
+<!-- Areas of Research - Original Layout -->
+<section class="research-showcase">
+  <div class="section-intro">
+    <h2 class="section-title">Areas of <span class="highlight">Research</span></h2>
+    <p class="section-description" style="text-align: center; margin: 0 auto; max-width: 800px;">We are driving cutting-edge advancements across these pivotal research domains</p>
+  </div>
+
+  <div class="research-cards-container">
+    <div class="research-card" data-aos="fade-up">
+      <div class="card-icon">
+        <div class="icon-3d">
+          <i class="fas fa-image"></i>
         </div>
       </div>
-    {% endfor %}
-  </div>
-  
-  <div class="view-all-container">
-    <a href="{{ site.baseurl }}/publications/" class="view-all-button" data-aos="fade-up">
-      View All Publications
-      <i class="fas fa-long-arrow-alt-right"></i>
-    </a>
-  </div>
-</section> -->
+      <h3>Image Processing</h3>
+      <p>Advancing techniques in image enhancement, restoration, and transformation for improved visual quality.</p>
+      <div class="card-footer">
+        <a href="{{ site.baseurl }}/research/#image-processing" class="read-more">
+          <span>Learn More</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
 
-<!-- News and updates with modern masonry grid -->
+    <div class="research-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-icon">
+        <div class="icon-3d">
+          <i class="fas fa-eye"></i>
+        </div>
+      </div>
+      <h3>Computer Vision</h3>
+      <p>Developing algorithms for visual understanding, super resolution, and scene analysis using advanced AI techniques.</p>
+      <div class="card-footer">
+        <a href="{{ site.baseurl }}/research/#computer-vision" class="read-more">
+          <span>Learn More</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="research-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="card-icon">
+        <div class="icon-3d">
+          <i class="fas fa-robot"></i>
+        </div>
+      </div>
+      <h3>Deep Learning</h3>
+      <p>Innovating neural network architectures that learn from data to solve complex visual and computational problems with remarkable accuracy.</p>
+      <div class="card-footer">
+        <a href="{{ site.baseurl }}/research/#deep-learning" class="read-more">
+          <span>Learn More</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Latest News - Original Layout -->
 <section class="news-section">
   <div class="section-intro">
     <h2 class="section-title">Latest <span class="highlight">News</span></h2>
-    <p class="section-description">Stay updated with our recent accomplishments and events</p>
   </div>
-  
+
   <div class="news-grid">
     {% assign latest_news = site.news | sort: "date" | reverse | limit: 4 %}
     {% for post in latest_news %}
@@ -182,29 +124,28 @@ classes: wide
           {% if post.header.teaser %}
             <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}" loading="lazy">
           {% else %}
-          <!-- default teaser image, WIP -->
             <img src="{{ site.baseurl }}/assets/images/website-launch.png" alt="MMAILAB Research" loading="lazy" width="400" height="400">
           {% endif %}
-          
+
           <div class="news-card-date">
             <span class="day">{{ post.date | date: "%d" }}</span>
             <span class="month">{{ post.date | date: "%b" }}</span>
           </div>
-          
+
           {% if post.categories[0] %}
             <span class="news-card-category">{{ post.categories[0] | capitalize }}</span>
           {% endif %}
         </div>
-        
+
         <div class="news-card-content">
           <h3 class="news-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          
+
           <div class="news-card-excerpt">
             {% if post.excerpt %}
               {{ post.excerpt | strip_html | truncate: 120 }}
             {% endif %}
           </div>
-          
+
           {% if post.tags %}
           <div class="news-card-tags">
             {% for tag in post.tags limit:3 %}
@@ -212,7 +153,7 @@ classes: wide
             {% endfor %}
           </div>
           {% endif %}
-          
+
           <a href="{{ post.url | relative_url }}" class="read-more">
             Read Full Story
             <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -221,7 +162,7 @@ classes: wide
       </article>
     {% endfor %}
   </div>
-  
+
   <div class="view-all-container">
     <a href="{{ site.baseurl }}/news/" class="view-all-button" data-aos="fade-up">
       View All News
@@ -230,380 +171,630 @@ classes: wide
   </div>
 </section>
 
+<!-- Join Lab Section -->
+<section class="join-lab-section">
+  <div class="join-content">
+    <div class="join-logo-container">
+      <img src="{{ site.baseurl }}/assets/images/mmailab-logo.png" alt="MMAILAB Logo" class="join-logo">
+    </div>
+
+    <div class="join-text-content">
+      <h2 class="join-title">Join the <span class="highlight">MMAILAB</span> Team</h2>
+      <p class="join-description">
+        We are always looking for passionate researchers, talented students, and innovative
+        collaborators to join us in pushing the boundaries of AI and computer vision.
+      </p>
+
+      <div class="join-opportunities">
+        <div class="opportunity-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>Graduate Programs</h3>
+          <p>PhD & Master positions available for motivated students</p>
+        </div>
+        <div class="opportunity-card">
+          <i class="fas fa-handshake"></i>
+          <h3>Research Collaboration</h3>
+          <p>Industry and academic partnerships welcome</p>
+        </div>
+        <div class="opportunity-card">
+          <i class="fas fa-globe"></i>
+          <h3>International Exchange</h3>
+          <p>Global research opportunities and exchanges</p>
+        </div>
+      </div>
+
+      <div class="join-cta">
+        <a href="{{ site.baseurl }}/join/" class="btn-join-new primary">
+          <span>Explore Opportunities</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="{{ site.baseurl }}/contact/" class="btn-join-new outline">
+          <span>Get in Touch</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <style>
-/* Enhanced News Section Styles */
-.news-section {
-  padding: 5rem 0;
-  max-width: 1200px;
-  margin: 0 auto;
+/* ===== CONFIGURATION PARAMETERS ===== */
+:root {
+  --slide-duration: 4s; /* Change this to modify slide speed */
+  --primary-color: #105E96;
+  --secondary-color: #17A589;
+  --text-dark: #2D3142;
+  --background-light: #f8f9fa;
 }
 
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2rem;
-  padding: 0 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.news-card {
-  border-radius: 12px;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.news-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-}
-
-.news-card:hover .news-card-image img {
-  transform: scale(1.05);
-}
-
-.news-card:hover .read-more i {
-  transform: translateX(5px);
-}
-
-.news-card-image {
+/* ===== HERO SLIDESHOW SECTION WITH OVERLAY ===== */
+.hero-slideshow-section {
   position: relative;
-  height: 200px;
+  height: 80vh;
+  min-height: 600px;
   overflow: hidden;
 }
 
-.news-card-image img {
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  z-index: 1;
 }
 
-.news-card-date {
+.slide {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  background: rgba(255, 255, 255, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* ===== OVERLAID CONTENT AT BOTTOM ===== */
+.hero-content-overlaid {
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    transparent 100%
+  );
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 8px;
-  padding: 0.5rem 0.8rem;
-  display: flex;
-  flex-direction: column;
+  padding: 0.5rem 0 2rem;
+}
+
+/* ===== NAVIGATION BUTTONS SECTION ===== */
+.hero-nav-section {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.hero-nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.btn-nav {
+  display: inline-flex;
   align-items: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.news-card-date .day {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.1;
-  color: #105E96;
-}
-
-.news-card-date .month {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #17A589;
-}
-
-.news-card-category {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  background: #17A589;
-  color: white;
-  padding: 0.3rem 1rem;
-  border-radius: 30px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-.news-card-content {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.news-card-title {
-  margin: 0 0 0.8rem;
-  font-size: 1.3rem;
-  line-height: 1.4;
-}
-
-.news-card-title a {
-  color: #105E96;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.news-card-title a:hover {
-  color: #17A589;
-}
-
-.news-card-excerpt {
-  color: #555;
-  margin-bottom: 1.2rem;
-  line-height: 1.5;
-  flex-grow: 1;
-}
-
-.news-card-tags {
-  display: flex;
-  flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.news-tag {
-  display: inline-block;
-  padding: 0.2rem 0.6rem;
-  border-radius: 30px;
-  font-size: 0.8rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
   text-decoration: none;
-  background: rgba(16, 94, 150, 0.1);
-  color: #105E96;
   transition: all 0.3s ease;
+  font-size: 0.9rem;
+  margin: 0 0.5rem;
 }
 
-.news-tag:hover {
-  background: rgba(16, 94, 150, 0.15);
+.btn-nav.primary {
+  background: var(--secondary-color);
+  color: white;
+  box-shadow: 0 4px 15px rgba(23, 165, 137, 0.4);
+}
+
+.btn-nav.primary:hover {
+  background: #138a73;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(23, 165, 137, 0.5);
+}
+
+.btn-nav.secondary {
+  background: rgba(45, 52, 54, 0.1);
+  color: #2c3e50;
+  border: 1px solid rgba(45, 52, 54, 0.2);
+}
+
+.btn-nav.secondary:hover {
+  background: rgba(45, 52, 54, 0.15);
+  border-color: rgba(45, 52, 54, 0.3);
   transform: translateY(-2px);
 }
 
-.read-more {
+.hero-content-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-content-wrapper {
+  text-align: center;
+}
+
+.hero-title {
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.title-main {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  text-shadow:
+    1px 1px 2px rgba(0, 0, 0, 0.5),
+    0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.title-sub {
+  display: block;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+}
+
+.highlight-text {
+  color: var(--secondary-color);
+}
+
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  min-width: 120px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.btn-clean {
   display: inline-flex;
   align-items: center;
-  color: #17A589;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
   font-weight: 600;
-  font-size: 0.9rem;
   text-decoration: none;
-  margin-top: auto;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
 }
 
-.read-more i {
-  margin-left: 0.4rem;
-  transition: transform 0.3s ease;
+.btn-clean.primary {
+  background: var(--secondary-color);
+  color: white;
+  box-shadow: 0 4px 15px rgba(23, 165, 137, 0.4);
 }
 
-.read-more:hover {
-  color: darken(#17A589, 10%);
+.btn-clean.primary:hover {
+  background: #138a73;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(23, 165, 137, 0.5);
 }
 
-@media (max-width: 768px) {
-  .news-grid {
-    grid-template-columns: 1fr;
+.btn-clean.secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.btn-clean.secondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* ===== JOIN LAB SECTION ===== */
+.join-lab-section {
+  padding: 6rem 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.join-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.join-logo-container {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.join-logo {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.1));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.join-text-content {
+  flex: 1;
+  text-align: left;
+}
+
+.join-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.join-title .highlight {
+  color: var(--primary-color);
+}
+
+.join-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  color: #5a6c7d;
+  max-width: 600px;
+}
+
+.join-opportunities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.opportunity-card {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--secondary-color);
+}
+
+.opportunity-card i {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.opportunity-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.opportunity-card p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+.join-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-join-new {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-join-new.primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  box-shadow: 0 4px 15px rgba(16, 94, 150, 0.3);
+}
+
+.btn-join-new.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(16, 94, 150, 0.4);
+}
+
+.btn-join-new.outline {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-join-new.outline:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+  .hero-content-overlaid {
+    width: 45%;
+    max-width: 550px;
+  }
+
+  .hero-card-overlaid {
+    padding: 2rem;
   }
 }
 
-@media (max-width: 576px) {
-  .news-card-image {
-    height: 180px;
+@media (max-width: 768px) {
+  .hero-slideshow-section {
+    height: 80vh;
+    min-height: 500px;
+  }
+
+  .hero-content-overlaid {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .hero-content-container {
+    padding: 0 1rem;
+  }
+
+  .title-sub {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .btn-clean {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .join-features {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .join-actions {
+    flex-direction: column;
+  }
+
+  .btn-join {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .join-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .join-logo-container {
+    flex: none;
+    width: 100%;
+  }
+
+  .join-text-content {
+    text-align: center;
+  }
+
+  .join-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .join-cta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-slideshow-section {
+    height: 70vh;
+    min-height: 450px;
+  }
+
+  .hero-content-overlaid {
+    padding: 1.5rem 0 1rem;
+  }
+
+  .hero-content-container {
+    padding: 0 1rem;
+  }
+
+  .title-main {
+    font-size: 1rem;
+  }
+
+  .title-sub {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .btn-clean {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
   }
 }
 </style>
 
-<!-- Team section with hover effects -->
-<section class="team-section">
-  <div class="team-bg-pattern"></div>
-  
-  <div class="section-intro dark">
-    <h2 class="section-title">Our <span class="highlight">Team</span></h2>
-    <p class="section-description">Meet the researchers driving innovation in AI</p>
-  </div>
-  
-  <div class="team-cards">
-    {% assign faculty = site.team | where: "position", "faculty" %}
-    {% for member in faculty limit:3 %}
-      <div class="team-card-wrapper" data-aos="flip-left" data-aos-delay="{{ forloop.index | minus: 1 | times: 100 }}">
-        <div class="team-card">
-          <div class="team-card-front">
-            {% if member.avatar %}
-              <img src="{{ member.avatar | relative_url }}" alt="{{ member.name }}" class="team-photo">
-            {% else %}
-              <div class="team-photo-placeholder">
-                <i class="fas fa-user"></i>
-              </div>
-            {% endif %}
-            <h3 class="team-name">{{ member.name }}</h3>
-            <p class="team-title">{{ member.title }}</p>
-          </div>
-          
-          <div class="team-card-back">
-            <h3 class="team-name">{{ member.name }}</h3>
-            <p class="team-bio">{{ member.bio | truncate: 150 }}</p>
-            
-            <div class="team-social">
-              {% if member.email %}
-                <a href="mailto:{{ member.email }}" class="social-icon">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              {% endif %}
-              
-              {% if member.github %}
-                <a href="{{ member.github }}" target="_blank" class="social-icon">
-                  <i class="fab fa-github"></i>
-                </a>
-              {% endif %}
-              
-              {% if member.linkedin %}
-                <a href="{{ member.linkedin }}" target="_blank" class="social-icon">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              {% endif %}
-              
-              {% if member.twitter %}
-                <a href="{{ member.twitter }}" target="_blank" class="social-icon">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              {% endif %}
-            </div>
-            
-            <a href="{{ member.url | relative_url }}" class="view-profile">
-              View Full Profile
-            </a>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-  
-  <div class="view-all-container">
-    <a href="{{ site.baseurl }}/member/" class="view-all-button" data-aos="fade-up">
-      Meet Our Full Team
-      <i class="fas fa-long-arrow-alt-right"></i>
-    </a>
-  </div>
-</section>
-
-<!-- Impact statistics with animated counters -->
-<!-- <section class="impact-section">
-  <div class="section-intro">
-    <h2 class="section-title">Research <span class="highlight">Impact</span></h2>
-    <p class="section-description">Our contributions to advancing the scientific community</p>
-  </div>
-  
-  <div class="stats-container">
-    <div class="stat-card" data-aos="zoom-in">
-      <div class="stat-icon">
-        <i class="fas fa-file-alt"></i>
-      </div>
-      <div class="stat-counter">
-        <span class="count" data-target="50">0</span>
-      </div>
-      <h3 class="stat-title">Publications</h3>
-      <p class="stat-description">Scientific papers in top-tier journals and conferences</p>
-    </div>
-    
-    <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
-      <div class="stat-icon">
-        <i class="fas fa-project-diagram"></i>
-      </div>
-      <div class="stat-counter">
-        <span class="count" data-target="15">0</span>
-      </div>
-      <h3 class="stat-title">Research Projects</h3>
-      <p class="stat-description">Active innovative research initiatives</p>
-    </div>
-    
-    <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
-      <div class="stat-icon">
-        <i class="fas fa-handshake"></i>
-      </div>
-      <div class="stat-counter">
-        <span class="count" data-target="25">0</span>
-      </div>
-      <h3 class="stat-title">Collaborations</h3>
-      <p class="stat-description">Partnerships with industry and academia</p>
-    </div>
-    
-    <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
-      <div class="stat-icon">
-        <i class="fas fa-award"></i>
-      </div>
-      <div class="stat-counter">
-        <span class="count" data-target="10">0</span>
-      </div>
-      <h3 class="stat-title">Awards</h3>
-      <p class="stat-description">Recognition for our research excellence</p>
-    </div>
-  </div>
-</section> -->
-
-<!-- Call to action section -->
-<section class="cta-section">
-  <div class="cta-container">
-    <div class="cta-content" data-aos="fade-right">
-      <h2 class="cta-title">Interested in <span class="highlight">Joining Our Lab?</span></h2>
-      <p class="cta-description">We are always looking for talented and passionate researchers to join our team.</p>
-      <a href="{{ site.baseurl }}/join/" class="cta-button primary">View Opportunities</a>
-    </div>
-    
-    <div class="cta-image" data-aos="fade-left">
-      <div class="image-wrapper">
-        <img src="{{ site.baseurl }}/assets/images/mailab-logo-black.png" alt="Join our research team">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Custom JavaScript -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-      const parallax = document.querySelector('.parallax-background');
-      if (parallax) {
-        let scrollPosition = window.pageYOffset;
-        parallax.style.transform = 'translateY(' + scrollPosition * 0.4 + 'px)';
+document.addEventListener('DOMContentLoaded', function() {
+  // Configuration - Easy to modify
+  const SLIDE_DURATION = 4000; // 4 seconds - change this value to modify speed
+  const TYPE_SPEED = 100;
+  const DELETE_SPEED = 50;
+  const PAUSE_TIME = 2000;
+
+  // Slideshow functionality
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+
+    // Sync text with slide change
+    syncTextWithSlides();
+  }
+
+  // Auto-advance slides
+  setInterval(nextSlide, SLIDE_DURATION);
+
+  // Synchronized typewriter effect with slides
+  const dynamicTexts = [
+    "Image Deraining",
+    "LUT Neural Representation",
+    "3D Reconstruction"
+  ];
+
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeWriter() {
+    const element = document.getElementById('dynamic-text');
+    if (!element) return;
+
+    const currentText = dynamicTexts[textIndex];
+
+    if (isDeleting) {
+      element.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      element.textContent = currentText.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let timeout = isDeleting ? DELETE_SPEED : TYPE_SPEED;
+
+    if (!isDeleting && charIndex === currentText.length) {
+      timeout = PAUSE_TIME;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % dynamicTexts.length;
+    }
+
+    setTimeout(typeWriter, timeout);
+  }
+
+  // Sync text changes with slide changes
+  function syncTextWithSlides() {
+    // Change text immediately when slide changes
+    const element = document.getElementById('dynamic-text');
+    if (element) {
+      textIndex = currentSlide;
+      element.textContent = dynamicTexts[textIndex];
+      charIndex = dynamicTexts[textIndex].length;
+      isDeleting = false;
+    }
+  }
+
+  // Start with first slide text
+  setTimeout(() => {
+    const element = document.getElementById('dynamic-text');
+    if (element) {
+      element.textContent = dynamicTexts[0];
+    }
+  }, 100);
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
       }
     });
-    
-    // Animated counters for stats
-    const counterElements = document.querySelectorAll('.count');
-    
-    function startCountUp() {
-      counterElements.forEach(counter => {
-        const target = parseInt(counter.dataset.target);
-        const duration = 2000; // ms
-        const stepTime = 50; // ms
-        const steps = duration / stepTime;
-        const increment = target / steps;
-        
-        let current = 0;
-        const timer = setInterval(() => {
-          current += increment;
-          counter.textContent = Math.floor(current);
-          
-          if (Math.floor(current) >= target) {
-            counter.textContent = target;
-            clearInterval(timer);
-          }
-        }, stepTime);
-      });
-    }
-    
-    // Use Intersection Observer for counter animation
-    const statsSection = document.querySelector('.impact-section');
-    if (statsSection) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            startCountUp();
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.5 });
-      
-      observer.observe(statsSection);
-    }
   });
+});
 </script>

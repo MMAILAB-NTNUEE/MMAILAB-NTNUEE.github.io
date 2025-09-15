@@ -102,6 +102,8 @@ current_students:
     - name: "張榮翰"
     - name: "曾昭諺"
     - name: "蕭學應"
+    - name: "劉建陞"
+      program: "(Kang & Yeh Co-Advisor)"
     # - name: "Alex Chen"
     #   program: "Computer Science (4th Year)"
     #   photo: "/assets/images/student-undergrad1.jpg"
@@ -135,7 +137,7 @@ current_students:
     #   email: "david.lee@ntnu.edu.tw"
     #   github: "#"
 
-  interns:
+  # interns:
     # - name: "Jenny Smith"
     #   program: "Computer Science (3rd Year)"
     #   duration: "Summer 2024 Intern"
@@ -183,6 +185,18 @@ current_students:
     #     - "Mathematics"
     #   email: "ryan.thompson@ntnu.edu.tw"
     #   github: "#"
+
+  # exchange:
+  #   - name: "Student Name"
+      #   program: "Exchange Program"
+      #   home_university: "University Name"
+      #   duration: "Sep 2024 - Feb 2025"
+      #   research_areas:
+      #     - "Computer Vision"
+      #     - "Deep Learning"
+      #   email: "email@example.com"
+
+
 
 # Graduated Students & Thesis Archive
 graduated_students:
