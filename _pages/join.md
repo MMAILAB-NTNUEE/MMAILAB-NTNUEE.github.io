@@ -20,7 +20,7 @@ header:
 
     <div style="text-align: center; margin-bottom: 3rem;">
       <p>For urgent inquiries about research opportunities, please contact us at:</p>
-      <a href="mailto:mmailab@ntnu.edu.tw" class="btn btn--primary">mmailab@ntnu.edu.tw</a>
+      <a href="mailto:lwkang@ntnu.edu.tw" class="btn btn--primary">lwkang@ntnu.edu.tw</a>
     </div>
   </div>
 </div>
