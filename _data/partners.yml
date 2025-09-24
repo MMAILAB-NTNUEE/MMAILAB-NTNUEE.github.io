@@ -22,7 +22,7 @@ partners:
 
   - name: "Realtek"
     name_zh: "瑞昱半導體"
-    logo: "/assets/images/REALTEK.jpg"
+    logo: "/assets/images/REALTEK.png"
     url: "https://www.realtek.com"
     active: true
 
