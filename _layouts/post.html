@@ -2,50 +2,47 @@
 layout: default
 ---
 
-<div class="post-page">
-  <!-- Hero Section with post title and meta data -->
-  <section class="post-hero">
-    <div class="post-hero-overlay"></div>
-    <div class="container">
-      <div class="post-hero-content">
-        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-        
-        {% if page.date or page.author or page.categories %}
-          <div class="post-meta">
-            {% if page.date %}
-              <div class="post-date">
-                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                  {{ page.date | date: "%B %-d, %Y" }}
-                </time>
-              </div>
-            {% endif %}
+<link rel="stylesheet" href="/assets/css/homepage.css">
 
-            {% if page.author %}
-              <div class="post-author">
-                <i class="fas fa-user" aria-hidden="true"></i>
-                <span itemprop="author">{{ page.author }}</span>
-              </div>
-            {% endif %}
+<div class="jp-section">
+  <div class="container">
+    <div class="jp-hero-content">
+      <h1 style="font-style: italic; font-weight: normal;" itemprop="name headline">{{ page.title }}</h1>
+      {% if page.excerpt %}
+      <p class="jp-subtitle">{{ page.excerpt }}</p>
+      {% endif %}
 
-            {% if page.categories.size > 0 %}
-              <div class="post-categories">
-                <i class="fas fa-folder" aria-hidden="true"></i>
-                {% for category in page.categories %}
-                  <span class="post-category">{{ category }}</span>
-                {% endfor %}
-              </div>
-            {% endif %}
-          </div>
+      {% if page.date or page.author or page.categories %}
+      <div class="post-meta">
+        {% if page.date %}
+        <div class="post-date">
+          <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ page.date | date: "%B %-d, %Y" }}
+          </time>
+        </div>
+        {% endif %}
+
+        {% if page.categories.size > 0 %}
+        <div class="post-categories">
+          <i class="fas fa-folder" aria-hidden="true"></i>
+          {% for category in page.categories %}
+          <span class="jp-tag">{{ category }}</span>
+          {% endfor %}
+        </div>
         {% endif %}
       </div>
+      {% endif %}
     </div>
-  </section>
+  </div>
+</div>
 
+<div class="jp-section">
   <div class="container">
     <article class="post-content" itemscope itemtype="https://schema.org/BlogPosting">
-      <!-- Featured Image Section -->
-      {% if page.header.teaser %}
+      <div class="jp-content-wrapper">
+        <!-- Featured Image Section -->
+        {% if page.header.teaser %}
         <div class="post-featured-image">
           <figure>
             <img src="{{ page.header.teaser | relative_url }}" alt="{{ page.title }}" itemprop="image">
@@ -54,36 +51,30 @@ layout: default
             {% endif %}
           </figure>
         </div>
-      {% endif %}
+        {% endif %}
 
-      <!-- Main Content -->
-      <div class="post-body" itemprop="articleBody">
-        {{ content }}
-      </div>
+        <!-- Main Content -->
+        <div class="post-body" itemprop="articleBody">
+          {{ content }}
+        </div>
 
-      <!-- Tags Section -->
-      {% if page.tags.size > 0 %}
+        <!-- Tags Section -->
+        {% if page.tags.size > 0 %}
         <div class="post-tags">
           <i class="fas fa-tags" aria-hidden="true"></i>
           {% for tag in page.tags %}
-            <a href="{{ site.baseurl }}/tags/{{ tag | slugify }}/" class="post-tag">#{{ tag }}</a>
+          <span class="jp-tag jp-tag-secondary">#{{ tag }}</span>
           {% endfor %}
         </div>
-      {% endif %}
-      
-      <!-- Social Sharing -->
-      <!-- {% if page.share %}
-      <div class="post-share">
-        <h3>Share This</h3>
-        {% include social-share.html %}
-      </div>
-      {% endif %} -->
-      
-      <!-- Navigation -->
-      <div class="post-navigation">
-        <a href="{{ site.baseurl }}/news/" class="back-link">
-          <i class="fas fa-arrow-left"></i> Back to News
-        </a>
+        {% endif %}
+
+        <!-- Navigation -->
+        <div class="post-navigation">
+          <a href="{{ site.baseurl }}/news/" class="jp-btn secondary">
+            <span class="jp-btn-text">← Back to News</span>
+            <span class="jp-btn-icon">←</span>
+          </a>
+        </div>
       </div>
     </article>
   </div>
@@ -471,4 +462,144 @@ layout: default
       font-size: 1.4rem;
     }
   }
+
+/* Full width layout overrides */
+.jp-section {
+  width: 100%;
+  padding: var(--jp-spacing-lg) 3rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Post meta styling */
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--jp-spacing-md);
+  margin-top: var(--jp-spacing-md);
+  font-size: 0.95rem;
+  color: var(--jp-gray-dark);
+}
+
+.post-meta i {
+  margin-right: var(--jp-spacing-xs);
+}
+
+/* Content wrapper */
+.jp-content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Featured image styling */
+.post-featured-image {
+  margin: 0 0 var(--jp-spacing-lg);
+}
+
+.post-featured-image figure {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.post-featured-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-featured-image figcaption {
+  padding: var(--jp-spacing-sm) var(--jp-spacing-md);
+  background: var(--jp-gray-light);
+  font-size: 0.9rem;
+  color: var(--jp-gray-dark);
+  font-style: italic;
+  text-align: center;
+}
+
+.post-body {
+  color: var(--jp-gray-dark);
+  margin-bottom: var(--jp-spacing-lg);
+}
+
+.post-body h1,
+.post-body h2,
+.post-body h3 {
+  color: var(--jp-black);
+  margin-top: var(--jp-spacing-lg);
+  margin-bottom: var(--jp-spacing-md);
+}
+
+.post-body p {
+  margin-bottom: var(--jp-spacing-md);
+}
+
+.post-body ul,
+.post-body ol {
+  margin-bottom: var(--jp-spacing-md);
+  padding-left: 1.5rem;
+}
+
+.post-body li {
+  margin-bottom: var(--jp-spacing-xs);
+}
+
+/* Tags section */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--jp-spacing-xs);
+  margin: var(--jp-spacing-lg) 0;
+  align-items: center;
+  padding-top: var(--jp-spacing-md);
+  border-top: 1px solid #eee;
+}
+
+.post-tags i {
+  color: var(--jp-gray-dark);
+  margin-right: var(--jp-spacing-xs);
+}
+
+/* Navigation */
+.post-navigation {
+  margin-top: var(--jp-spacing-xl);
+  padding-top: var(--jp-spacing-md);
+  border-top: 1px solid #eee;
+}
+
+/* Long title handling - prevent ugly line breaks */
+.jp-hero-content h1 {
+  line-height: 1.3;
+  font-size: clamp(1.2rem, 3vw, 2.5rem) !important;
+  max-height: 4em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .jp-hero-content h1 {
+    font-size: clamp(1rem, 3.5vw, 1.8rem) !important;
+    -webkit-line-clamp: 2;
+    max-height: 3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .jp-hero-content h1 {
+    font-size: clamp(0.9rem, 4vw, 1.3rem) !important;
+    -webkit-line-clamp: 2;
+    max-height: 2.5em;
+  }
+}
 </style>

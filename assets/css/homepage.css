@@ -463,8 +463,8 @@ a:focus-visible {
 }
 
 .jp-partner-logo {
-  width: 120px;
-  height: 80px;
+  width: 320px;
+  height: 200px;
   margin: 0 auto var(--jp-spacing-sm);
   display: flex;
   align-items: center;

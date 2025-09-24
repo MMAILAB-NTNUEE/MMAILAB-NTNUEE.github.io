@@ -10,58 +10,33 @@
 partners:
   - name: "National Science and Technology Council"
     name_zh: "國家科學及技術委員會"
-    logo: "/assets/images/partners/nstc-logo.png"
+    logo: "/assets/images/NSTC.png"
     url: "https://www.nstc.gov.tw/"
-    description: "Supporting fundamental research in AI and computer vision through multi-year grants"
-    description_zh: "透過多年期計畫支持人工智慧與電腦視覺的基礎研究"
-    categories:
-      - funding
-      - government
     active: true
 
-  - name: "Taiwan AI Labs"
-    name_zh: "台灣人工智慧實驗室"
-    logo: "/assets/images/partners/ailabs-logo.png"
-    url: "https://ailabs.tw/"
-    description: "Collaborative research on deep learning applications and AI innovation"
-    description_zh: "深度學習應用與人工智慧創新的合作研究"
-    categories:
-      - research
-      - industry
+  - name: "Coretronic"
+    name_zh: "中強光電 "
+    logo: "/assets/images/Coretronic.png"
+    url: "https://www.coretronic.com"
     active: true
 
-  - name: "MediaTek"
-    name_zh: "聯發科技"
-    logo: "/assets/images/partners/mediatek-logo.png"
-    url: "https://www.mediatek.com/"
-    description: "Joint development of AI chips and embedded vision systems"
-    description_zh: "共同開發人工智慧晶片與嵌入式視覺系統"
-    categories:
-      - industry
-      - technology
+  - name: "Realtek"
+    name_zh: "瑞昱半導體"
+    logo: "/assets/images/REALTEK.jpg"
+    url: "https://www.realtek.com"
     active: true
 
-  - name: "Academia Sinica"
-    name_zh: "中央研究院"
-    logo: "/assets/images/partners/academia-sinica-logo.png"
-    url: "https://www.sinica.edu.tw/"
-    description: "Cross-institutional research collaboration in machine learning and data science"
-    description_zh: "機器學習與資料科學的跨機構研究合作"
-    categories:
-      - academic
-      - research
+  - name: "E Ink"
+    name_zh: "元太科技"
+    logo: "/assets/images/EInk.png"
+    url: "https://tw.eink.com"
     active: true
 
-#   - name: "NVIDIA AI Technology Center"
-#     name_zh: "NVIDIA人工智慧技術中心"
-#     logo: "/assets/images/partners/nvidia-logo.png"
-#     url: "https://www.nvidia.com/"
-#     description: "GPU computing resources and deep learning framework optimization"
-#     description_zh: "GPU運算資源與深度學習框架優化"
-#     categories:
-#       - technology
-#       - resources
-#     active: true
+  - name: "Industrial Technology Research Institute"
+    name_zh: "工業技術研究院"
+    logo: "/assets/images/ITRI.png"
+    url: "https://www.itri.org.tw"
+    active: true
 
 #   - name: "Microsoft Research Asia"
 #     name_zh: "微軟亞洲研究院"

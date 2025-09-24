@@ -1,6 +1,6 @@
 ---
 title: "News & Updates"
-layout: splash
+layout: fullwidth
 permalink: /news/
 header:
   overlay_image: /assets/images/research-vision.jpg
@@ -12,7 +12,7 @@ header:
 <div class="jp-section">
   <div class="container">
     <div class="jp-hero-content">
-      <h1>News & Updates</h1>
+      <h1 style="font-style: italic; font-weight: normal;">News & Updates</h1>
       <p class="jp-subtitle">Stay updated with our latest research developments, publications, and lab activities.</p>
     </div>
   </div>
@@ -51,7 +51,7 @@ header:
 
         <div class="jp-card-content">
           <div class="jp-card-body">
-            <p>{{ news_item.excerpt | strip_html | truncate: 150 }}</p>
+            <p>{{ news_item.excerpt | strip_html | truncate: 200 }}</p>
 
             {% if news_item.tags.size > 0 %}
             <div style="margin-top: 1rem;">
@@ -61,12 +61,6 @@ header:
             </div>
             {% endif %}
           </div>
-
-          {% if news_item.header.teaser %}
-          <div class="jp-card-image">
-            <img src="{{ news_item.header.teaser | relative_url }}" alt="{{ news_item.title }}" loading="lazy">
-          </div>
-          {% endif %}
         </div>
 
         <div class="jp-card-footer">
@@ -115,8 +109,91 @@ header:
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 800,
+    duration: 100,
     once: true,
-    offset: 100
+    offset: 20
   });
 </script>
+
+<style>
+/* Full width layout overrides */
+.jp-section {
+  width: 100%;
+  padding: var(--jp-spacing-lg) 3rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove staggered animation delays */
+[data-aos-delay] {
+  animation-delay: 0ms !important;
+}
+
+/* News blocks layout - single column for wider blocks */
+.jp-grid-1 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jp-spacing-lg);
+  margin-bottom: var(--jp-spacing-xl);
+  width: 100%;
+  max-width: none;
+}
+
+/* Enhanced news card styling */
+.jp-card {
+  padding: var(--jp-spacing-lg);
+  width: 100%;
+  max-width: none;
+}
+
+/* Date badge styling */
+.jp-date-badge {
+  background: linear-gradient(135deg, var(--jp-accent), var(--jp-accent-light));
+  border-radius: 12px;
+  padding: 0.75rem;
+  color: var(--jp-white);
+  text-align: center;
+  min-width: 80px;
+  box-shadow: 0 4px 12px rgba(44, 95, 124, 0.2);
+}
+
+.jp-date-badge .day {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.jp-date-badge .month {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.jp-date-badge .year {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-top: 0.2rem;
+}
+
+/* Better spacing for card content */
+.jp-card-content {
+  margin-bottom: var(--jp-spacing-lg);
+}
+
+.jp-card-footer {
+  margin-top: auto;
+  padding-top: var(--jp-spacing-md);
+}
+</style>

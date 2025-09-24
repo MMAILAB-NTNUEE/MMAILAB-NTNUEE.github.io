@@ -1,6 +1,6 @@
 ---
 title: "Join Our Lab"
-layout: splash
+layout: fullwidth
 permalink: /join/
 classes:
   - wide
@@ -14,7 +14,7 @@ header:
 <div class="jp-section">
   <div class="container">
     <div class="jp-hero-content">
-      <h1>Join Our Lab</h1>
+      <h1 style="font-style: italic; font-weight: normal;">Join Our Lab</h1>
       <p class="jp-subtitle">We're currently updating our recruitment information. Please check back soon for details about joining our lab!</p>
     </div>
   </div>
@@ -35,11 +35,66 @@ header:
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 800,
+    duration: 100,
     once: true,
-    offset: 100
+    offset: 20
   });
 </script>
+
+<style>
+/* Full width layout overrides */
+.jp-section {
+  width: 100%;
+  padding: var(--jp-spacing-lg) 3rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Enhanced card styling */
+.jp-card {
+  padding: var(--jp-spacing-xl);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.jp-card h3 {
+  color: var(--jp-black);
+  margin-bottom: var(--jp-spacing-md);
+}
+
+.jp-card p {
+  color: var(--jp-gray-dark);
+  margin-bottom: var(--jp-spacing-md);
+  line-height: 1.6;
+}
+
+/* Button styling */
+.jp-button {
+  display: inline-block;
+  background: var(--jp-accent);
+  color: var(--jp-white);
+  padding: var(--jp-spacing-sm) var(--jp-spacing-lg);
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.jp-button:hover {
+  background: var(--jp-accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 95, 124, 0.3);
+}
+</style>
 <!-- <div class="feature-section">
   <div class="feature-container">
     <div class="section-heading">

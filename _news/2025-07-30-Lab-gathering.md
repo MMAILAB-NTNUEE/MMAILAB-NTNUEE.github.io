@@ -8,7 +8,7 @@ header:
   teaser: "/assets/images/events/lab_gather_0730/photo_1.jpg"
 ---
 
-# MMAILAB Lab Gathering in July 2025
+MMAILAB Lab Gathering in July 2025
 
 We recently held a wonderful lab gathering that brought together all members of MMAILAB! MMAILAB members enjoyed lunch together.
 

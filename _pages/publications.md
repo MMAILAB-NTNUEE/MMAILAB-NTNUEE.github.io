@@ -14,7 +14,7 @@ header:
 <div class="jp-section">
   <div class="container">
     <div class="jp-hero-content">
-      <h1>Publications</h1>
+      <h1 style="font-style: italic; font-weight: normal;">Publications</h1>
       <p class="jp-subtitle">Discover our research contributions to computer vision, machine learning, and multimedia analysis.</p>
     </div>
   </div>
@@ -38,7 +38,7 @@ header:
         <h2>Highly Cited Papers</h2>
       </div>
 
-      <div class="jp-grid-2">
+      <div class="jp-grid-1">
         <div class="jp-card jp-publication-card" data-aos="fade-up">
           <div class="jp-card-header">
             <h3>Automatic single-image-based rain streaks removal via image decomposition</h3>
@@ -123,7 +123,7 @@ header:
         <h2>2025</h2>
       </div>
 
-      <div class="jp-grid-2">
+      <div class="jp-grid-1">
         <div class="jp-card jp-publication-card" data-aos="fade-up">
           <div class="jp-card-header">
             <h3>Automated peanut defect detection using hyperspectral imaging and deep learning: A real-time approach for smart agriculture</h3>
@@ -190,7 +190,7 @@ header:
         <h2>2024</h2>
       </div>
 
-      <div class="jp-grid-2">
+      <div class="jp-grid-1">
         <div class="jp-card jp-publication-card" data-aos="fade-up">
           <div class="jp-card-header">
             <h3>Two-stage deep image restoration network with application to single image shadow removal</h3>
@@ -248,7 +248,7 @@ header:
         <h2>2023</h2>
       </div>
 
-      <div class="jp-grid-2">
+      <div class="jp-grid-1">
         <div class="jp-card jp-publication-card" data-aos="fade-up">
           <div class="jp-card-header">
             <h3>A lightweight deep learning model for real-time face recognition</h3>
@@ -315,7 +315,7 @@ header:
         <h2>2022</h2>
       </div>
 
-      <div class="jp-grid-2">
+      <div class="jp-grid-1">
         <div class="jp-card jp-publication-card" data-aos="fade-up">
           <div class="jp-card-header">
             <h3>Lightweight deep neural network for joint learning of underwater object detection and color conversion</h3>
@@ -353,7 +353,7 @@ header:
         <h2>2021</h2>
       </div>
 
-      <div class="jp-grid-2">
+      <div class="jp-grid-1">
         <div class="jp-card jp-publication-card" data-aos="fade-up">
           <div class="jp-card-header">
             <h3>Deep learning-based compressed image artifacts reduction based on multi-scale image fusion</h3>
@@ -381,7 +381,7 @@ header:
         <h2>2020</h2>
       </div>
 
-      <div class="jp-grid-2">
+      <div class="jp-grid-1">
         <div class="jp-card jp-publication-card" data-aos="fade-up">
           <div class="jp-card-header">
             <h3>Sequential dual attention network for rain streak removal in a single image</h3>
@@ -450,7 +450,7 @@ header:
         <h2>Older Publications (Selection)</h2>
       </div>
 
-      <div class="jp-grid-2">
+      <div class="jp-grid-1">
         <div class="jp-card jp-publication-card" data-aos="fade-up">
           <div class="jp-card-header">
             <h3>Popularity prediction of social media based on multi-modal feature mining</h3>
@@ -509,13 +509,37 @@ header:
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 800,
+    duration: 100,
     once: true,
-    offset: 100
+    offset: 20
   });
 </script>
 
 <style>
+/* Full width layout overrides */
+.jp-section {
+  width: 100%;
+  padding: var(--jp-spacing-lg) 3rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Publication grid layout - single column row by row */
+.jp-grid-1 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jp-spacing-lg);
+  margin-bottom: var(--jp-spacing-xl);
+  width: 100%;
+  max-width: none;
+}
+
 .jp-nav-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -549,6 +573,9 @@ header:
 
 .jp-publication-card {
   height: auto;
+  width: 100%;
+  max-width: none;
+  padding: var(--jp-spacing-lg);
 }
 
 .jp-publication-card .jp-card-header {
