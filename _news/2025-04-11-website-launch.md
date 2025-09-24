@@ -4,7 +4,7 @@ layout: post
 date: 2025-04-11
 excerpt: "MMAILAB has launched a new website!"
 categories: [announcements]
-tags: [website, launch]
+tags: [Website Launch] 
 # header:
 #   teaser: "/assets/images/mailab-logo.png"
 ---

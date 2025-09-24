@@ -3,7 +3,7 @@ title: "Lab Gathering"
 layout: post
 date: 2025-07-30
 categories: [events]
-tags: [gathering,]
+tags: [Gathering]
 header:
   teaser: "/assets/images/events/lab_gather_0730/photo_1.jpg"
 ---

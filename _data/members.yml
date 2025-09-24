@@ -14,6 +14,7 @@
 #   - duration - Optional (for interns, shows internship period)
 #   - photo - Optional (not currently used in layout)
 #   - initials - Optional (not currently used in layout)
+#   - other - Optional (flexible field for any additional info like specialization, thesis topic, etc.)
 
 current_students:
   masters:
@@ -22,10 +23,11 @@ current_students:
     #   email: "xxx@ntnu.edu.tw"
     #   github: "https://github.com/xxxx"
     #   linkedin: "https://linkedin.com/in/xxxx"
-    #   # research_areas:
-    #   #   - "Deep Learning"
-    #   #   - "Computer Vision"
-    #   #   - "Medical AI"
+    #   research_areas:
+    #     - "Deep Learning"
+    #     - "Computer Vision"
+    #     - "Medical AI"
+    #   other: "Thesis: Advanced Neural Networks for Image Recognition"
       
 
     - name: "彭昶得"
@@ -103,7 +105,8 @@ current_students:
     - name: "曾昭諺"
     - name: "蕭學應"
     - name: "劉建陞"
-      program: "(Kang & Yeh Co-Advisor)"
+      other: "Kang & Yeh Co-Advisor"
+    - name: "蔡杰宇"
     # - name: "Alex Chen"
     #   program: "Computer Science (4th Year)"
     #   photo: "/assets/images/student-undergrad1.jpg"

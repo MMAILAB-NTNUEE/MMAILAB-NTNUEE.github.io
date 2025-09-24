@@ -1,0 +1,139 @@
+# Partners Configuration for MMAILAB
+# Each partner entry should include:
+# - name: Partner organization name (required)
+# - logo: Path to logo image file (required)
+# - url: Partner website URL (optional)
+# - description: Brief cooperation description (required)
+# - categories: Type of partnership (optional)
+# - active: Whether partnership is currently active (default: true)
+
+partners:
+  - name: "National Science and Technology Council"
+    name_zh: "國家科學及技術委員會"
+    logo: "/assets/images/partners/nstc-logo.png"
+    url: "https://www.nstc.gov.tw/"
+    description: "Supporting fundamental research in AI and computer vision through multi-year grants"
+    description_zh: "透過多年期計畫支持人工智慧與電腦視覺的基礎研究"
+    categories:
+      - funding
+      - government
+    active: true
+
+  - name: "Taiwan AI Labs"
+    name_zh: "台灣人工智慧實驗室"
+    logo: "/assets/images/partners/ailabs-logo.png"
+    url: "https://ailabs.tw/"
+    description: "Collaborative research on deep learning applications and AI innovation"
+    description_zh: "深度學習應用與人工智慧創新的合作研究"
+    categories:
+      - research
+      - industry
+    active: true
+
+  - name: "MediaTek"
+    name_zh: "聯發科技"
+    logo: "/assets/images/partners/mediatek-logo.png"
+    url: "https://www.mediatek.com/"
+    description: "Joint development of AI chips and embedded vision systems"
+    description_zh: "共同開發人工智慧晶片與嵌入式視覺系統"
+    categories:
+      - industry
+      - technology
+    active: true
+
+  - name: "Academia Sinica"
+    name_zh: "中央研究院"
+    logo: "/assets/images/partners/academia-sinica-logo.png"
+    url: "https://www.sinica.edu.tw/"
+    description: "Cross-institutional research collaboration in machine learning and data science"
+    description_zh: "機器學習與資料科學的跨機構研究合作"
+    categories:
+      - academic
+      - research
+    active: true
+
+#   - name: "NVIDIA AI Technology Center"
+#     name_zh: "NVIDIA人工智慧技術中心"
+#     logo: "/assets/images/partners/nvidia-logo.png"
+#     url: "https://www.nvidia.com/"
+#     description: "GPU computing resources and deep learning framework optimization"
+#     description_zh: "GPU運算資源與深度學習框架優化"
+#     categories:
+#       - technology
+#       - resources
+#     active: true
+
+#   - name: "Microsoft Research Asia"
+#     name_zh: "微軟亞洲研究院"
+#     logo: "/assets/images/partners/microsoft-logo.png"
+#     url: "https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/"
+#     description: "Joint research projects in computer vision and natural language processing"
+#     description_zh: "電腦視覺與自然語言處理的聯合研究專案"
+#     categories:
+#       - research
+#       - international
+#     active: true
+
+#   - name: "Industrial Technology Research Institute"
+#     name_zh: "工業技術研究院"
+#     logo: "/assets/images/partners/itri-logo.png"
+#     url: "https://www.itri.org.tw/"
+#     description: "Technology transfer and industrial application of AI research"
+#     description_zh: "人工智慧研究的技術轉移與產業應用"
+#     categories:
+#       - industry
+#       - application
+#     active: true
+
+#   - name: "Google Research"
+#     name_zh: "Google研究"
+#     logo: "/assets/images/partners/google-logo.png"
+#     url: "https://research.google/"
+#     description: "Collaboration on open-source AI tools and research publications"
+#     description_zh: "開源人工智慧工具與研究論文的合作"
+#     categories:
+#       - research
+#       - international
+#     active: true
+
+# # Partner categories definition
+# categories:
+#   funding:
+#     name: "Funding Partners"
+#     name_zh: "資助夥伴"
+#     description: "Organizations providing research grants and financial support"
+
+#   research:
+#     name: "Research Partners"
+#     name_zh: "研究夥伴"
+#     description: "Academic and research institutions for collaborative projects"
+
+#   industry:
+#     name: "Industry Partners"
+#     name_zh: "產業夥伴"
+#     description: "Companies and corporations for technology development"
+
+#   government:
+#     name: "Government Partners"
+#     name_zh: "政府夥伴"
+#     description: "Government agencies and public institutions"
+
+#   international:
+#     name: "International Partners"
+#     name_zh: "國際夥伴"
+#     description: "Global organizations and overseas collaborations"
+
+#   technology:
+#     name: "Technology Partners"
+#     name_zh: "技術夥伴"
+#     description: "Organizations providing technical resources and expertise"
+
+#   academic:
+#     name: "Academic Partners"
+#     name_zh: "學術夥伴"
+#     description: "Universities and educational institutions"
+
+#   application:
+#     name: "Application Partners"
+#     name_zh: "應用夥伴"
+#     description: "Partners for real-world application deployment"

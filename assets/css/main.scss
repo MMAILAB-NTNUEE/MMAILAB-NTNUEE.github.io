@@ -74,13 +74,16 @@ $caption-font-family: $serif;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }
 
 .parallax-background {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 120%;
   background-position: center;
   background-size: cover;
@@ -107,9 +110,18 @@ $caption-font-family: $serif;
 .hero-content-wrapper {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   z-index: 2;
-  padding: 0 2rem;
+  padding: 0 3rem;
+
+  @media (min-width: 1600px) {
+    max-width: 1600px;
+  }
+
+  @media (max-width: 992px) {
+    max-width: 1200px;
+    padding: 0 2rem;
+  }
 }
 
 .hero-content {
@@ -459,9 +471,17 @@ $caption-font-family: $serif;
 
 /* === RESEARCH SHOWCASE SECTION === */
 .research-showcase {
-  padding: 5rem 0;
-  max-width: 1200px;
+  padding: 5rem 2rem;
+  max-width: 100%;
   margin: 0 auto;
+
+  @media (min-width: 1400px) {
+    padding: 5rem 4rem;
+  }
+
+  @media (min-width: 1800px) {
+    padding: 5rem 6rem;
+  }
 }
 
 .section-intro {
@@ -512,8 +532,14 @@ $caption-font-family: $serif;
 .research-cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: 2rem;
   padding-bottom: 5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .research-card {
@@ -884,13 +910,17 @@ $caption-font-family: $serif;
   display: flex;
   gap: 2rem;
   margin: 0 auto 3rem;
-  padding: 0 1.5rem;
-  max-width: 1200px;
+  padding: 0 2rem;
+  max-width: 1600px;
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
   scroll-snap-type: x mandatory;
-  
+
+  @media (min-width: 1400px) {
+    padding: 0 4rem;
+  }
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -1175,18 +1205,32 @@ $caption-font-family: $serif;
 
 /* === NEWS SECTION === */
 .news-section {
-  padding-bottom: 7rem;
-  max-width: 1200px;
+  padding: 0 2rem 7rem;
+  max-width: 100%;
   margin: 0 auto;
+
+  @media (min-width: 1400px) {
+    padding: 0 4rem 7rem;
+  }
+
+  @media (min-width: 1800px) {
+    padding: 0 6rem 7rem;
+  }
 }
 
 .news-masonry {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
-  padding: 0 1.5rem;
   margin-bottom: 3rem;
-  
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   @media (max-width: 767px) {
     grid-template-columns: 1fr;
   }
@@ -2139,9 +2183,13 @@ $caption-font-family: $serif;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2.5rem;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto 3rem;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
+
+  @media (min-width: 1400px) {
+    padding: 0 4rem;
+  }
 }
 
 .team-card-wrapper {
@@ -2280,16 +2328,29 @@ $caption-font-family: $serif;
 
 /* === IMPACT STATISTICS SECTION === */
 .impact-section {
-  padding: 5rem 0;
-  max-width: 1200px;
+  padding: 5rem 2rem;
+  max-width: 100%;
   margin: 0 auto;
+
+  @media (min-width: 1400px) {
+    padding: 5rem 4rem;
+  }
+
+  @media (min-width: 1800px) {
+    padding: 5rem 6rem;
+  }
 }
 
 .stats-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  padding: 0 1.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .stat-card {
@@ -2372,15 +2433,23 @@ $caption-font-family: $serif;
 }
 
 .cta-container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 3rem;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   position: relative;
   z-index: 1;
-  
+
+  @media (min-width: 1400px) {
+    padding: 0 4rem;
+  }
+
+  @media (min-width: 1800px) {
+    padding: 0 6rem;
+  }
+
   @media (max-width: 992px) {
     flex-direction: column;
   }
@@ -2616,9 +2685,17 @@ $caption-font-family: $serif;
 }
 
 .feature-container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
+
+  @media (min-width: 1400px) {
+    padding: 0 4rem;
+  }
+
+  @media (min-width: 1800px) {
+    padding: 0 6rem;
+  }
 }
 
 /* === HELPER CLASSES === */

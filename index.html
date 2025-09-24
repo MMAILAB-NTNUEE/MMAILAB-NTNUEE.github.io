@@ -1,62 +1,156 @@
 ---
-layout: splash
-title: "多媒體暨人工智慧實驗室"
-excerpt: "NTNU Multimedia and Artificial Intelligence Laboratory"
-header:
-  overlay_color: "#000"
+title: "Multimedia & Artificial Intelligence Laboratory"
+layout: fullwidth
+<!-- header:
+  overlay_image: /assets/images/research-vision.jpg
   overlay_filter: 0.5
-  overlay_image: /assets/images/lab_scene.jpg
-  image_description: "Lab Scene"
-  caption: ""
-header.overlay_image:
-  background-size: contain
-  background-position: center
-classes: wide
+classes: 
+  - wide -->
 ---
 
-<!-- Hero Slideshow Section with Overlaid Content -->
-<section class="hero-slideshow-section">
-  <div class="hero-slideshow">
-    <div class="slide active" style="background-image: url('{{ site.baseurl }}/assets/images/raindrop.png')"></div>
-    <div class="slide" style="background-image: url('{{ site.baseurl }}/assets/images/LUT.png')"></div>
-    <div class="slide" style="background-image: url('{{ site.baseurl }}/assets/images/3dgs.png')"></div>
-  </div>
-  <!-- Overlaid Content at Bottom of Slideshow -->
-  <div class="hero-content-overlaid">
-    <div class="hero-content-container">
-      <div class="hero-content-wrapper">
-        <h1 class="hero-title">
-          <span class="title-main">Multimedia & AI Laboratory</span>
-          <span class="title-sub"><span class="highlight-text" id="dynamic-text">Computer Vision</span></span>
+<!-- Optimized Font Loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Crimson+Text:wght@400;600&family=Source+Code+Pro:wght@300;400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Crimson+Text:wght@400;600&family=Source+Code+Pro:wght@300;400&display=swap"></noscript>
+
+<!-- External CSS -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/homepage.css">
+
+<!-- Japanese Minimalist Hero Section 日系簡約風 -->
+<section class="jp-minimal-hero">
+  <!-- Zen Circle Background Element -->
+  <div class="zen-circle"></div>
+  <div class="zen-circle secondary"></div>
+
+  <!-- Subtle Grid Pattern -->
+  <div class="jp-grid-pattern"></div>
+
+  <!-- Floating Sakura Petals -->
+  <div class="sakura-container" id="sakura-petals"></div>
+
+  <!-- Main Content Container -->
+  <div class="jp-hero-content">
+    <div class="jp-content-inner">
+
+      <!-- Minimal Logo -->
+      <div class="jp-logo-wrapper" data-aos="fade-down" data-aos-duration="1200">
+        <div class="logo-line-decoration">
+          <span class="line"></span>
+          <img src="{{ site.baseurl }}/assets/images/mmailab-logo.png" alt="MMAILAB" class="jp-logo">
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <!-- Japanese Style Title -->
+      <div class="jp-title-group">
+        <h1 class="jp-main-title" data-aos="fade-up" data-aos-delay="300">
+          <span class="jp-title-en">Multimedia & AI Laboratory</span>
         </h1>
+
+        <!-- Minimal Subtitle -->
+        <!-- <div class="jp-subtitle" data-aos="fade-up" data-aos-delay="500">
+          <span class="jp-vertical-text">Research</span>
+          <div class="jp-subtitle-content">
+            <span class="jp-dynamic-text" id="jp-dynamic">Computer Vision</span>
+            <span class="jp-subtitle-line">Innovation</span>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- Minimalist Description -->
+      <p class="jp-description" data-aos="fade-up" data-aos-delay="700">
+        <span lang="zh-TW">台灣師範大學・多媒體暨人工智慧實驗室</span><br>
+        <span lang="en">AI & DLCV Research at NTNU</span>
+      </p>
+
+      <!-- Zen-style CTA Buttons -->
+      <div class="jp-cta-container" data-aos="fade-up" data-aos-delay="900">
+        <a href="{{ site.baseurl }}/research/" class="jp-btn secondary">
+          <span class="jp-btn-text">View Research</span>
+          <span class="jp-btn-subtext">Explore Our Work</span>
+          <span class="jp-btn-icon">→</span>
+        </a>
+        <a href="{{ site.baseurl }}/publications/" class="jp-btn secondary">
+          <span class="jp-btn-text">Publications</span>
+          <span class="jp-btn-subtext">Our Research Papers</span>
+          <span class="jp-btn-icon">→</span>
+        </a>
+        <a href="{{ site.baseurl }}/join/" class="jp-btn secondary">
+          <span class="jp-btn-text">Join Lab</span>
+          <span class="jp-btn-subtext">Be Part of Innovation</span>
+          <span class="jp-btn-icon">→</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Decorative Elements -->
+  <div class="jp-corner-decoration top-left" aria-hidden="true">
+    <svg viewBox="0 0 100 100" class="corner-svg" role="presentation">
+      <path d="M0,0 L100,0 L100,10 L10,10 L10,100 L0,100 Z" fill="currentColor"/>
+    </svg>
+  </div>
+  <div class="jp-corner-decoration bottom-right" aria-hidden="true">
+    <svg viewBox="0 0 100 100" class="corner-svg" role="presentation">
+      <path d="M100,100 L0,100 L0,90 L90,90 L90,0 L100,0 Z" fill="currentColor"/>
+    </svg>
+  </div>
+</section>
+
+<!-- Partners Section -->
+<section class="jp-partners-section">
+  <div class="jp-partners-container">
+    <div class="jp-partners-header" data-aos="fade-up">
+      <h2 class="jp-partners-title">
+        <span lang="zh-TW">合作夥伴</span>
+        <span class="jp-title-divider">/</span>
+        <span lang="en">Our Partners</span>
+      </h2>
+      <div class="jp-stat-number">
+        <span data-counter="8">0</span>
+        <span class="jp-stat-plus">+</span>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Navigation Buttons Section -->
-<section class="hero-nav-section">
-  <div class="hero-nav-container">
-    <div class="hero-actions">
-      <a href="{{ site.baseurl }}/research/" class="btn-nav primary">
-        <span>Explore Research</span>
-        <i class="fas fa-arrow-right"></i>
-      </a>
-      <a href="{{ site.baseurl }}/publications/" class="btn-nav secondary">
-        <span>Publications</span>
-      </a>
-      <a href="{{ site.baseurl }}/contact/" class="btn-nav secondary">
-        <span>Contact Us</span>
-      </a>
+    <!-- Partner Icons Container -->
+    <div class="jp-partners-grid" data-aos="fade-up" data-aos-delay="200">
+      {% for partner in site.data.partners.partners %}
+        {% if partner.active %}
+        <div class="jp-partner-item">
+          {% if partner.url %}
+          <a href="{{ partner.url }}" target="_blank" rel="noopener" class="jp-partner-link" title="{{ partner.description }}">
+          {% else %}
+          <div class="jp-partner-link" title="{{ partner.description }}">
+          {% endif %}
+            <div class="jp-partner-logo">
+              <img src="{{ site.baseurl }}{{ partner.logo }}"
+                   alt="{{ partner.name }}"
+                   onerror="this.onerror=null; this.src='{{ site.baseurl }}/assets/images/partners/default-logo.png';">
+            </div>
+            <div class="jp-partner-name">
+              <span class="jp-partner-name-en">{{ partner.name }}</span>
+              {% if partner.name_zh %}
+              <span class="jp-partner-name-zh">{{ partner.name_zh }}</span>
+              {% endif %}
+            </div>
+          {% if partner.url %}
+          </a>
+          {% else %}
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+      {% endfor %}
     </div>
   </div>
 </section>
 
-<!-- Areas of Research - Original Layout -->
+<!-- Areas of Research - Original Layout with Minimalist Typography -->
 <section class="research-showcase">
   <div class="section-intro">
     <h2 class="section-title">Areas of <span class="highlight">Research</span></h2>
-    <p class="section-description" style="text-align: center; margin: 0 auto; max-width: 800px;">We are driving cutting-edge advancements across these pivotal research domains</p>
   </div>
 
   <div class="research-cards-container">
@@ -67,7 +161,6 @@ classes: wide
         </div>
       </div>
       <h3>Image Processing</h3>
-      <p>Advancing techniques in image enhancement, restoration, and transformation for improved visual quality.</p>
       <div class="card-footer">
         <a href="{{ site.baseurl }}/research/#image-processing" class="read-more">
           <span>Learn More</span>
@@ -83,7 +176,6 @@ classes: wide
         </div>
       </div>
       <h3>Computer Vision</h3>
-      <p>Developing algorithms for visual understanding, super resolution, and scene analysis using advanced AI techniques.</p>
       <div class="card-footer">
         <a href="{{ site.baseurl }}/research/#computer-vision" class="read-more">
           <span>Learn More</span>
@@ -99,7 +191,6 @@ classes: wide
         </div>
       </div>
       <h3>Deep Learning</h3>
-      <p>Innovating neural network architectures that learn from data to solve complex visual and computational problems with remarkable accuracy.</p>
       <div class="card-footer">
         <a href="{{ site.baseurl }}/research/#deep-learning" class="read-more">
           <span>Learn More</span>
@@ -110,7 +201,7 @@ classes: wide
   </div>
 </section>
 
-<!-- Latest News - Original Layout -->
+<!-- Latest News - Original Layout with Minimalist Typography -->
 <section class="news-section">
   <div class="section-intro">
     <h2 class="section-title">Latest <span class="highlight">News</span></h2>
@@ -127,17 +218,20 @@ classes: wide
             <img src="{{ site.baseurl }}/assets/images/website-launch.png" alt="MMAILAB Research" loading="lazy" width="400" height="400">
           {% endif %}
 
-          <div class="news-card-date">
-            <span class="day">{{ post.date | date: "%d" }}</span>
-            <span class="month">{{ post.date | date: "%b" }}</span>
-          </div>
-
-          {% if post.categories[0] %}
-            <span class="news-card-category">{{ post.categories[0] | capitalize }}</span>
-          {% endif %}
         </div>
 
         <div class="news-card-content">
+          <div class="news-card-header">
+            <div class="news-card-date-inline">
+              <span class="day">{{ post.date | date: "%d" }}</span>
+              <span class="month">{{ post.date | date: "%b" }}</span>
+              <span class="year">{{ post.date | date: "%Y" }}</span>
+            </div>
+            {% if post.categories[0] %}
+              <span class="news-card-category">{{ post.categories[0] | capitalize }}</span>
+            {% endif %}
+          </div>
+
           <h3 class="news-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
 
           <div class="news-card-excerpt">
@@ -171,7 +265,7 @@ classes: wide
   </div>
 </section>
 
-<!-- Join Lab Section -->
+<!-- Join Lab Section - Original Layout with Minimalist Typography -->
 <section class="join-lab-section">
   <div class="join-content">
     <div class="join-logo-container">
@@ -216,637 +310,21 @@ classes: wide
   </div>
 </section>
 
-<style>
-/* ===== CONFIGURATION PARAMETERS ===== */
-:root {
-  --slide-duration: 4s; /* Change this to modify slide speed */
-  --primary-color: #105E96;
-  --secondary-color: #17A589;
-  --text-dark: #2D3142;
-  --background-light: #f8f9fa;
-}
+<!-- AOS Library for animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-/* ===== HERO SLIDESHOW SECTION WITH OVERLAY ===== */
-.hero-slideshow-section {
-  position: relative;
-  height: 80vh;
-  min-height: 600px;
-  max-height: 100vh;
-  overflow: hidden;
-}
+<!-- External JavaScript -->
+<script src="{{ site.baseurl }}/assets/js/homepage.js" defer></script>
 
-.hero-slideshow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 5rem);
-  z-index: 1;
-  overflow: hidden;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-/* ===== OVERLAID CONTENT AT BOTTOM ===== */
-.hero-content-overlaid {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 3;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.3) 50%,
-    transparent 100%
-  );
-  backdrop-filter: blur(5px);
-  padding: 0.5rem 0 1rem;
-}
-
-/* ===== NAVIGATION BUTTONS SECTION ===== */
-.hero-nav-section {
-  padding: 3rem 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-}
-
-.hero-nav-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  text-align: center;
-}
-
-.btn-nav {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-  margin: 0 0.5rem;
-}
-
-.btn-nav.primary {
-  background: var(--secondary-color);
-  color: white;
-  box-shadow: 0 4px 15px rgba(23, 165, 137, 0.4);
-}
-
-.btn-nav.primary:hover {
-  background: #138a73;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(23, 165, 137, 0.5);
-}
-
-.btn-nav.secondary {
-  background: rgba(45, 52, 54, 0.1);
-  color: #2c3e50;
-  border: 1px solid rgba(45, 52, 54, 0.2);
-}
-
-.btn-nav.secondary:hover {
-  background: rgba(45, 52, 54, 0.15);
-  border-color: rgba(45, 52, 54, 0.3);
-  transform: translateY(-2px);
-}
-
-.hero-content-container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.hero-content-wrapper {
-  text-align: center;
-}
-
-.hero-title {
-  margin-bottom: 1.5rem;
-  color: white;
-}
-
-.title-main {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #ffffff;
-  text-shadow:
-    1px 1px 2px rgba(0, 0, 0, 0.5),
-    0 0 4px rgba(0, 0, 0, 0.3);
-}
-
-.title-sub {
-  display: block;
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.2;
-  color: white;
-}
-
-.highlight-text {
-  color: var(--secondary-color);
-}
-
-.hero-description {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.hero-stats {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.stat-item {
-  text-align: center;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  min-width: 120px;
-}
-
-.stat-number {
-  display: block;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--secondary-color);
-  margin-bottom: 0.25rem;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-}
-
-.btn-clean {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 0.85rem;
-}
-
-.btn-clean.primary {
-  background: var(--secondary-color);
-  color: white;
-  box-shadow: 0 4px 15px rgba(23, 165, 137, 0.4);
-}
-
-.btn-clean.primary:hover {
-  background: #138a73;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(23, 165, 137, 0.5);
-}
-
-.btn-clean.secondary {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(10px);
-}
-
-.btn-clean.secondary:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.6);
-  transform: translateY(-2px);
-}
-
-/* ===== JOIN LAB SECTION ===== */
-.join-lab-section {
-  padding: 6rem 0;
-  background: #ffffff;
-  position: relative;
-  overflow: hidden;
-}
-
-.join-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-}
-
-.join-logo-container {
-  flex: 0 0 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.join-logo {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.1));
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-.join-text-content {
-  flex: 1;
-  text-align: left;
-}
-
-.join-title {
-  font-size: clamp(2rem, 4vw, 2.5rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--text-dark);
-}
-
-.join-title .highlight {
-  color: var(--primary-color);
-}
-
-.join-description {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 2.5rem;
-  color: #5a6c7d;
-  max-width: 600px;
-}
-
-.join-opportunities {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.opportunity-card {
-  padding: 1.5rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  border-radius: 12px;
-  border: 1px solid #e9ecef;
-  transition: all 0.3s ease;
-}
-
-.opportunity-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border-color: var(--secondary-color);
-}
-
-.opportunity-card i {
-  font-size: 2rem;
-  color: var(--secondary-color);
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.opportunity-card h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--text-dark);
-}
-
-.opportunity-card p {
-  font-size: 0.9rem;
-  color: #6c757d;
-  line-height: 1.5;
-}
-
-.join-cta {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn-join-new {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
-
-.btn-join-new.primary {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
-  box-shadow: 0 4px 15px rgba(16, 94, 150, 0.3);
-}
-
-.btn-join-new.primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(16, 94, 150, 0.4);
-}
-
-.btn-join-new.outline {
-  background: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-}
-
-.btn-join-new.outline:hover {
-  background: var(--primary-color);
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1024px) {
-  .hero-content-overlaid {
-    width: 45%;
-    max-width: 550px;
-  }
-
-  .hero-card-overlaid {
-    padding: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-slideshow-section {
-    height: 70vh;
-    min-height: 400px;
-    max-height: 90vh;
-  }
-
-  .hero-slideshow {
-    height: calc(100% - 3rem);
-  }
-
-  .hero-content-overlaid {
-    padding: 1rem 0 1rem;
-    bottom: 0;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.4) 70%,
-      transparent 100%
-    );
-  }
-
-  .hero-content-container {
-    padding: 0 1rem;
-  }
-
-  .title-main {
-    font-size: 1rem;
-  }
-
-  .title-sub {
-    font-size: clamp(1.2rem, 5vw, 1.8rem);
-  }
-
-  .hero-title {
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-
-  .btn-clean {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .join-features {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .join-actions {
-    flex-direction: column;
-  }
-
-  .btn-join {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .join-content {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .join-logo-container {
-    flex: none;
-    width: 100%;
-  }
-
-  .join-text-content {
-    text-align: center;
-  }
-
-  .join-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .join-cta {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-slideshow-section {
-    height: 50vh;
-    min-height: 300px;
-    max-height: 60vh;
-  }
-
-  .hero-slideshow {
-    height: 100%;
-    top: 0;
-  }
-
-  .hero-content-overlaid {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: auto;
-    max-height: 40vh;
-    padding: 0.5rem 0 0.5rem;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.95) 0%,
-      rgba(0, 0, 0, 0.6) 80%,
-      transparent 100%
-    );
-    transform: translateZ(0);
-  }
-
-  .hero-content-container {
-    padding: 0 0.8rem;
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  .title-main {
-    font-size: 0.85rem;
-    margin-bottom: 0.2rem;
-  }
-
-  .title-sub {
-    font-size: clamp(1rem, 5vw, 1.3rem);
-    line-height: 1.1;
-  }
-
-  .hero-title {
-    margin-bottom: 0.5rem;
-    text-align: center;
-  }
-
-  .hero-description {
-    font-size: 0.85rem;
-    line-height: 1.4;
-  }
-
-  .btn-clean {
-    padding: 0.6rem 1rem;
-    font-size: 0.75rem;
-  }
-}
-</style>
-
+<!-- Initialize AOS -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Configuration - Easy to modify
-  const SLIDE_DURATION = 4000; // 4 seconds - change this value to modify speed
-  const TYPE_SPEED = 100;
-  const DELETE_SPEED = 50;
-  const PAUSE_TIME = 2000;
-
-  // Slideshow functionality
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
-
-  function nextSlide() {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-
-    // Sync text with slide change
-    syncTextWithSlides();
-  }
-
-  // Auto-advance slides
-  setInterval(nextSlide, SLIDE_DURATION);
-
-  // Synchronized typewriter effect with slides
-  const dynamicTexts = [
-    "Image Deraining",
-    "LUT Neural Representation",
-    "3D Reconstruction"
-  ];
-
-  let textIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-
-  function typeWriter() {
-    const element = document.getElementById('dynamic-text');
-    if (!element) return;
-
-    const currentText = dynamicTexts[textIndex];
-
-    if (isDeleting) {
-      element.textContent = currentText.substring(0, charIndex - 1);
-      charIndex--;
-    } else {
-      element.textContent = currentText.substring(0, charIndex + 1);
-      charIndex++;
-    }
-
-    let timeout = isDeleting ? DELETE_SPEED : TYPE_SPEED;
-
-    if (!isDeleting && charIndex === currentText.length) {
-      timeout = PAUSE_TIME;
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      textIndex = (textIndex + 1) % dynamicTexts.length;
-    }
-
-    setTimeout(typeWriter, timeout);
-  }
-
-  // Sync text changes with slide changes
-  function syncTextWithSlides() {
-    // Change text immediately when slide changes
-    const element = document.getElementById('dynamic-text');
-    if (element) {
-      textIndex = currentSlide;
-      element.textContent = dynamicTexts[textIndex];
-      charIndex = dynamicTexts[textIndex].length;
-      isDeleting = false;
-    }
-  }
-
-  // Start with first slide text
-  setTimeout(() => {
-    const element = document.getElementById('dynamic-text');
-    if (element) {
-      element.textContent = dynamicTexts[0];
-    }
-  }, 100);
-
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
     });
   });
-});
 </script>
