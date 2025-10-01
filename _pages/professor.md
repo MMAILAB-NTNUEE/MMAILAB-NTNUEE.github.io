@@ -631,7 +631,7 @@ header:
 
           <p>Dr. Kang's research interests span computer vision, image processing, multimedia content analysis, and artificial intelligence applications. He leads the Multimedia and Artificial Intelligence Lab at NTNU, which focuses on developing innovative solutions in these areas.</p>
 
-          <p>Throughout his career, Dr. Kang has held several academic positions, including roles at Academia Sinica and National Yunlin University of Science and Technology. He has made significant contributions to the academic community as an Associate Editor for several journals including IEEE Transactions on Multimedia and has served on organizing committees for international conferences such as IEEE ICCE-TW and APSIPA ASC.</p>
+          <p>Throughout his career, Dr. Kang has held several academic positions, including roles at Academia Sinica and National Yunlin University of Science and Technology. </p>
 
           <p>Dr. Kang's work has been recognized with multiple awards, including the Top 10% Paper Award at IEEE MMSP 2013, the Best Performance Award in the Social Media Prediction Challenge at ACM Multimedia 2019, and the Best Paper Award at APSIPA ASC 2020. He has published extensively in prestigious journals and conferences, with over 100 research papers to his credit.</p>
         </div>
