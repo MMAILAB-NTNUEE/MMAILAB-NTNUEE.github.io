@@ -672,7 +672,8 @@ header:
             <div class="award-content">
               <div class="award-name">World's Top 2% Scientist</div>
               <div class="award-org">Stanford University</div>
-              <div class="award-year">2024, 2022</div>
+              <div class="award-year">2025, 2024, 2022</div>
+              <a href="https://pr.ntnu.edu.tw/ntnunews/index.php?mode=data&id=23857" target="_blank">[2025 World's Top 2% Scientists]</a>
             </div>
           </div>
           <div class="award-item" style="margin-bottom: 1.5rem;">

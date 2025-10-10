@@ -71,20 +71,6 @@ current_students:
     - name: "陳毅"
       program: "1st Year"
 
-    - name: "黃品慈"
-      program: "2nd Year (Graduated)"
-
-    - name: "顏伯諭"
-      program: "2nd Year (Graduated)"
-
-    - name: "林琮祐"
-      program: "2nd Year (Graduated)"
-    
-    - name: "吳政陽"
-      program: "2nd Year (Graduated)"
-    
-    - name: "何祐豪"
-      program: "2nd Year (Graduated)"
 
     # - name: "xxx"
     # program: "xxx"
@@ -202,6 +188,33 @@ current_students:
 
 # Graduated Students & Thesis Archive
 graduated_students:
+  - year: 2025
+    students:
+      - name: "黃品慈"
+        name_en: "Huang, Pin-Tzu"
+        thesis_cn: "適用於電子紙顯示器色彩濾光陣列的深度色彩影像抖動網路"
+        thesis_en: "Deep Color Image Dithering Network for Electronic Paper Displays with Color Filter Arrays"
+        
+      - name: "吳政陽"
+        name_en: "Wu, Zheng-Yang"
+        thesis_cn: "結合全域光譜注意力之多階段空間-光譜轉換模型於高光譜影像修復之研究"
+        thesis_en: "GSA-MSSFormer: A Multi-Stage Spatial-Spectral Transformer with Global Spectral Attention for Hyperspectral Image Restoration"
+      
+      - name: "何祐豪"
+        name_en: "Ho, Yu-Hao"
+        thesis_cn: "基於階層式空間光譜緊密關聯性Transformer之高光譜與多光譜影像融合"
+        thesis_en: "Hierarchical Spatial-Spectral Dense Correlated Transformer for Hyperspectral and Multispectral Image Fusion"
+
+      - name: "林琮祐"
+        name_en: "Lin, Tsong-You"
+        thesis_cn: "基於混合擴張卷積及卷積注意力模組的即時車道線偵測深度學習網路"
+        thesis_en: "Real-time Lane Detection Based on Hybrid Dilated Convolution and Convolutional Block Attention Module"
+      
+      - name: "顏伯諭"
+        name_en: "Yen, Po-Yu"
+        thesis_cn: "SA-FBCNN：一種具空間自適應性與彈性的盲式卷積神經網路於JPEG影像壓縮雜訊去除之研究"
+        thesis_en: "SA-FBCNN: A Spatially Adaptive and Flexible Blind Convolutional Neural Network for JPEG Compression Artifact Removal"
+        
   - year: 2024
     students:
       - name: "王鬱紹"
