@@ -5,7 +5,7 @@ date: 2026-01-07
 categories: [events]
 tags: [Gathering]
 header:
-  teaser: "/assets/images/events/lab_gather_0107/photo.JPG"
+  teaser: "/assets/images/events/lab_gather_0107/photo.jpg"
 ---
 
 MMAILAB Lab Gathering in January 2026
