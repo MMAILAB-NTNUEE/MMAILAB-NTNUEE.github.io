@@ -32,26 +32,26 @@ current_students:
 
     - name: "彭昶得"
       initials: "CDP"
-      program: "1.5 st Year"
+      program: "2nd Year"
       email: "61375096h@gapps.ntnu.edu.tw"
     
     - name: "鍾佳妤"
-      program: "2st Year"
+      program: "2nd Year"
     
     - name: "陳柏安"
-      program: "2st Year"
+      program: "2nd Year"
     
     - name: "張耘翰"
-      program: "2st Year"
+      program: "2nd Year"
     
     - name: "陳品樺"
-      program: "2st Year"
+      program: "2nd Year"
     
     - name: "林昱緯"
-      program: "2st Year"
+      program: "2nd Year"
 
     - name: "顏福翔"
-      program: "2st Year"
+      program: "2nd Year"
 
     - name: "游筑伊"
       program: "1st Year"
@@ -191,6 +191,10 @@ current_students:
 
 # Graduated Students & Thesis Archive
 graduated_students:
+  - year: 2026
+    students:
+      - name: "簡若安"
+
   - year: 2025
     students:
       - name: "黃品慈"
