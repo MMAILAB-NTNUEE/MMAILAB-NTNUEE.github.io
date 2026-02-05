@@ -10,5 +10,5 @@ header:
 
 Congratulations to Chang-De Peng, Chieh-Yu Tsai, and Prof. Li-wei Kang for receiving the Best Presentation Award at the CACS 2025 Special Session!
 
-Paper Title: "Uncertainty-Guided Deraining for Robust Object Detection in Rainy Scenarios"
+<br>Paper Title: "Uncertainty-Guided Deraining for Robust Object Detection in Rainy Scenarios"
 This research addresses robust object detection under rainy conditions using uncertainty-guided deraining approaches.
