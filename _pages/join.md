@@ -18,6 +18,12 @@ header:
         <h3 style="font-style: italic; font-weight: normal;">Join Our Lab</h3>
         <p>Prof. Kang currently accepts students through two programs: the <strong>Graduate Institute of Electrical Engineering</strong> and the <strong>Graduate Institute of AI Cross-Disciplinary Studies</strong>. If you are interested in research on deep learning applied to computer vision, feel free to reach out to a lab member or schedule a meeting with Prof. Kang.</p>
         <br>
+        <h3>Open Positions</h3>
+        <p>Prof. Kang is currently accepting <strong>undergraduate research students</strong>, <strong>master's students</strong>, and <strong>PhD students</strong>.</p>
+      </div>
+    </div>
+    <div class="jp-card" data-aos="fade-up">
+      <div class="jp-card-content">
         <h3>This Lab Might Be a Good Fit If You Have...</h3>
         <ul style="text-align: left; margin: 0 auto; line-height: 2;">
           <li><strong>Self-Discipline</strong> — You can meet deadlines responsibly and proactively drive your own research progress.</li>
@@ -25,9 +31,6 @@ header:
           <li><strong>Image Processing Experience</strong> <em>(optional)</em> — Including but not limited to experience with the OpenCV library. A passion for photography is a bonus!</li>
           <li><strong>Deep Learning Fundamentals</strong> <em>(optional)</em> — Experience with PyTorch or having taken a machine learning / deep learning course is helpful.</li>
         </ul>
-        <br>
-        <h3>Open Positions</h3>
-        <p>Prof. Kang is currently accepting <strong>undergraduate research students</strong>, <strong>master's students</strong>, and <strong>PhD students</strong>.</p>
       </div>
     </div>
   </div>
