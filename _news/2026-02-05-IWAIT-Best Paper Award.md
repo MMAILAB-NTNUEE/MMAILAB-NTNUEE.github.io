@@ -5,7 +5,7 @@ date: 2026-02-05
 categories: [Awards]
 tags: [IWAIT]
 header:
-    teaser: "assets/images/events/IWAIT/best_paper_award.jpg"
+  teaser: "assets/images/events/IWAIT/best_paper_award.jpg"
 ---
 
 Congratulations to PO-YU YEN (顏伯諭) and Prof. Li-wei Kang for receiving the Best Paper Award at the International Workshop on Advanced Image Technology (IWAIT) 2026.
