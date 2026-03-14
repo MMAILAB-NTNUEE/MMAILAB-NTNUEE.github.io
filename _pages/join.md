@@ -31,15 +31,7 @@ header:
           <li><strong>Image Processing Experience</strong> <em>(optional)</em> — Including but not limited to experience with the OpenCV library. A passion for photography is a bonus!</li>
           <li><strong>Deep Learning Fundamentals</strong> <em>(optional)</em> — Experience with PyTorch or having taken a machine learning / deep learning course is helpful.</li>
         </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="jp-section">
-  <div class="container">
-    <div class="jp-card" data-aos="fade-up">
-      <div class="jp-card-content">
+        <br>
         <h3>Open Positions</h3>
         <p>Prof. Kang is currently accepting <strong>undergraduate research students</strong>, <strong>master's students</strong>, and <strong>PhD students</strong>.</p>
       </div>
