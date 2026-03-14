@@ -13,17 +13,11 @@ header:
 
 <div class="jp-section">
   <div class="container">
-    <div class="jp-hero-content">
-      <h1 style="font-style: italic; font-weight: normal;">Join Our Lab</h1>
-      <p class="jp-subtitle">Prof. Kang currently accepts students through two programs: the <strong>Graduate Institute of Electrical Engineering</strong> and the <strong>Graduate Institute of AI Cross-Disciplinary Studies</strong>. If you are interested in research on deep learning applied to computer vision, feel free to reach out to a lab member or schedule a meeting with Prof. Kang.</p>
-    </div>
-  </div>
-</div>
-
-<div class="jp-section">
-  <div class="container">
     <div class="jp-card" data-aos="fade-up">
       <div class="jp-card-content">
+        <h3 style="font-style: italic; font-weight: normal;">Join Our Lab</h3>
+        <p>Prof. Kang currently accepts students through two programs: the <strong>Graduate Institute of Electrical Engineering</strong> and the <strong>Graduate Institute of AI Cross-Disciplinary Studies</strong>. If you are interested in research on deep learning applied to computer vision, feel free to reach out to a lab member or schedule a meeting with Prof. Kang.</p>
+        <br>
         <h3>This Lab Might Be a Good Fit If You Have...</h3>
         <ul style="text-align: left; margin: 0 auto; line-height: 2;">
           <li><strong>Self-Discipline</strong> — You can meet deadlines responsibly and proactively drive your own research progress.</li>
