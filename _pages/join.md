@@ -15,7 +15,34 @@ header:
   <div class="container">
     <div class="jp-hero-content">
       <h1 style="font-style: italic; font-weight: normal;">Join Our Lab</h1>
-      <p class="jp-subtitle">We're currently updating our recruitment information. Please check back soon for details about joining our lab!</p>
+      <p class="jp-subtitle">Prof. Kang currently accepts students through two programs: the <strong>Graduate Institute of Electrical Engineering</strong> and the <strong>Graduate Institute of AI Cross-Disciplinary Studies</strong>. If you are interested in research on deep learning applied to computer vision, feel free to reach out to a lab member or schedule a meeting with Prof. Kang.</p>
+    </div>
+  </div>
+</div>
+
+<div class="jp-section">
+  <div class="container">
+    <div class="jp-card" data-aos="fade-up">
+      <div class="jp-card-content">
+        <h3>This Lab Might Be a Good Fit If You Have...</h3>
+        <ul style="text-align: left; max-width: 700px; margin: 0 auto; line-height: 2;">
+          <li><strong>Self-Discipline</strong> — You can meet deadlines responsibly and proactively drive your own research progress.</li>
+          <li><strong>Programming Skills</strong> — Familiarity with Python or proficiency in using large language models is a plus.</li>
+          <li><strong>Image Processing Experience</strong> <em>(optional)</em> — Including but not limited to experience with the OpenCV library. A passion for photography is a bonus!</li>
+          <li><strong>Deep Learning Fundamentals</strong> <em>(optional)</em> — Experience with PyTorch or having taken a machine learning / deep learning course is helpful.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="jp-section">
+  <div class="container">
+    <div class="jp-card" data-aos="fade-up">
+      <div class="jp-card-content">
+        <h3>Open Positions</h3>
+        <p>Prof. Kang is currently accepting <strong>undergraduate research students</strong>, <strong>master's students</strong>, and <strong>PhD students</strong>.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -25,7 +52,7 @@ header:
     <div class="jp-card" data-aos="fade-up">
       <div class="jp-card-content" style="text-align: center;">
         <h3>Get In Touch</h3>
-        <p>For urgent inquiries about research opportunities, please contact us at:</p>
+        <p>For inquiries about research opportunities, please contact us at:</p>
         <a href="mailto:lwkang@ntnu.edu.tw" class="jp-button">lwkang@ntnu.edu.tw</a>
       </div>
     </div>
@@ -100,7 +127,7 @@ header:
     <div class="section-heading">
       <h2>Opportunities at MAILAB</h2>
     </div>
-    
+
     <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
       We are always looking for talented and motivated individuals to join our research team.
       We offer various opportunities for students and researchers at different career stages.
@@ -179,7 +206,7 @@ header:
     <div class="section-heading">
       <h2>Application Process</h2>
     </div>
-    
+
     <div style="max-width: 800px; margin: 0 auto;">
       <h3 style="color: #1E5F74;">For Prospective PhD and Master's Students</h3>
 
@@ -202,7 +229,7 @@ header:
           </ul>
         </li>
       </ol>
-      
+
       <h3 style="color: #1E5F74;">For Postdoctoral Applicants</h3>
 
       <p>If you're interested in a postdoctoral position, please email <a href="mailto:mmailab@ntnu.edu.tw">mmailab@ntnu.edu.tw</a> with the following:</p>
@@ -212,7 +239,7 @@ header:
         <li>Contact information for 2-3 references</li>
         <li>1-2 representative publications</li>
       </ul>
-      
+
       <h3 style="color: #1E5F74;">For Undergraduate Students</h3>
 
       <p>If you're a current NTNU undergraduate student interested in research opportunities, please email us with:</p>
@@ -231,33 +258,33 @@ header:
     <div class="section-heading">
       <h2>Lab Environment & Benefits</h2>
     </div>
-    
+
     <div style="display: flex; flex-wrap: wrap; justify-content: center; text-align: center; margin-bottom: 2rem;">
       <div style="flex: 1; min-width: 200px; max-width: 250px; margin: 1rem;">
         <i class="fas fa-laptop-code" style="font-size: 2.5rem; color: #1E5F74; margin-bottom: 1rem;"></i>
         <h3>Resources</h3>
         <p>Access to high-performance computing infrastructure with multiple GPUs for deep learning research</p>
       </div>
-      
+
       <div style="flex: 1; min-width: 200px; max-width: 250px; margin: 1rem;">
         <i class="fas fa-users" style="font-size: 2.5rem; color: #1E5F74; margin-bottom: 1rem;"></i>
         <h3>Community</h3>
         <p>Collaborative environment with regular seminars, reading groups, and social events</p>
       </div>
-      
+
       <div style="flex: 1; min-width: 200px; max-width: 250px; margin: 1rem;">
         <i class="fas fa-globe" style="font-size: 2.5rem; color: #1E5F74; margin-bottom: 1rem;"></i>
         <h3>Networking</h3>
         <p>Opportunities to collaborate with researchers from academia and industry worldwide</p>
       </div>
-      
+
       <div style="flex: 1; min-width: 200px; max-width: 250px; margin: 1rem;">
         <i class="fas fa-graduation-cap" style="font-size: 2.5rem; color: #1E5F74; margin-bottom: 1rem;"></i>
         <h3>Career Development</h3>
         <p>Mentorship and training in research, writing, presentation, and professional skills</p>
       </div>
     </div>
-    
+
     <div style="text-align: center; max-width: 800px; margin: 0 auto;">
       <p>Our lab members have gone on to successful careers in academia and industry, including positions at leading universities, research labs, and technology companies worldwide.</p>
       <div style="margin-top: 2rem;">
