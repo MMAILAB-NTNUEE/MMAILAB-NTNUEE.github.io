@@ -25,7 +25,7 @@ header:
     <div class="jp-card" data-aos="fade-up">
       <div class="jp-card-content">
         <h3>This Lab Might Be a Good Fit If You Have...</h3>
-        <ul style="text-align: left; max-width: 700px; margin: 0 auto; line-height: 2;">
+        <ul style="text-align: left; margin: 0 auto; line-height: 2;">
           <li><strong>Self-Discipline</strong> — You can meet deadlines responsibly and proactively drive your own research progress.</li>
           <li><strong>Programming Skills</strong> — Familiarity with Python or proficiency in using large language models is a plus.</li>
           <li><strong>Image Processing Experience</strong> <em>(optional)</em> — Including but not limited to experience with the OpenCV library. A passion for photography is a bonus!</li>
@@ -87,7 +87,7 @@ header:
 .jp-card {
   padding: var(--jp-spacing-xl);
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
