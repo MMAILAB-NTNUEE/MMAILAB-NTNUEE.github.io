@@ -1,0 +1,436 @@
+/* =============================================
+   CONTACT & JOIN — Editorial Research Notebook
+   ============================================= */
+
+/* --- Typography --- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  --cj-serif: 'DM Serif Display', 'Crimson Text', Georgia, serif;
+  --cj-sans: 'DM Sans', 'Inter', -apple-system, sans-serif;
+  --cj-ink: #1A1A1A;
+  --cj-ink-soft: #4A4A4A;
+  --cj-accent: #2C5F7C;
+  --cj-accent-light: #5A8CAA;
+  --cj-rule: #D4D4D4;
+  --cj-bg: #FFFFFF;
+  --cj-bg-alt: #FFFFFF;
+  --cj-paper-line: rgba(190, 205, 218, 0.25);
+  --cj-paper-line-fine: rgba(190, 205, 218, 0.10);
+  --cj-margin-red: rgba(200, 80, 75, 0.18);
+}
+
+/* --- Notebook background (shared with homepage) --- */
+.cj-hero,
+.cj-section,
+.cj-section--alt {
+  background-color: var(--cj-bg);
+  background-image:
+    linear-gradient(var(--cj-paper-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--cj-paper-line) 1px, transparent 1px),
+    linear-gradient(var(--cj-paper-line-fine) 1px, transparent 1px),
+    linear-gradient(90deg, var(--cj-paper-line-fine) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  position: relative;
+}
+
+/* Red margin line */
+.cj-hero::before,
+.cj-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 72px;
+  width: 1.5px;
+  background: var(--cj-margin-red);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+.cj-hero {
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--cj-rule);
+}
+
+.cj-hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.cj-hero-label {
+  display: inline-block;
+  font-family: var(--cj-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--cj-accent);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--cj-accent);
+  padding: 0.35rem 1rem;
+}
+
+.cj-hero-title {
+  font-family: var(--cj-serif);
+  font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+  font-weight: 400;
+  color: var(--cj-ink);
+  line-height: 1.15;
+  margin: 0 0 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+.cj-amp {
+  font-style: italic;
+  color: var(--cj-accent);
+  font-weight: 400;
+}
+
+.cj-hero .cj-hero-sub {
+  font-family: var(--cj-sans);
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--cj-ink-soft);
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cj-hero-rule {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cj-hero-rule span {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--cj-accent);
+}
+
+/* =============================================
+   SECTIONS
+   ============================================= */
+.cj-section {
+  padding: 4rem 2rem;
+}
+
+.cj-section--alt {
+  border-top: 1px solid var(--cj-rule);
+}
+
+.cj-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.cj-section-heading {
+  font-family: var(--cj-serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 400;
+  color: var(--cj-ink);
+  margin: 0 0 2.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--cj-rule);
+  letter-spacing: -0.01em;
+}
+
+/* =============================================
+   SPLIT LAYOUT — Join Section
+   ============================================= */
+.cj-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* --- Prose column --- */
+.cj-prose p {
+  font-family: var(--cj-sans);
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: var(--cj-ink-soft);
+  margin: 0 0 1rem;
+}
+
+.cj-prose strong {
+  color: var(--cj-ink);
+  font-weight: 600;
+}
+
+.cj-positions-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+  padding: 0.7rem 1.2rem;
+  background: rgba(44, 95, 124, 0.06);
+  border: 1px solid rgba(44, 95, 124, 0.15);
+  border-left: 3px solid var(--cj-accent);
+  font-family: var(--cj-sans);
+  font-size: 0.92rem;
+  color: var(--cj-ink-soft);
+}
+
+.cj-positions-badge i {
+  color: var(--cj-accent);
+  font-size: 1rem;
+}
+
+.cj-positions-badge strong {
+  color: var(--cj-accent);
+}
+
+/* --- Checklist card --- */
+.cj-checklist-card {
+  background: var(--cj-bg);
+  border: 1px solid var(--cj-rule);
+  border-left: 3px solid var(--cj-accent);
+  padding: 2rem 2rem 1.5rem;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.03);
+}
+
+.cj-checklist-title {
+  font-family: var(--cj-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--cj-ink);
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--cj-rule);
+}
+
+.cj-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cj-checklist li {
+  display: flex;
+  gap: 0.85rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
+  align-items: flex-start;
+}
+
+.cj-checklist li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cj-check-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  background: var(--cj-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  margin-top: 2px;
+}
+
+.cj-check-icon.optional {
+  background: transparent;
+  border: 1.5px dashed var(--cj-accent-light);
+  color: var(--cj-accent-light);
+}
+
+.cj-checklist li strong {
+  font-family: var(--cj-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cj-ink);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.cj-checklist li p {
+  font-family: var(--cj-sans);
+  font-size: 0.85rem;
+  color: var(--cj-ink-soft);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cj-optional {
+  font-family: var(--cj-sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--cj-accent-light);
+  background: rgba(90, 140, 170, 0.08);
+  padding: 0.1rem 0.45rem;
+  border-radius: 3px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+  letter-spacing: 0.03em;
+}
+
+/* =============================================
+   CONTACT GRID
+   ============================================= */
+.cj-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.cj-contact-card {
+  background: var(--cj-bg);
+  border: 1px solid var(--cj-rule);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.02);
+  position: relative;
+}
+
+.cj-contact-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--cj-accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.cj-contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+.cj-contact-card:hover::after {
+  transform: scaleX(1);
+}
+
+.cj-contact-icon-wrap {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 1.2rem;
+  border: 1.5px solid var(--cj-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cj-accent);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.cj-contact-card:hover .cj-contact-icon-wrap {
+  background: var(--cj-accent);
+  color: #fff;
+}
+
+.cj-contact-card h3 {
+  font-family: var(--cj-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--cj-ink);
+  margin: 0 0 1rem;
+}
+
+.cj-contact-card address {
+  font-family: var(--cj-sans);
+  font-style: normal;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--cj-ink-soft);
+}
+
+.cj-email-link {
+  display: inline-block;
+  font-family: var(--cj-sans);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--cj-accent);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.cj-email-link:hover {
+  border-bottom-color: var(--cj-accent);
+}
+
+.cj-phone-number {
+  font-family: var(--cj-sans);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--cj-ink);
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+.cj-contact-note {
+  font-family: var(--cj-sans);
+  font-size: 0.82rem;
+  color: var(--cj-ink-soft);
+  line-height: 1.5;
+  margin: 0.8rem 0 0;
+  opacity: 0.75;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 900px) {
+  .cj-split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .cj-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cj-hero {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .cj-section {
+    padding: 3rem 1.5rem;
+  }
+
+  /* Hide margin line on small screens */
+  .cj-hero::before,
+  .cj-section::before {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .cj-hero-title {
+    font-size: 2rem;
+  }
+
+  .cj-checklist-card {
+    padding: 1.5rem 1.2rem 1rem;
+  }
+
+  .cj-contact-card {
+    padding: 1.5rem 1rem;
+  }
+}

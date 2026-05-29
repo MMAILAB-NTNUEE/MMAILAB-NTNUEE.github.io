@@ -1,0 +1,547 @@
+/* =============================================
+   PROFESSOR PAGE — Editorial Academic Profile
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --prof-serif: 'Playfair Display', 'DM Serif Display', Georgia, serif;
+  --prof-sans: 'DM Sans', 'Inter', -apple-system, sans-serif;
+  --prof-ink: #1A1A1A;
+  --prof-ink-soft: #4A4A4A;
+  --prof-accent: #2C5F7C;
+  --prof-accent-light: #5A8CAA;
+  --prof-rule: #D4D4D4;
+  --prof-bg: #FFFFFF;
+  --prof-paper-line: rgba(190, 205, 218, 0.25);
+  --prof-paper-line-fine: rgba(190, 205, 218, 0.10);
+  --prof-margin-red: rgba(200, 80, 75, 0.18);
+}
+
+/* --- Notebook background --- */
+.prof-hero,
+.prof-section {
+  background-color: var(--prof-bg);
+  background-image:
+    linear-gradient(var(--prof-paper-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--prof-paper-line) 1px, transparent 1px),
+    linear-gradient(var(--prof-paper-line-fine) 1px, transparent 1px),
+    linear-gradient(90deg, var(--prof-paper-line-fine) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  position: relative;
+}
+
+/* Red margin line */
+.prof-hero::before,
+.prof-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 72px;
+  width: 1.5px;
+  background: var(--prof-margin-red);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+.prof-hero {
+  padding: 5rem 2rem 3.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--prof-rule);
+}
+
+.prof-hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.prof-hero-label {
+  display: inline-block;
+  font-family: var(--prof-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--prof-accent);
+  margin-bottom: 1.2rem;
+  border: 1px solid var(--prof-accent);
+  padding: 0.3rem 0.9rem;
+}
+
+.prof-hero-title {
+  font-family: var(--prof-serif);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  color: var(--prof-ink);
+  line-height: 1.15;
+  margin: 0 0 0.8rem;
+}
+
+.prof-hero-sub {
+  font-family: var(--prof-sans);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--prof-ink-soft);
+  line-height: 1.5;
+}
+
+.prof-hero-rule {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.prof-hero-rule span {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--prof-accent);
+}
+
+/* =============================================
+   SECTIONS
+   ============================================= */
+.prof-section {
+  padding: 3.5rem 2rem;
+}
+
+.prof-section--ruled {
+  border-top: 1px solid var(--prof-rule);
+}
+
+.prof-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.prof-section-heading {
+  font-family: var(--prof-serif);
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-weight: 400;
+  color: var(--prof-ink);
+  margin: 0 0 2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--prof-rule);
+  letter-spacing: -0.01em;
+}
+
+/* =============================================
+   PROFILE — Portrait + Bio
+   ============================================= */
+.prof-profile {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Portrait */
+.prof-portrait-col {
+  position: sticky;
+  top: 2rem;
+}
+
+.prof-portrait-frame {
+  border: 1px solid var(--prof-rule);
+  padding: 6px;
+  background: var(--prof-bg);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.03);
+}
+
+.prof-portrait-frame img {
+  width: 100%;
+  display: block;
+  filter: grayscale(15%);
+  transition: filter 0.5s ease;
+}
+
+.prof-portrait-frame:hover img {
+  filter: grayscale(0%);
+}
+
+/* Quick links below portrait */
+.prof-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.prof-link-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  font-family: var(--prof-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--prof-accent);
+  text-decoration: none;
+  border: 1px solid var(--prof-rule);
+  background: var(--prof-bg);
+  transition: all 0.3s ease;
+}
+
+.prof-link-chip:hover {
+  background: var(--prof-accent);
+  color: #fff;
+  border-color: var(--prof-accent);
+}
+
+.prof-link-chip i {
+  font-size: 0.72rem;
+}
+
+/* Bio column */
+.prof-bio-col {
+  padding-top: 0.25rem;
+}
+
+.prof-name-zh {
+  font-family: var(--prof-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--prof-ink);
+  margin: 0 0 0.3rem;
+  letter-spacing: 0.05em;
+}
+
+.prof-degree {
+  font-family: var(--prof-sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--prof-ink-soft);
+  letter-spacing: 0;
+}
+
+.prof-role {
+  font-family: var(--prof-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--prof-accent);
+  margin: 0 0 0.2rem;
+}
+
+.prof-role-sub {
+  font-family: var(--prof-sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--prof-ink-soft);
+  margin: 0 0 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--prof-rule);
+}
+
+.prof-bio-text p {
+  font-family: var(--prof-sans);
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: var(--prof-ink-soft);
+  margin: 0 0 1rem;
+  text-align: justify;
+}
+
+.prof-bio-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* =============================================
+   RESEARCH INTERESTS — Tag chips
+   ============================================= */
+.prof-interests {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.prof-interest-tag {
+  font-family: var(--prof-sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--prof-accent);
+  padding: 0.8rem 1.3rem;
+  border: 1px solid var(--prof-accent);
+  background: transparent;
+  transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: default;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prof-interest-tag:hover {
+  background: var(--prof-accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 95, 124, 0.2);
+}
+
+/* =============================================
+   EDUCATION — Minimal timeline
+   ============================================= */
+.prof-timeline {
+  border-left: 2px solid var(--prof-rule);
+  padding-left: 1.8rem;
+  margin-left: 0.5rem;
+}
+
+.prof-timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+.prof-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Dot on the timeline */
+.prof-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.35rem;
+  top: 0.45rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--prof-bg);
+  border: 2px solid var(--prof-accent);
+}
+
+.prof-timeline-year {
+  font-family: var(--prof-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--prof-accent);
+  min-width: 3rem;
+  letter-spacing: 0.04em;
+}
+
+.prof-timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.prof-timeline-content strong {
+  font-family: var(--prof-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--prof-ink);
+}
+
+.prof-timeline-content span {
+  font-family: var(--prof-sans);
+  font-size: 0.85rem;
+  color: var(--prof-ink-soft);
+}
+
+/* =============================================
+   AWARDS — Grid cards
+   ============================================= */
+.prof-awards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.prof-award {
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--prof-rule);
+  border-left: 3px solid var(--prof-accent);
+  background: var(--prof-bg);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.02);
+}
+
+.prof-award:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border-left-color: var(--prof-accent-light);
+}
+
+.prof-award-year {
+  font-family: var(--prof-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--prof-accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.prof-award-title {
+  font-family: var(--prof-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--prof-ink);
+  margin-bottom: 0.15rem;
+}
+
+.prof-award-org {
+  font-family: var(--prof-sans);
+  font-size: 0.82rem;
+  color: var(--prof-ink-soft);
+}
+
+/* =============================================
+   PROFESSIONAL SERVICE
+   ============================================= */
+.prof-service-block {
+  margin-bottom: 2rem;
+}
+
+.prof-service-block:last-child {
+  margin-bottom: 0;
+}
+
+.prof-service-cat {
+  font-family: var(--prof-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--prof-accent);
+  margin: 0 0 0.8rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--prof-accent);
+}
+
+.prof-service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.prof-service-list li {
+  font-family: var(--prof-sans);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--prof-ink-soft);
+  padding: 0.5rem 0 0.5rem 1.2rem;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.prof-service-list li:last-child {
+  border-bottom: none;
+}
+
+.prof-service-list li::before {
+  content: '\2014';
+  position: absolute;
+  left: 0;
+  color: var(--prof-rule);
+  font-weight: 300;
+}
+
+/* =============================================
+   TEACHING — Compact card row
+   ============================================= */
+.prof-teaching-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.prof-teaching-card {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--prof-rule);
+  background: var(--prof-bg);
+  transition: all 0.35s ease;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.02);
+}
+
+.prof-teaching-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--prof-accent);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.prof-teaching-card i {
+  font-size: 1.1rem;
+  color: var(--prof-accent);
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.prof-teaching-card span {
+  font-family: var(--prof-sans);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--prof-ink);
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 900px) {
+  .prof-profile {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .prof-portrait-col {
+    position: static;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .prof-links {
+    justify-content: center;
+  }
+
+  .prof-bio-col {
+    text-align: left;
+  }
+
+  .prof-interests {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .prof-awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prof-teaching-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prof-hero::before,
+  .prof-section::before {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .prof-hero {
+    padding: 3.5rem 1.5rem 2.5rem;
+  }
+
+  .prof-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .prof-hero-title {
+    font-size: 1.9rem;
+  }
+
+  .prof-name-zh {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,605 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="/assets/css/homepage.css">
+
+<div class="jp-section">
+  <div class="container">
+    <div class="jp-hero-content">
+      <h1 style="font-style: italic; font-weight: normal;" itemprop="name headline">{{ page.title }}</h1>
+      {% if page.excerpt %}
+      <p class="jp-subtitle">{{ page.excerpt }}</p>
+      {% endif %}
+
+      {% if page.date or page.author or page.categories %}
+      <div class="post-meta">
+        {% if page.date %}
+        <div class="post-date">
+          <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ page.date | date: "%B %-d, %Y" }}
+          </time>
+        </div>
+        {% endif %}
+
+        {% if page.categories.size > 0 %}
+        <div class="post-categories">
+          <i class="fas fa-folder" aria-hidden="true"></i>
+          {% for category in page.categories %}
+          <span class="jp-tag">{{ category }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="jp-section">
+  <div class="container">
+    <article class="post-content" itemscope itemtype="https://schema.org/BlogPosting">
+      <div class="jp-content-wrapper">
+        <!-- Featured Image Section -->
+        {% if page.header.teaser %}
+        <div class="post-featured-image">
+          <figure>
+            <img src="{{ page.header.teaser | relative_url }}" alt="{{ page.title }}" itemprop="image">
+            {% if page.image_caption %}
+              <figcaption>{{ page.image_caption }}</figcaption>
+            {% endif %}
+          </figure>
+        </div>
+        {% endif %}
+
+        <!-- Main Content -->
+        <div class="post-body" itemprop="articleBody">
+          {{ content }}
+        </div>
+
+        <!-- Tags Section -->
+        {% if page.tags.size > 0 %}
+        <div class="post-tags">
+          <i class="fas fa-tags" aria-hidden="true"></i>
+          {% for tag in page.tags %}
+          <span class="jp-tag jp-tag-secondary">#{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Navigation -->
+        <div class="post-navigation">
+          <a href="{{ site.baseurl }}/news/" class="jp-btn secondary">
+            <span class="jp-btn-text">← Back to News</span>
+            <span class="jp-btn-icon">←</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+<!-- Related News Section -->
+<!-- <div class="related-posts">
+  <div class="container">
+    <h2 class="section-title">Related <span class="highlight">News</span></h2>
+    
+    <div class="related-grid">
+      {% assign related_posts = site.news | where_exp: "post", "post.url != page.url" | sample: 3 %}
+      {% for post in related_posts %}
+      <div class="related-card">
+        <div class="related-image">
+          {% if post.header.teaser %}
+          <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}" loading="lazy">
+          {% else %}
+          <img src="{{ site.baseurl }}/assets/images/research-vision.jpg" alt="MAILAB Research" loading="lazy">
+          {% endif %}
+        </div>
+        <div class="related-content">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <div class="related-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div> -->
+
+<style>
+  /* Post Page Styling - Consistent with site design */
+  .post-page {
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  /* Hero Section */
+  .post-hero {
+    position: relative;
+    height: 250px;
+    background: linear-gradient(135deg, #105E96, #17A589);
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .post-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.3;
+  }
+
+  .post-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .post-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0 0 1.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .post-meta i {
+    margin-right: 0.5rem;
+  }
+
+  .post-category {
+    display: inline-block;
+    margin-left: 0.4rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+  }
+
+  /* Content Section */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .post-content {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+  }
+
+  .post-featured-image {
+    margin: 0 0 2rem;
+  }
+
+  .post-featured-image figure {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .post-featured-image img {
+    width: 100%;
+    display: block;
+  }
+
+  .post-featured-image figcaption {
+    padding: 0.8rem 1rem;
+    background: #f5f5f5;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+  }
+
+  .post-body {
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+
+  .post-body h2 {
+    color: #105E96;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(16, 94, 150, 0.1);
+    padding-bottom: 0.5rem;
+  }
+
+  .post-body h3 {
+    color: #105E96;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+  }
+
+  .post-body a {
+    color: #17A589;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .post-body a:hover {
+    text-decoration: underline;
+  }
+
+  .post-body ul, .post-body ol {
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .post-body li {
+    margin-bottom: 0.5rem;
+  }
+
+  .post-body img {
+    max-width: 100%;
+    border-radius: 8px;
+    display: block;
+    margin: 1.5rem auto;
+  }
+
+  .post-body pre, .post-body code {
+    background: #f5f5f5;
+    border-radius: 5px;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .post-body pre {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .post-body blockquote {
+    border-left: 4px solid #17A589;
+    padding-left: 1rem;
+    margin-left: 0;
+    color: #555;
+    font-style: italic;
+  }
+
+  /* Tags Section */
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2rem 0;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+  }
+
+  .post-tags i {
+    color: #888;
+  }
+
+  .post-tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    background: rgba(16, 94, 150, 0.1);
+    color: #105E96;
+    transition: all 0.3s ease;
+  }
+
+  .post-tag:hover {
+    background: rgba(16, 94, 150, 0.15);
+    transform: translateY(-2px);
+  }
+
+  /* Share Section */
+  .post-share {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+  }
+
+  .post-share h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #105E96;
+  }
+
+  /* Navigation */
+  .post-navigation {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    color: #105E96;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .back-link i {
+    margin-right: 0.5rem;
+  }
+
+  .back-link:hover {
+    color: #17A589;
+    transform: translateX(-5px);
+  }
+
+  /* Related Posts Section */
+  .related-posts {
+    background: #f8f9fa;
+    padding: 4rem 0;
+    margin-top: 2rem;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #105E96;
+  }
+
+  .section-title .highlight {
+    color: #17A589;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .related-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+  }
+
+  .related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .related-image {
+    height: 180px;
+    overflow: hidden;
+  }
+
+  .related-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .related-card:hover .related-image img {
+    transform: scale(1.05);
+  }
+
+  .related-content {
+    padding: 1.2rem;
+  }
+
+  .related-content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  .related-content h3 a {
+    color: #105E96;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .related-content h3 a:hover {
+    color: #17A589;
+  }
+
+  .related-date {
+    color: #777;
+    font-size: 0.85rem;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .post-hero {
+      height: auto;
+      padding: 3rem 0;
+    }
+    
+    .post-title {
+      font-size: 1.2rem;
+    }
+    
+    .post-meta {
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .post-title {
+      font-size: 1rem;
+    }
+    
+    .section-title {
+      font-size: 1.8rem;
+    }
+    
+    .post-body h2 {
+      font-size: 1.6rem;
+    }
+    
+    .post-body h3 {
+      font-size: 1.4rem;
+    }
+  }
+
+/* Full width layout overrides */
+.jp-section {
+  width: 100%;
+  padding: var(--jp-spacing-lg) 3rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Post meta styling */
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--jp-spacing-md);
+  margin-top: var(--jp-spacing-md);
+  font-size: 0.95rem;
+  color: var(--jp-gray-dark);
+}
+
+.post-meta i {
+  margin-right: var(--jp-spacing-xs);
+}
+
+/* Content wrapper */
+.jp-content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Featured image styling */
+.post-featured-image {
+  margin: 0 0 var(--jp-spacing-lg);
+}
+
+.post-featured-image figure {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.post-featured-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-featured-image figcaption {
+  padding: var(--jp-spacing-sm) var(--jp-spacing-md);
+  background: var(--jp-gray-light);
+  font-size: 0.9rem;
+  color: var(--jp-gray-dark);
+  font-style: italic;
+  text-align: center;
+}
+
+.post-body {
+  color: var(--jp-gray-dark);
+  margin-bottom: var(--jp-spacing-lg);
+}
+
+.post-body h1,
+.post-body h2,
+.post-body h3 {
+  color: var(--jp-black);
+  margin-top: var(--jp-spacing-lg);
+  margin-bottom: var(--jp-spacing-md);
+}
+
+.post-body p {
+  margin-bottom: var(--jp-spacing-md);
+}
+
+.post-body ul,
+.post-body ol {
+  margin-bottom: var(--jp-spacing-md);
+  padding-left: 1.5rem;
+}
+
+.post-body li {
+  margin-bottom: var(--jp-spacing-xs);
+}
+
+/* Tags section */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--jp-spacing-xs);
+  margin: var(--jp-spacing-lg) 0;
+  align-items: center;
+  padding-top: var(--jp-spacing-md);
+  border-top: 1px solid #eee;
+}
+
+.post-tags i {
+  color: var(--jp-gray-dark);
+  margin-right: var(--jp-spacing-xs);
+}
+
+/* Navigation */
+.post-navigation {
+  margin-top: var(--jp-spacing-xl);
+  padding-top: var(--jp-spacing-md);
+  border-top: 1px solid #eee;
+}
+
+/* Long title handling - prevent ugly line breaks */
+.jp-hero-content h1 {
+  line-height: 1.3;
+  font-size: clamp(1.2rem, 3vw, 2.5rem) !important;
+  max-height: 4em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .jp-hero-content h1 {
+    font-size: clamp(1rem, 3.5vw, 1.8rem) !important;
+    -webkit-line-clamp: 2;
+    max-height: 3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .jp-hero-content h1 {
+    font-size: clamp(0.9rem, 4vw, 1.3rem) !important;
+    -webkit-line-clamp: 2;
+    max-height: 2.5em;
+  }
+}
+</style>

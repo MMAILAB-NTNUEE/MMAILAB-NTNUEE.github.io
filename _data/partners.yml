@@ -1,0 +1,114 @@
+# Partners Configuration for MMAILAB
+# Each partner entry should include:
+# - name: Partner organization name (required)
+# - logo: Path to logo image file (required)
+# - url: Partner website URL (optional)
+# - description: Brief cooperation description (required)
+# - categories: Type of partnership (optional)
+# - active: Whether partnership is currently active (default: true)
+
+partners:
+  - name: "National Science and Technology Council"
+    name_zh: "國家科學及技術委員會"
+    logo: "/assets/images/NSTC.png"
+    url: "https://www.nstc.gov.tw/"
+    active: true
+
+  - name: "Coretronic"
+    name_zh: "中強光電 "
+    logo: "/assets/images/Coretronic.png"
+    url: "https://www.coretronic.com"
+    active: true
+
+  - name: "Realtek"
+    name_zh: "瑞昱半導體"
+    logo: "/assets/images/REALTEK.png"
+    url: "https://www.realtek.com"
+    active: true
+
+  - name: "E Ink"
+    name_zh: "元太科技"
+    logo: "/assets/images/EInk.png"
+    url: "https://tw.eink.com"
+    active: true
+
+  - name: "Industrial Technology Research Institute"
+    name_zh: "工業技術研究院"
+    logo: "/assets/images/ITRI.png"
+    url: "https://www.itri.org.tw"
+    active: true
+
+#   - name: "Microsoft Research Asia"
+#     name_zh: "微軟亞洲研究院"
+#     logo: "/assets/images/partners/microsoft-logo.png"
+#     url: "https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/"
+#     description: "Joint research projects in computer vision and natural language processing"
+#     description_zh: "電腦視覺與自然語言處理的聯合研究專案"
+#     categories:
+#       - research
+#       - international
+#     active: true
+
+#   - name: "Industrial Technology Research Institute"
+#     name_zh: "工業技術研究院"
+#     logo: "/assets/images/partners/itri-logo.png"
+#     url: "https://www.itri.org.tw/"
+#     description: "Technology transfer and industrial application of AI research"
+#     description_zh: "人工智慧研究的技術轉移與產業應用"
+#     categories:
+#       - industry
+#       - application
+#     active: true
+
+#   - name: "Google Research"
+#     name_zh: "Google研究"
+#     logo: "/assets/images/partners/google-logo.png"
+#     url: "https://research.google/"
+#     description: "Collaboration on open-source AI tools and research publications"
+#     description_zh: "開源人工智慧工具與研究論文的合作"
+#     categories:
+#       - research
+#       - international
+#     active: true
+
+# # Partner categories definition
+# categories:
+#   funding:
+#     name: "Funding Partners"
+#     name_zh: "資助夥伴"
+#     description: "Organizations providing research grants and financial support"
+
+#   research:
+#     name: "Research Partners"
+#     name_zh: "研究夥伴"
+#     description: "Academic and research institutions for collaborative projects"
+
+#   industry:
+#     name: "Industry Partners"
+#     name_zh: "產業夥伴"
+#     description: "Companies and corporations for technology development"
+
+#   government:
+#     name: "Government Partners"
+#     name_zh: "政府夥伴"
+#     description: "Government agencies and public institutions"
+
+#   international:
+#     name: "International Partners"
+#     name_zh: "國際夥伴"
+#     description: "Global organizations and overseas collaborations"
+
+#   technology:
+#     name: "Technology Partners"
+#     name_zh: "技術夥伴"
+#     description: "Organizations providing technical resources and expertise"
+
+#   academic:
+#     name: "Academic Partners"
+#     name_zh: "學術夥伴"
+#     description: "Universities and educational institutions"
+
+#   application:
+#     name: "Application Partners"
+#     name_zh: "應用夥伴"
+#     description: "Partners for real-world application deployment"
