@@ -498,13 +498,6 @@ header:
   margin: var(--jp-spacing-md) 0;
 }
 
-/* Other field tag styling */
-.jp-tag-other {
-  background: #b4eeb4 !important;
-  color: var(--jp-black) !important;
-}
-
-
 /* Ensure consistent card heights */
 .jp-card {
   display: flex;
