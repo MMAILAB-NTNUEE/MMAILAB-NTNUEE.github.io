@@ -64,36 +64,47 @@ current_students:
 
     - name: "黃柏允"
       program: "1st Year"
+      other: "EE"
 
     - name: "李昆諭"
       program: "1st Year"
+      other: "EE"
 
     - name: "林彥辰"
       program: "1st Year"
+      other: "EE"
 
     - name: "劉宇宸"
       program: "1st Year"
+      other: "EE"
 
     - name: "黃昱閎"
       program: "1st Year"
+      other: "AI"
 
     - name: "李芷翔"
       program: "1st Year"
+      other: "AI"
 
     - name: "鄭鈞賢"
       program: "1st Year"
+      other: "AI"
 
     - name: "陳琦"
       program: "1st Year"
+      other: "AI"
 
     - name: "黃子耘"
       program: "1st Year"
+      other: "AI"
 
     - name: "蔡旻潔"
       program: "1st Year"
+      other: "AI"
 
     - name: "陳意姗"
       program: "1st Year"
+      other: "AI"
 
     # - name: "xxx"
     # program: "xxx"
@@ -118,9 +129,9 @@ current_students:
     - name: "張詠俊"
     - name: "張筠婕"
     - name: "李昱楨"
-      other: "科技系雙主修"
+      other: "TAHRD"
     - name: "黃孔廷"
-      other: "科技系雙主修"
+      other: "TAHRD"
     # - name: "Alex Chen"
     #   program: "Computer Science (4th Year)"
     #   photo: "/assets/images/student-undergrad1.jpg"
