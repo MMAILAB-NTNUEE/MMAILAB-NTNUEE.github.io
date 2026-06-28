@@ -34,15 +34,19 @@ current_students:
       program: "2nd Year"
       email: "61375096h@gapps.ntnu.edu.tw"
       coffee_chat: "Coffee chat for Master"
+      other: "EE"
 
     - name: "鍾佳妤"
       program: "2.5 Year"
+      other: "EE"
 
     - name: "顏福翔"
       program: "2.5 Year"
+      other: "EE"
 
     - name: "游筑伊"
       program: "2nd Year"
+      other: "EE"
 
     - name: "謝銘元"
       program: "2nd Year"
@@ -50,15 +54,19 @@ current_students:
 
     - name: "連翊安"
       program: "2nd Year"
+      other: "AI"
 
     - name: "徐嵩德"
       program: "2nd Year"
+      other: "AI"
 
     - name: "劉冠承"
       program: "2nd Year"
+      other: "AI"
 
     - name: "陳毅"
       program: "2nd Year"
+      other: "AI"
 
     - name: "林明諭"
       program: "2nd Year"
