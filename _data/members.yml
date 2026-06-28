@@ -36,42 +36,63 @@ current_students:
       coffee_chat: "Coffee chat for Master"
 
     - name: "鍾佳妤"
-      program: "2nd Year"
-
-    - name: "陳柏安"
-      program: "2nd Year"
-
-    - name: "張耘翰"
-      program: "2nd Year"
-
-    - name: "陳品樺"
-      program: "2nd Year"
-
-    - name: "林昱緯"
-      program: "2nd Year"
+      program: "2.5 Year"
 
     - name: "顏福翔"
-      program: "2nd Year"
+      program: "2.5 Year"
 
     - name: "游筑伊"
-      program: "1st Year"
+      program: "2nd Year"
 
     - name: "謝銘元"
-      program: "1st Year"
+      program: "2nd Year"
 
     - name: "連翊安"
-      program: "1st Year"
+      program: "2nd Year"
 
     - name: "徐嵩德"
-      program: "1st Year"
+      program: "2nd Year"
 
     - name: "劉冠承"
-      program: "1st Year"
+      program: "2nd Year"
 
     - name: "陳毅"
-      program: "1st Year"
+      program: "2nd Year"
 
     - name: "林明諭"
+      program: "2nd Year"
+
+    - name: "黃柏允"
+      program: "1st Year"
+
+    - name: "李昆諭"
+      program: "1st Year"
+
+    - name: "林彥辰"
+      program: "1st Year"
+
+    - name: "劉宇宸"
+      program: "1st Year"
+
+    - name: "黃昱閎"
+      program: "1st Year"
+
+    - name: "李芷翔"
+      program: "1st Year"
+
+    - name: "鄭鈞賢"
+      program: "1st Year"
+
+    - name: "陳琦"
+      program: "1st Year"
+
+    - name: "黃子耘"
+      program: "1st Year"
+
+    - name: "蔡旻潔"
+      program: "1st Year"
+
+    - name: "陳意姗"
       program: "1st Year"
 
     # - name: "xxx"
@@ -91,12 +112,15 @@ current_students:
       program: "Direct Ph.D. Program"
       email: "41375007h@gapps.ntnu.edu.tw"
       coffee_chat: "Coffee chat for Bachelor"
-    - name: "蘇賢晉"
-    - name: "林珈丞"
-    - name: "張榮翰"
-    - name: "曾昭諺"
-    - name: "蕭學應"
-    - name: "劉建陞"
+    - name: "陳世恩"
+    - name: "黃翊鈞"
+    - name: "胡幃宸"
+    - name: "張詠俊"
+    - name: "張筠婕"
+    - name: "李昱楨"
+      other: "科技系雙主修"
+    - name: "黃孔廷"
+      other: "科技系雙主修"
     # - name: "Alex Chen"
     #   program: "Computer Science (4th Year)"
     #   photo: "/assets/images/student-undergrad1.jpg"
