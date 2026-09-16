@@ -76,10 +76,6 @@ current_students:
       program: "1st Year"
       other: "EE"
 
-    - name: "黃柏允"
-      program: "1st Year"
-      other: "EE"
-
     - name: "李昆諭"
       program: "1st Year"
       other: "EE"
@@ -91,7 +87,7 @@ current_students:
     - name: "劉祐銓"
       program: "1st Year"
       other: "EE"
-      
+
     - name: "蔡依嬑"
       program: "1st Year"
       other: "EE"
