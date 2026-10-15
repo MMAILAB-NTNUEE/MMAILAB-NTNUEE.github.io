@@ -4,6 +4,8 @@ layout: post
 date: 2026-10-15
 categories: [Awards]
 tags: [World's Top 2% Scientists]
+header:
+    teaser: "assets/images/events/kang_top2/2025_top2_scientist.png"
 ---
 
 Congratulations to Prof. Li-Wei Kang for being ranked again among the World's Top 2% Scientists in 2026
