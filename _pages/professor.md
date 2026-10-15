@@ -110,7 +110,7 @@ classes: wide
     <h2 class="prof-section-heading">Selected Awards & Honors</h2>
     <div class="prof-awards-grid">
       <div class="prof-award">
-        <div class="prof-award-year">2025 / 2024 / 2022</div>
+        <div class="prof-award-year">2026 / 2025 / 2024 / 2022</div>
         <div class="prof-award-title">World's Top 2% Scientist</div>
         <div class="prof-award-org">Stanford University</div>
       </div>
