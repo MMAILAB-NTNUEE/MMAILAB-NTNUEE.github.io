@@ -248,6 +248,26 @@ graduated_students:
         thesis_cn: "具亮度引導學習之 U-Net 架構於單張影像曝光校正與影像增強"
         thesis_en: "Luminance-Guided U-Net for Single-Image Exposure Correction and Image Enhancement"
 
+      - name: "陳柏安"
+        name_en: "Chen, Po-An"
+        thesis_cn: "基於殘差U-Net之高光譜影像修復：利用合成豐度圖進行監督式學習"
+        thesis_en: "Residual U-Net Based Hyperspectral Image Restoration: Supervised Learning with Synthetic Abundance Maps"
+
+      - name: "陳品樺"
+        name_en: "Chen, Pin-Hua"
+        thesis_cn: "基於LS卷積的輕量化雙階段RawMamba模型於低光RAW影像增強之應用"
+        thesis_en: "Lightweight Two-Stage RawMamba with LS Convolution for Low-Light RAW Image Enhancement"
+
+      - name: "簡煒哲"
+        name_en: "Chien, Wei-Che"
+        thesis_cn: "DocDiff-ATT : 一種具注意力機制的擴散模型於文件去模糊任務之研究"
+        thesis_en: "DocDiff-ATT: An Attention-Based Diffusion Model for Document Deblurring"
+
+      - name: "張耘翰"
+        name_en: "Chang, Yun-Han"
+        thesis_cn: "基於 Pix2Pix 模型的彩色電子紙顯示模擬與色域映射誤差最小化之研究"
+        thesis_en: "Pix2Pix-Based Color Electronic Paper Display Simulation with Color Gamut Mapping Error Minimization"
+
   - year: 2025
     students:
       - name: "黃品慈"
