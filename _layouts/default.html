@@ -98,6 +98,30 @@
           });
         }
 
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var revealNodes = document.querySelectorAll(
+          '.research-card, .news-card, .jp-card, .direction-card, .opportunity-card, .jp-partner-item, .hero-shot, .jp-publication-year, .section-title, .jp-partners-title, .join-title'
+        );
+        revealNodes.forEach(function(node) {
+          if (reduceMotion) {
+            node.classList.add('is-revealed');
+            return;
+          }
+          node.classList.add('will-reveal');
+        });
+        if (!reduceMotion && 'IntersectionObserver' in window) {
+          var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add('is-revealed');
+              revealObserver.unobserve(entry.target);
+            });
+          }, { threshold: 0.14, rootMargin: '0px 0px -6% 0px' });
+          revealNodes.forEach(function(node) { revealObserver.observe(node); });
+        } else {
+          revealNodes.forEach(function(node) { node.classList.add('is-revealed'); });
+        }
+
         // Remove preloader after page is fully loaded
         window.addEventListener('load', function() {
           const preloader = document.querySelector('.preloader');

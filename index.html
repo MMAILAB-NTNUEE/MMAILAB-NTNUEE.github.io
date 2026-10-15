@@ -19,19 +19,12 @@ classes:
 
 <!-- Homepage hero -->
 <section class="jp-minimal-hero startup-hero">
-  <div class="hero-glow" aria-hidden="true"></div>
-  <div class="hero-grid" aria-hidden="true"></div>
-
   <div class="jp-hero-content">
     <div class="jp-content-inner">
-      <div class="jp-logo-wrapper">
-        <img src="{{ site.baseurl }}/assets/images/MMAILAB_Logo_v2.png" alt="MMAILAB" class="jp-logo">
-      </div>
-
       <p class="hero-kicker">{{ site.abbreviation }} · {{ site.subtitle }}</p>
 
       <h1 class="jp-main-title">
-        <span class="jp-title-en">Multimedia &amp; AI Laboratory</span>
+        <span class="jp-title-en">Multimedia &amp; <span class="text-gradient">AI</span> Laboratory</span>
       </h1>
 
       <p class="hero-tagline">{{ site.description }}</p>
@@ -53,6 +46,18 @@ classes:
         </a>
       </div>
     </div>
+  </div>
+
+  <div class="hero-stage">
+    <figure class="hero-shot hero-shot--main">
+      <img src="{{ site.baseurl }}/assets/images/events/lab_gather_0107/photo.jpg" alt="Lab gathering">
+    </figure>
+    <figure class="hero-shot">
+      <img src="{{ site.baseurl }}/assets/images/publication/dehazing/Result_Comparison_SOTS.png" alt="Image dehazing comparison">
+    </figure>
+    <figure class="hero-shot">
+      <img src="{{ site.baseurl }}/assets/images/publication/deraining/Result_Comparison_Rain100L.png" alt="Image deraining comparison">
+    </figure>
   </div>
 </section>
 
@@ -111,7 +116,10 @@ classes:
   </div>
 
   <div class="research-cards-container">
-    <div class="research-card" data-aos="fade-up">
+    <div class="research-card research-card--blue" data-aos="fade-up">
+      <div class="research-card-media">
+        <img src="{{ site.baseurl }}/assets/images/publication/dehazing/Result_Comparison_SOTS.png" alt="">
+      </div>
       <div class="card-icon">
         <div class="icon-3d">
           <i class="fas fa-image"></i>
@@ -126,7 +134,10 @@ classes:
       </div>
     </div>
 
-    <div class="research-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="research-card research-card--purple" data-aos="fade-up" data-aos-delay="100">
+      <div class="research-card-media">
+        <img src="{{ site.baseurl }}/assets/images/publication/deraining/Result_Comparison_Rain100H.png" alt="">
+      </div>
       <div class="card-icon">
         <div class="icon-3d">
           <i class="fas fa-eye"></i>
@@ -141,7 +152,10 @@ classes:
       </div>
     </div>
 
-    <div class="research-card" data-aos="fade-up" data-aos-delay="200">
+    <div class="research-card research-card--teal" data-aos="fade-up" data-aos-delay="200">
+      <div class="research-card-media">
+        <img src="{{ site.baseurl }}/assets/images/publication/S3RNet/S3RNet.png" alt="">
+      </div>
       <div class="card-icon">
         <div class="icon-3d">
           <i class="fas fa-robot"></i>
