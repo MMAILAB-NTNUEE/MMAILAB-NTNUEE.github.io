@@ -15,7 +15,7 @@ header:
 <div class="jp-section">
   <div class="container">
     <div class="jp-hero-content">
-      <h1 style="font-style: italic; font-weight: normal;">Lab Members</h1>
+      <h1>Lab Members</h1>
     </div>
   </div>
 </div>
@@ -23,7 +23,7 @@ header:
 <div class="jp-section">
   <div class="container">
     <div class="jp-section-header">
-      <h2 style="font-style: italic;">Current Students</h2>
+      <h2>Current Students</h2>
     </div>
 
     <!-- Master's Students -->
@@ -257,7 +257,7 @@ header:
 <div class="jp-section">
   <div class="container">
     <div class="jp-section-header">
-      <h2 style="font-style: italic;">Graduated Master & Thesis</h2>
+      <h2>Graduated Master & Thesis</h2>
     </div>
 
     <div class="jp-grid-1">

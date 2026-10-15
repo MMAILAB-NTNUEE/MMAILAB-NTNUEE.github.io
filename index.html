@@ -17,85 +17,42 @@ classes:
 <!-- External CSS -->
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/homepage.css">
 
-<!-- Japanese Minimalist Hero Section 日系簡約風 -->
-<section class="jp-minimal-hero">
-  <!-- Zen Circle Background Element -->
-  <div class="zen-circle"></div>
-  <div class="zen-circle secondary"></div>
+<!-- Homepage hero -->
+<section class="jp-minimal-hero startup-hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
 
-  <!-- Subtle Grid Pattern -->
-  <div class="jp-grid-pattern"></div>
-
-  <!-- Floating Sakura Petals -->
-  <div class="sakura-container" id="sakura-petals"></div>
-
-  <!-- Main Content Container -->
   <div class="jp-hero-content">
     <div class="jp-content-inner">
-
-      <!-- Minimal Logo -->
-      <div class="jp-logo-wrapper" data-aos="fade-down" data-aos-duration="1200">
-        <div class="logo-line-decoration">
-          <span class="line"></span>
-          <img src="{{ site.baseurl }}/assets/images/MMAILAB_Logo_v2.png" alt="MMAILAB" class="jp-logo">
-          <span class="line"></span>
-        </div>
+      <div class="jp-logo-wrapper">
+        <img src="{{ site.baseurl }}/assets/images/MMAILAB_Logo_v2.png" alt="MMAILAB" class="jp-logo">
       </div>
 
-      <!-- Japanese Style Title -->
-      <div class="jp-title-group">
-        <h1 class="jp-main-title" data-aos="fade-up" data-aos-delay="300">
-          <span class="jp-title-en">Multimedia & AI Laboratory</span>
-        </h1>
+      <p class="hero-kicker">{{ site.abbreviation }} · {{ site.subtitle }}</p>
 
-        <!-- Minimal Subtitle -->
-        <!-- <div class="jp-subtitle" data-aos="fade-up" data-aos-delay="500">
-          <span class="jp-vertical-text">Research</span>
-          <div class="jp-subtitle-content">
-            <span class="jp-dynamic-text" id="jp-dynamic">Computer Vision</span>
-            <span class="jp-subtitle-line">Innovation</span>
-          </div>
-        </div> -->
-      </div>
+      <h1 class="jp-main-title">
+        <span class="jp-title-en">Multimedia &amp; AI Laboratory</span>
+      </h1>
 
-      <!-- Minimalist Description -->
-      <p class="jp-description" data-aos="fade-up" data-aos-delay="700">
+      <p class="hero-tagline">{{ site.description }}</p>
+
+      <p class="jp-description">
         <span lang="zh-TW">台灣師範大學・多媒體暨人工智慧實驗室</span><br>
-        <span lang="en">AI & DLCV Research at NTNU</span>
+        <span lang="en">AI &amp; DLCV Research at NTNU</span>
       </p>
 
-      <!-- Zen-style CTA Buttons -->
-      <div class="jp-cta-container" data-aos="fade-up" data-aos-delay="900">
-        <a href="{{ site.baseurl }}/research/" class="jp-btn secondary">
-          <span class="jp-btn-text">View Research</span>
-          <span class="jp-btn-subtext">Explore Our Work</span>
-          <span class="jp-btn-icon">→</span>
+      <div class="jp-cta-container">
+        <a href="{{ site.baseurl }}/research/" class="jp-btn primary">
+          <span class="jp-btn-text">Research</span>
         </a>
         <a href="{{ site.baseurl }}/publications/" class="jp-btn secondary">
           <span class="jp-btn-text">Publications</span>
-          <span class="jp-btn-subtext">Our Research Papers</span>
-          <span class="jp-btn-icon">→</span>
         </a>
         <a href="{{ site.baseurl }}/join/" class="jp-btn secondary">
-          <span class="jp-btn-text">Join Lab</span>
-          <span class="jp-btn-subtext">Be Part of Innovation</span>
-          <span class="jp-btn-icon">→</span>
+          <span class="jp-btn-text">Join us</span>
         </a>
       </div>
-
     </div>
-  </div>
-
-  <!-- Decorative Elements -->
-  <div class="jp-corner-decoration top-left" aria-hidden="true">
-    <svg viewBox="0 0 100 100" class="corner-svg" role="presentation">
-      <path d="M0,0 L100,0 L100,10 L10,10 L10,100 L0,100 Z" fill="currentColor"/>
-    </svg>
-  </div>
-  <div class="jp-corner-decoration bottom-right" aria-hidden="true">
-    <svg viewBox="0 0 100 100" class="corner-svg" role="presentation">
-      <path d="M100,100 L0,100 L0,90 L90,90 L90,0 L100,0 Z" fill="currentColor"/>
-    </svg>
   </div>
 </section>
 

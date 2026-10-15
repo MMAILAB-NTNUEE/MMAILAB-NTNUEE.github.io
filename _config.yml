@@ -9,7 +9,7 @@ repository: MMAILAB-NTNUEE/MMAILAB-NTNUEE.github.io
 # Theme Configuration
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes@4.24.0
-minimal_mistakes_skin: "dark"
+minimal_mistakes_skin: "air"
 search: true
 search_full_content: true
 logo: "/assets/images/MMAILAB_Logo_v2.png"

@@ -14,7 +14,7 @@ header:
 <div class="jp-section">
   <div class="container">
     <div class="jp-hero-content">
-      <h1 style="font-style: italic; font-weight: normal;">Research</h1>
+      <h1>Research</h1>
       <p class="jp-subtitle">Our lab focuses on developing cutting-edge DL algorithms and artificial intelligence systems that solve real-world problems across multiple domains.</p>
     </div>
   </div>
