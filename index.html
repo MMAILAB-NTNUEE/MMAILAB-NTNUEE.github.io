@@ -17,85 +17,47 @@ classes:
 <!-- External CSS -->
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/homepage.css">
 
-<!-- Japanese Minimalist Hero Section 日系簡約風 -->
-<section class="jp-minimal-hero">
-  <!-- Zen Circle Background Element -->
-  <div class="zen-circle"></div>
-  <div class="zen-circle secondary"></div>
-
-  <!-- Subtle Grid Pattern -->
-  <div class="jp-grid-pattern"></div>
-
-  <!-- Floating Sakura Petals -->
-  <div class="sakura-container" id="sakura-petals"></div>
-
-  <!-- Main Content Container -->
+<!-- Homepage hero -->
+<section class="jp-minimal-hero startup-hero">
   <div class="jp-hero-content">
     <div class="jp-content-inner">
+      <p class="hero-kicker">{{ site.abbreviation }} · {{ site.subtitle }}</p>
 
-      <!-- Minimal Logo -->
-      <div class="jp-logo-wrapper" data-aos="fade-down" data-aos-duration="1200">
-        <div class="logo-line-decoration">
-          <span class="line"></span>
-          <img src="{{ site.baseurl }}/assets/images/MMAILAB_Logo_v2.png" alt="MMAILAB" class="jp-logo">
-          <span class="line"></span>
-        </div>
-      </div>
+      <h1 class="jp-main-title">
+        <span class="jp-title-en">Multimedia &amp; <span class="text-gradient">AI</span> Laboratory</span>
+      </h1>
 
-      <!-- Japanese Style Title -->
-      <div class="jp-title-group">
-        <h1 class="jp-main-title" data-aos="fade-up" data-aos-delay="300">
-          <span class="jp-title-en">Multimedia & AI Laboratory</span>
-        </h1>
+      <p class="hero-tagline">{{ site.description }}</p>
 
-        <!-- Minimal Subtitle -->
-        <!-- <div class="jp-subtitle" data-aos="fade-up" data-aos-delay="500">
-          <span class="jp-vertical-text">Research</span>
-          <div class="jp-subtitle-content">
-            <span class="jp-dynamic-text" id="jp-dynamic">Computer Vision</span>
-            <span class="jp-subtitle-line">Innovation</span>
-          </div>
-        </div> -->
-      </div>
-
-      <!-- Minimalist Description -->
-      <p class="jp-description" data-aos="fade-up" data-aos-delay="700">
+      <p class="jp-description">
         <span lang="zh-TW">台灣師範大學・多媒體暨人工智慧實驗室</span><br>
-        <span lang="en">AI & DLCV Research at NTNU</span>
+        <span lang="en">AI &amp; DLCV Research at NTNU</span>
       </p>
 
-      <!-- Zen-style CTA Buttons -->
-      <div class="jp-cta-container" data-aos="fade-up" data-aos-delay="900">
-        <a href="{{ site.baseurl }}/research/" class="jp-btn secondary">
-          <span class="jp-btn-text">View Research</span>
-          <span class="jp-btn-subtext">Explore Our Work</span>
-          <span class="jp-btn-icon">→</span>
+      <div class="jp-cta-container">
+        <a href="{{ site.baseurl }}/research/" class="jp-btn primary">
+          <span class="jp-btn-text">Research</span>
         </a>
         <a href="{{ site.baseurl }}/publications/" class="jp-btn secondary">
           <span class="jp-btn-text">Publications</span>
-          <span class="jp-btn-subtext">Our Research Papers</span>
-          <span class="jp-btn-icon">→</span>
         </a>
         <a href="{{ site.baseurl }}/join/" class="jp-btn secondary">
-          <span class="jp-btn-text">Join Lab</span>
-          <span class="jp-btn-subtext">Be Part of Innovation</span>
-          <span class="jp-btn-icon">→</span>
+          <span class="jp-btn-text">Join us</span>
         </a>
       </div>
-
     </div>
   </div>
 
-  <!-- Decorative Elements -->
-  <div class="jp-corner-decoration top-left" aria-hidden="true">
-    <svg viewBox="0 0 100 100" class="corner-svg" role="presentation">
-      <path d="M0,0 L100,0 L100,10 L10,10 L10,100 L0,100 Z" fill="currentColor"/>
-    </svg>
-  </div>
-  <div class="jp-corner-decoration bottom-right" aria-hidden="true">
-    <svg viewBox="0 0 100 100" class="corner-svg" role="presentation">
-      <path d="M100,100 L0,100 L0,90 L90,90 L90,0 L100,0 Z" fill="currentColor"/>
-    </svg>
+  <div class="hero-stage">
+    <figure class="hero-shot hero-shot--main">
+      <img src="{{ site.baseurl }}/assets/images/events/lab_gather_0107/photo.jpg" alt="Lab gathering">
+    </figure>
+    <figure class="hero-shot">
+      <img src="{{ site.baseurl }}/assets/images/publication/dehazing/Result_Comparison_SOTS.png" alt="Image dehazing comparison">
+    </figure>
+    <figure class="hero-shot">
+      <img src="{{ site.baseurl }}/assets/images/publication/deraining/Result_Comparison_Rain100L.png" alt="Image deraining comparison">
+    </figure>
   </div>
 </section>
 
@@ -154,7 +116,10 @@ classes:
   </div>
 
   <div class="research-cards-container">
-    <div class="research-card" data-aos="fade-up">
+    <div class="research-card research-card--blue" data-aos="fade-up">
+      <div class="research-card-media">
+        <img src="{{ site.baseurl }}/assets/images/publication/dehazing/Result_Comparison_SOTS.png" alt="">
+      </div>
       <div class="card-icon">
         <div class="icon-3d">
           <i class="fas fa-image"></i>
@@ -169,7 +134,10 @@ classes:
       </div>
     </div>
 
-    <div class="research-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="research-card research-card--purple" data-aos="fade-up" data-aos-delay="100">
+      <div class="research-card-media">
+        <img src="{{ site.baseurl }}/assets/images/publication/deraining/Result_Comparison_Rain100H.png" alt="">
+      </div>
       <div class="card-icon">
         <div class="icon-3d">
           <i class="fas fa-eye"></i>
@@ -184,7 +152,10 @@ classes:
       </div>
     </div>
 
-    <div class="research-card" data-aos="fade-up" data-aos-delay="200">
+    <div class="research-card research-card--teal" data-aos="fade-up" data-aos-delay="200">
+      <div class="research-card-media">
+        <img src="{{ site.baseurl }}/assets/images/publication/S3RNet/S3RNet.png" alt="">
+      </div>
       <div class="card-icon">
         <div class="icon-3d">
           <i class="fas fa-robot"></i>

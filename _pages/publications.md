@@ -14,7 +14,7 @@ header:
 <div class="jp-section">
   <div class="container">
     <div class="jp-hero-content">
-      <h1 style="font-style: italic; font-weight: normal;">Publications</h1>
+      <h1>Publications</h1>
       <p class="jp-subtitle">Discover our research contributions to computer vision, machine learning, and multimedia analysis.</p>
     </div>
   </div>

@@ -12,7 +12,7 @@ header:
 <div class="jp-section">
   <div class="container">
     <div class="jp-hero-content">
-      <h1 style="font-style: italic; font-weight: normal;">News & Updates</h1>
+      <h1>News & Updates</h1>
       <p class="jp-subtitle">Stay updated with our latest research developments, publications, and lab activities.</p>
     </div>
   </div>

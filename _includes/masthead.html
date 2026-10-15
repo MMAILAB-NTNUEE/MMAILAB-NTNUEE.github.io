@@ -14,7 +14,7 @@
         <!-- without icon snippet -->
         <a class="site-title" href="{{ '/' | relative_url }}">
           <img src="{{ site.baseurl }}/assets/images/MMAILAB_Logo_v2.png" alt="MMAILAB" class="site-logo-small">
-          MMAILAB
+          <span class="site-title__text">MMAILAB</span>
         </a>
         
         <!-- Mobile toggle button - only visible on small screens -->
@@ -30,6 +30,12 @@
               <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
           {% endfor %}
+          <li class="masthead__menu-item masthead__menu-item--theme">
+            <button type="button" class="theme-toggle" aria-label="Toggle color theme">
+              <span class="theme-toggle__icon" aria-hidden="true"></span>
+              <span class="theme-toggle__label">Theme</span>
+            </button>
+          </li>
         </ul>
 
         <!-- Mobile navigation - hidden by default, shown when toggle is clicked -->
@@ -40,6 +46,12 @@
                 <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
               </li>
             {% endfor %}
+            <li class="masthead__menu-item">
+              <button type="button" class="theme-toggle" aria-label="Toggle color theme">
+                <span class="theme-toggle__icon" aria-hidden="true"></span>
+                <span class="theme-toggle__label">Theme</span>
+              </button>
+            </li>
           </ul>
         </div>
         
@@ -94,6 +106,15 @@
         mobileMenu.classList.add('hidden');
         mobileToggle.setAttribute('aria-expanded', 'false');
         mobileToggle.classList.remove('is-active');
+      });
+    });
+
+    document.querySelectorAll('.theme-toggle').forEach(function(button) {
+      button.addEventListener('click', function(event) {
+        event.stopPropagation();
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('mmailab-theme', next); } catch (e) {}
       });
     });
 
@@ -250,9 +271,9 @@
   }
 
   .site-logo-small {
-    height: 70px;
+    height: 36px;
     width: auto;
-    margin-right: 12px;
+    margin-right: 10px;
     vertical-align: middle;
   }
 
